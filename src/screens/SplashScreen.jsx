@@ -1,14 +1,43 @@
 import React ,{createRef,useEffect,useState} from 'react';
 import { FlatList, Text, View,Dimensions,Image, ImageBackground} from 'react-native';
+
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Background from '../components/Background';
 const SplashScreen = (props) => {
 
     useEffect(()=>{
-        setTimeout(()=>{
-            props.navigation.replace("OnboardingScreen")
-        },2500)
+        console.log("In use effect")
+        getUser()
     },[])
 
+    function changeScreen(name){
+        console.log("In changescreen")
+        console.log(name)
+        if(name){
+            console.log("Going to home screen")
+            props.navigation.replace("HomeScreen",{
+                name
+            })
+        }
+        else{
+            console.log("First time user")
+            props.navigation.replace("OnboardingScreen")
+        }        
+    }
+
+    const getUser = async () => {
+        console.log("In get user")
+        try {
+          await AsyncStorage.getItem("username")
+          .then(name=>{
+            setTimeout(()=>{
+                changeScreen(name)
+            },2000)
+        })
+        } catch (error) {
+          console.log(error);
+        }
+      };
   return(
 
     <Background>
@@ -22,11 +51,11 @@ const SplashScreen = (props) => {
          > 
             <Image
             style={{
-                height:"35%",
+                height:"28%",
                 aspectRatio:4/3
         
             }}
-            source={require("../../images/Logo.png")}
+            source={require("../../images/logo.png")}
             />
             </View>  
        </Background>

@@ -5,8 +5,8 @@ import {
   Image,
   ImageBackground,
 } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import Background from '../components/Background';
-
 const OnboardingScreen = props => {
   function changeScreen() {
     props.navigation.replace('InfoScreen');
@@ -15,34 +15,34 @@ const OnboardingScreen = props => {
     <Background>
       <Image
         style={{
-          height: '25%',
+          height: '35%',
           aspectRatio:1.8/2,
          // width: '50%',
-          marginTop:"20%"
+          marginTop:"10%"
         }}
-        source={require('../../images/Book.png')}
+        source={require('../../images/onboarding-screen-design.png')}
       />
 
       <Text
         style={{
-          marginTop: '20%',
-          color: 'white',
-          fontSize: 44,
+          marginTop: '10%',
+          color: 'black',
+          fontSize: 45,
           width: '70%',
           letterSpacing: 1,
-          textAlign: 'center',
+         // textAlign: 'center',
         }}>
-        Welcome!
+        Let's get started
       </Text>
 
       <Text
         style={{
           marginTop: "6%",
-          color: 'white',
+          color: 'black',
           fontSize: 20,
           width: '70%',
           letterSpacing: 1,
-          textAlign: 'center',
+          //textAlign: 'center',
         }}>
         Learn a new word daily & become a Word Guru
       </Text>
@@ -50,13 +50,13 @@ const OnboardingScreen = props => {
         activeOpacity={0.9}
         onPress={changeScreen}
         style={{
-          marginTop: '30%',
-          height: '12%',
-          width: '70%',
-          alignItems: 'center',
-          justifyContent: 'center',
+          marginTop: '15%',
+          alignSelf:'flex-end',
+          marginRight:'15%'
+          
         }}>
-        <ImageBackground
+          <Ionicons name="arrow-forward-circle-sharp" size={80} color="#000"/>
+        {/* <ImageBackground
           source={require('../../images/Button.png')}
           style={{
             height: '100%',
@@ -78,7 +78,7 @@ const OnboardingScreen = props => {
             }}>
             Get Started
           </Text>
-        </ImageBackground>
+        </ImageBackground> */}
       </TouchableOpacity>
     </Background>
   );

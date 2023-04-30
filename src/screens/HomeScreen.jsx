@@ -1,11 +1,125 @@
 import React, {createRef, useEffect, useState} from 'react';
 import {FlatList, Text, View, Dimensions} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Background from '../components/Background';
+import { getData } from '../utils/helperFunctions';
 
-const HomeScreen = props => {
+const HomeScreen = (props) => {
+
+  const [name, setName] = useState(props.route.params.name);
+  const [data,setData]=useState({})
+
+  useEffect(()=>{
+   console.log("In use effect of home screen")
+   fetchData()
+  },[])
+
+  async function fetchData(){
+    todaysData=await getData()
+   console.log(todaysData)
+   setData(todaysData)
+  }
   return (
     <Background>
-     
+      <View style={{
+        height:"100%",
+        width:"100%",
+        justifyContent:"center",
+        alignItems:"flex-start",
+        // marginLeft:"10%",
+        // width:"50%",
+       //  backgroundColor:"pink"
+      }}>
+        
+        <View style={{
+          marginLeft:"10%",
+          width:"80%",
+          height:"100%",
+         // justifyContent:"center"
+        }}>
+          <Text
+          style={{
+            color:"#1e1e1e",
+            fontWeight:"bold",
+            letterSpacing:2,
+            fontSize:20,
+            marginTop:"30%"
+          }}
+        >Hi {name},</Text>
+        <View
+        style={{
+         // justifyContent:"center",
+          height:"70%",
+          //backgroundColor:"pink"
+        }}
+        >
+           <Text
+          style={{
+            marginTop:'20%',
+            color:"#162016",
+            letterSpacing:3,
+            fontSize:18,
+          }}
+        >word of the day :</Text>
+        <Text
+          style={{
+            color:"#000",
+            letterSpacing:2,
+            fontSize:32,
+            fontWeight:"bold",
+            marginTop:"10%",
+            fontFamily:'Montserrat-Bold'
+          }}
+        >{data.word}</Text>
+
+        <Text
+        style={{
+          color:"#162017",
+          letterSpacing:3,
+          fontSize:18,
+          marginTop:"3%"
+        }}
+        >
+        {data.phonetic}
+        </Text>
+        <Text
+        style={{
+          color:"#162017",
+          letterSpacing:3,
+          fontSize:18,
+          marginTop:"2%"
+        }}
+        >{data.partOfSpeech}
+        </Text>
+        <Text
+        style={{
+          color:"#000",
+          fontSize:21,
+          marginTop:"10%",
+          letterSpacing:2,
+          fontFamily: 'Montserrat-Medium',
+        }}
+        >
+        {data.meaning}
+        </Text>
+      
+        <Text
+        style={{
+          color:"#000",
+          fontSize:19,
+          marginTop:"15%",
+          letterSpacing:2,
+          fontFamily: 'Montserrat-Regular',
+        }}
+        >
+       {data.sentence}
+        </Text>
+        </View>
+        </View>
+
+       
+        </View>
+
     </Background>
   );
 };

@@ -1,42 +1,69 @@
 import React, {useState} from 'react';
 import {
+  View,
   Text,
   ImageBackground,
   TouchableOpacity,
   TextInput,
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Background from '../components/Background';
-const InfoScreen = (props) => {
-  function changeScreen() {
-    props.navigation.navigate('HomeScreen')
-  }
 
-  const [name, setName] = useState('');
+const InfoScreen = (props) => {
+
+    const [name, setName] = useState('');
+
+    function changeScreen() {
+        console.log("In change screen")
+        if(name){
+            storeName(name)
+            props.navigation.replace('HomeScreen',{
+                name
+            })
+        }
+        else{
+            alert("Please enter a name")
+        }
+    }
+
+    async function storeName(name) {
+        console.log("In store name ",name)
+        todaysDate=new Date().getDate().toString()
+        try {
+          await AsyncStorage.setItem("username", name);
+          await AsyncStorage.setItem("lastUpdatedDate",todaysDate);
+          await AsyncStorage.setItem("numberOfDaysVisited","0");
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+  
   return (
 
     <Background>
-        {/* <Image
-          style={{
-            height: '15%',
-            width: '40%',
-            marginTop: '15%',
-          }}
-          source={require('../../images/Logo.png')}
-        /> */}
+      <View
+      style={{
+        height:"100%",
+        width:"100%",
+        justifyContent:'center',
+       alignItems:'center'
+      }}
+      >
 
-        <Text
+        {/* <Text
           style={{
             marginTop: '20%',
-            color: 'white',
-            fontSize: 30,
+            color: 'black',
+            fontSize: 20,
             width: '70%',
             textAlign: 'center',
-          //  fontStyle:"italic"
           }}>
-          Welcome to our community of</Text>
-        <Text
+          Grow your vocabulary with a new word daily on Word Guru</Text> */}
+        {/* <Text
           style={{
-            color: '#ff6341',
+           // color: '#ff6341',
+            color:'#7D5713',
             fontSize: 35,
             width: '70%',
             textAlign: 'center',
@@ -44,15 +71,16 @@ const InfoScreen = (props) => {
             fontStyle:"italic"
           }}>
           Word Gurus!
-        </Text>
+        </Text> */}
         <Text
           style={{
-            marginTop:"25%",
-            color: 'white',
+            marginTop:"15%",
+            color: '#000',
             fontSize: 22,
             width: '70%',
-            letterSpacing: 1,
+            letterSpacing: 2,
             textAlign: 'center',
+            fontFamily: 'Montserrat-Regular',
           }}>
           What should we call you?
         </Text>
@@ -61,14 +89,17 @@ const InfoScreen = (props) => {
           style={{
             height: '7%',
             width: '60%',
-            marginTop: '10%',
+            marginTop: '15%',
             borderRadius: 10,
             color: '#000',
             paddingLeft: 10,
-            
+            fontFamily: 'Montserrat-Regular',
             fontSize:16,
-            borderWidth: 3,
-            borderColor: '#ff6341',
+            borderBottomWidth: 3,
+            borderRightWidth: 3,
+            borderBottomColor:'#000',
+            borderRightColor:'#000',
+            //borderColor: '#e5c84c',
             backgroundColor: 'white',
           }}
           maxLength={15}
@@ -83,33 +114,40 @@ const InfoScreen = (props) => {
           onPress={changeScreen}
           style={{
             marginTop: '40%',
-            height: '12%',
-            width: '70%',
+            height: '10%',
+            width: '60%',
             alignItems: 'center',
             justifyContent: 'center',
+            
           }}>
-          <ImageBackground
-            source={require('../../images/Button.png')}
+          <View
+           // source={require('../../images/Button.png')}
+           
             style={{
+              backgroundColor:'#162016',
               height: '100%',
               width: '100%',
               alignItems: 'center',
               justifyContent: 'center',
+              borderRadius:7
             }}
-            imageStyle={{
-              height: '100%',
-              width: '100%',
-            }}>
+            // imageStyle={{
+            //   height: '100%',
+            //   width: '100%',
+            // }}
+            >
             <Text
               style={{
                 color: 'white',
                 fontSize: 28,
                 textAlign: 'center',
+                fontFamily: 'Montserrat-Regular',
               }}>
               Let's Go!
             </Text>
-          </ImageBackground>
+          </View>
         </TouchableOpacity>
+        </View>
         </Background>
   );
 };

@@ -6,20 +6,20 @@ const Background = (props) => {
   return(
     <View 
     style={{
-        backgroundColor:"#021639",
+        backgroundColor:"#fff",
         height:"100%",
         width:"100%"
     }}
     >
         <ImageBackground
-        source={require("../../images/BackDrop.png")}
+        source={require("../../images/BackDrop1.png")}
         style={{
             height:"100%",
             width:"100%",
         justifyContent:"center",
         alignItems:"center"
          }}
-         imageStyle={{opacity: 0.3}}
+        // imageStyle={{opacity: 0.3}}
         resizeMode="cover"
         >
             <View style={{
