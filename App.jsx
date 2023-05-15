@@ -7,41 +7,54 @@ import OnboardingScreen from "./src/screens/OnboardingScreen";
 import SplashScreen from './src/screens/SplashScreen';
 import InfoScreen from './src/screens/InfoScreen';
     
+import crashlytics from '@react-native-firebase/crashlytics';
+
+export const App = () => {
+ return (
+   
+      <Button onPress={
+         crashlytics().crash()
+       }>
+       Force Crash
+     </Button>
+   
+ );
+};
 
 
 
-const Stack = createStackNavigator();
+//const Stack = createStackNavigator();
 
 
-const App = (props) => {
+// const App = (props) => {
 
  
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-      <Stack.Screen
-          name="SplashScreen"
-          component={SplashScreen}
-          options={{headerShown:false}}
-        />
-      <Stack.Screen
-          name="OnboardingScreen"
-          component={OnboardingScreen}
-          options={{headerShown:false}}
-        />
-        <Stack.Screen
-          name="InfoScreen"
-          component={InfoScreen}
-          options={{headerShown:false}}
-        />
-        <Stack.Screen
-          name="HomeScreen"
-          component={HomeScreen}
-          options={{headerShown:false}}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator>
+//       <Stack.Screen
+//           name="SplashScreen"
+//           component={SplashScreen}
+//           options={{headerShown:false}}
+//         />
+//       <Stack.Screen
+//           name="OnboardingScreen"
+//           component={OnboardingScreen}
+//           options={{headerShown:false}}
+//         />
+//         <Stack.Screen
+//           name="InfoScreen"
+//           component={InfoScreen}
+//           options={{headerShown:false}}
+//         />
+//         <Stack.Screen
+//           name="HomeScreen"
+//           component={HomeScreen}
+//           options={{headerShown:false}}
+//         />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// };
 
 export default App;
