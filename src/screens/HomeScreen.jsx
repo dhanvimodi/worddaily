@@ -1,129 +1,145 @@
-import React, {createRef, useEffect, useState} from 'react';
-import {FlatList, Text, View, Dimensions} from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import React, {useEffect, useState} from 'react';
+import {Text, View} from 'react-native';
 import Background from '../components/Background';
-import { getData } from '../utils/helperFunctions';
+import {getData} from '../utils/helperFunctions';
+import analytics from '@react-native-firebase/analytics';
 
-const HomeScreen = (props) => {
-
+const HomeScreen = props => {
   const [name, setName] = useState(props.route.params.name);
-  const [data,setData]=useState({})
+  const [data, setData] = useState({});
 
-  useEffect(()=>{
-   console.log("In use effect of home screen")
-   fetchData()
-  },[])
+  // useEffect(() => {
 
-  async function fetchData(){
-    todaysData=await getData()
-   console.log(todaysData)
-   setData(todaysData)
+  //   trackScreenView('HomeScreen');
+  // }, []);
+
+  // async function trackScreenView(screen) {
+  //   // Set & override the MainActivity screen name
+  //   if(await analytics().setCurrentScreen(screen, screen)){}
+  //   else{
+  //       console.log("Error")
+  //   }
+  // }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    const [todaysData, numberOfDaysVisited] = await getData();
+    setData(todaysData);
+    try {
+      await analytics().logEvent('data_retrieved', {
+        data: todaysData,
+        numberOfDaysVisited: numberOfDaysVisited,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }
   return (
     <Background>
-      <View style={{
-        height:"100%",
-        width:"100%",
-        justifyContent:"center",
-        alignItems:"flex-start",
-        // marginLeft:"10%",
-        // width:"50%",
-       //  backgroundColor:"pink"
-      }}>
-        
-        <View style={{
-          marginLeft:"10%",
-          width:"80%",
-          height:"100%",
-         // justifyContent:"center"
+      <View
+        style={{
+          height: '100%',
+          width: '100%',
+          justifyContent: 'center',
+          alignItems: 'flex-start',
+          // marginLeft:"10%",
+          // width:"50%",
+          //  backgroundColor:"pink"
         }}>
-          <Text
-          style={{
-            color:"#1e1e1e",
-            fontWeight:"bold",
-            letterSpacing:2,
-            fontSize:20,
-            marginTop:"30%"
-          }}
-        >Hi {name},</Text>
         <View
-        style={{
-         // justifyContent:"center",
-          height:"70%",
-          //backgroundColor:"pink"
-        }}
-        >
-           <Text
           style={{
-            marginTop:'20%',
-            color:"#162016",
-            letterSpacing:3,
-            fontSize:18,
-          }}
-        >word of the day :</Text>
-        <Text
-          style={{
-            color:"#000",
-            letterSpacing:2,
-            fontSize:32,
-            fontWeight:"bold",
-            marginTop:"10%",
-            fontFamily:'Montserrat-Bold'
-          }}
-        >{data.word}</Text>
+            marginLeft: '10%',
+            width: '80%',
+            height: '100%',
+            // justifyContent:"center"
+          }}>
+          <Text
+            style={{
+              color: '#1e1e1e',
+              fontWeight: 'bold',
+              letterSpacing: 2,
+              fontSize: 20,
+              marginTop: '30%',
+            }}>
+            Hi {name},
+          </Text>
+          <View
+            style={{
+              // justifyContent:"center",
+              height: '70%',
+              //backgroundColor:"pink"
+            }}>
+            <Text
+              style={{
+                marginTop: '20%',
+                color: '#162016',
+                letterSpacing: 3,
+                fontSize: 18,
+              }}>
+              word of the day :
+            </Text>
+            <Text
+              style={{
+                color: '#000',
+                letterSpacing: 2,
+                fontSize: 32,
+                fontWeight: 'bold',
+                marginTop: '10%',
+                fontFamily: 'Montserrat-Bold',
+              }}>
+              {data.word}
+            </Text>
 
-        <Text
-        style={{
-          color:"#162017",
-          letterSpacing:3,
-          fontSize:18,
-          marginTop:"3%"
-        }}
-        >
-        {data.phonetic}
-        </Text>
-        <Text
-        style={{
-          color:"#162017",
-          letterSpacing:3,
-          fontSize:18,
-          marginTop:"2%"
-        }}
-        >{data.partOfSpeech}
-        </Text>
-        <Text
-        style={{
-          color:"#000",
-          fontSize:21,
-          marginTop:"10%",
-          letterSpacing:2,
-          fontFamily: 'Montserrat-Medium',
-        }}
-        >
-        {data.meaning}
-        </Text>
-      
-        <Text
-        style={{
-          color:"#000",
-          fontSize:19,
-          marginTop:"15%",
-          letterSpacing:2,
-          fontFamily: 'Montserrat-Regular',
-        }}
-        >
-       {data.sentence}
-        </Text>
-        </View>
-        </View>
+            <Text
+              style={{
+                color: '#162017',
+                letterSpacing: 3,
+                fontSize: 18,
+                marginTop: '3%',
+              }}>
+              {data.phonetic}
+            </Text>
+            <Text
+              style={{
+                color: '#162017',
+                letterSpacing: 3,
+                fontSize: 18,
+                marginTop: '2%',
+              }}>
+              {data.partOfSpeech}
+            </Text>
+            <Text
+              style={{
+                color: '#000',
+                fontSize: 21,
+                marginTop: '10%',
+                letterSpacing: 2,
+                fontFamily: 'Montserrat-Medium',
+              }}>
+              {data.meaning}
+            </Text>
 
-       
+            <Text
+              style={{
+                color: '#000',
+                fontSize: 19,
+                marginTop: '15%',
+                letterSpacing: 2,
+                fontFamily: 'Montserrat-Regular',
+              }}>
+              "{data.sentence}"
+            </Text>
+          </View>
         </View>
-
+      </View>
     </Background>
   );
 };
- {/* <View
+{
+  /* <View
         style={{
           height: '100%',
           width: '100%',
@@ -188,5 +204,6 @@ const HomeScreen = (props) => {
 
             </View>
         </View>
-      </View> */}
+      </View> */
+}
 export default HomeScreen;

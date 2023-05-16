@@ -1,56 +1,55 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  TouchableOpacity,
-  TextInput,
-} from 'react-native';
+import {View, Text, TouchableOpacity, TextInput} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import analytics from '@react-native-firebase/analytics';
+
 import Background from '../components/Background';
 
-const InfoScreen = (props) => {
+const InfoScreen = props => {
+  const [name, setName] = useState('');
 
-    const [name, setName] = useState('');
+  // useEffect(() => {
+  //   trackScreenView('InfoScreen');
+  // }, []);
 
-    function changeScreen() {
-        console.log("In change screen")
-        if(name){
-            storeName(name)
-            props.navigation.replace('HomeScreen',{
-                name
-            })
-        }
-        else{
-            alert("Please enter a name")
-        }
+  // async function trackScreenView(screen) {
+  //   // Set & override the MainActivity screen name
+  //   if(await analytics().setCurrentScreen(screen, screen)){}
+  //   else{
+  //       console.log("Error")
+  //   }  }
+
+  function changeScreen() {
+    if (name) {
+      storeName(name);
+      props.navigation.replace('HomeScreen', {
+        name,
+      });
+    } else {
+      alert('Please enter a name');
     }
+  }
 
-    async function storeName(name) {
-        console.log("In store name ",name)
-        todaysDate=new Date().getDate().toString()
-        try {
-          await AsyncStorage.setItem("username", name);
-          await AsyncStorage.setItem("lastUpdatedDate",todaysDate);
-          await AsyncStorage.setItem("numberOfDaysVisited","0");
-        } catch (error) {
-          console.log(error);
-        }
-      };
+  async function storeName(name) {
+    todaysDate = new Date().getDate().toString();
+    try {
+      await AsyncStorage.setItem('username', name);
+      await AsyncStorage.setItem('lastUpdatedDate', todaysDate);
+      await AsyncStorage.setItem('numberOfDaysVisited', '0');
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
-  
   return (
-
     <Background>
       <View
-      style={{
-        height:"100%",
-        width:"100%",
-        justifyContent:'center',
-       alignItems:'center'
-      }}
-      >
-
+        style={{
+          height: '100%',
+          width: '100%',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
         {/* <Text
           style={{
             marginTop: '20%',
@@ -74,7 +73,7 @@ const InfoScreen = (props) => {
         </Text> */}
         <Text
           style={{
-            marginTop:"15%",
+            marginTop: '15%',
             color: '#000',
             fontSize: 22,
             width: '70%',
@@ -94,11 +93,11 @@ const InfoScreen = (props) => {
             color: '#000',
             paddingLeft: 10,
             fontFamily: 'Montserrat-Regular',
-            fontSize:16,
+            fontSize: 16,
             borderBottomWidth: 3,
             borderRightWidth: 3,
-            borderBottomColor:'#000',
-            borderRightColor:'#000',
+            borderBottomColor: '#000',
+            borderRightColor: '#000',
             //borderColor: '#e5c84c',
             backgroundColor: 'white',
           }}
@@ -118,24 +117,23 @@ const InfoScreen = (props) => {
             width: '60%',
             alignItems: 'center',
             justifyContent: 'center',
-            
           }}>
           <View
-           // source={require('../../images/Button.png')}
-           
+            // source={require('../../images/Button.png')}
+
             style={{
-              backgroundColor:'#162016',
+              backgroundColor: '#162016',
               height: '100%',
               width: '100%',
               alignItems: 'center',
               justifyContent: 'center',
-              borderRadius:7
+              borderRadius: 7,
             }}
             // imageStyle={{
             //   height: '100%',
             //   width: '100%',
             // }}
-            >
+          >
             <Text
               style={{
                 color: 'white',
@@ -147,8 +145,8 @@ const InfoScreen = (props) => {
             </Text>
           </View>
         </TouchableOpacity>
-        </View>
-        </Background>
+      </View>
+    </Background>
   );
 };
 

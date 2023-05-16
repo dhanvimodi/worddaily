@@ -1,66 +1,71 @@
-import React ,{createRef,useEffect,useState} from 'react';
-import { FlatList, Text, View,Dimensions,Image, ImageBackground} from 'react-native';
+import React, {useEffect} from 'react';
+import {View, Image} from 'react-native';
+import analytics from '@react-native-firebase/analytics';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Background from '../components/Background';
-const SplashScreen = (props) => {
+const SplashScreen = props => {
+  useEffect(() => {
+   // console.log('In use effect');
+    getUser();
+  }, []);
 
-    useEffect(()=>{
-        console.log("In use effect")
-        getUser()
-    },[])
+  useEffect(() => {
+  //  trackScreenView('SplashScreen');
+  }, []);
 
-    function changeScreen(name){
-        console.log("In changescreen")
-        console.log(name)
-        if(name){
-            console.log("Going to home screen")
-            props.navigation.replace("HomeScreen",{
-                name
-            })
-        }
-        else{
-            console.log("First time user")
-            props.navigation.replace("OnboardingScreen")
-        }        
+  async function trackScreenView(screen) {
+    // Set & override the MainActivity screen name
+    try {await analytics().setCurrentScreen(screen, screen)}
+    catch(error)
+    {
+        console.log("error in splash screen" , error)
+    }        
+    
+
+  }
+
+  function changeScreen(name) {
+    if (name) {
+      props.navigation.replace('HomeScreen', {
+        name,
+      });
+    } else {
+      props.navigation.replace('OnboardingScreen');
     }
+  }
 
-    const getUser = async () => {
-        console.log("In get user")
-        try {
-          await AsyncStorage.getItem("username")
-          .then(name=>{
-            setTimeout(()=>{
-                changeScreen(name)
-            },2000)
-        })
-        } catch (error) {
-          console.log(error);
-        }
-      };
-  return(
-
+  const getUser = async () => {
+   // console.log('In get user');
+    try {
+      await AsyncStorage.getItem('username').then(name => {
+        setTimeout(() => {
+          changeScreen(name);
+        }, 2000);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  return (
     <Background>
-         <View
-         style={{
-            height:"100%",
-            width:"100%",
-            justifyContent:"center",
-            alignItems:"center"
-         }}
-         > 
-            <Image
-            style={{
-                height:"28%",
-                aspectRatio:4/3
-        
-            }}
-            source={require("../../images/logo.png")}
-            />
-            </View>  
-       </Background>
-   
-  )
-}
+      <View
+        style={{
+          height: '100%',
+          width: '100%',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Image
+          style={{
+            height: '28%',
+            aspectRatio: 4 / 3,
+          }}
+          source={require('../../images/logo.png')}
+        />
+      </View>
+    </Background>
+  );
+};
 
 export default SplashScreen;

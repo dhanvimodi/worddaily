@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {Button, Text, View} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from "./src/screens/HomeScreen";
 import OnboardingScreen from "./src/screens/OnboardingScreen";
 import SplashScreen from './src/screens/SplashScreen';
 import InfoScreen from './src/screens/InfoScreen';
-    
-
+import analytics from '@react-native-firebase/analytics';
 
 
 const Stack = createStackNavigator();
@@ -15,9 +14,32 @@ const Stack = createStackNavigator();
 
 const App = (props) => {
 
- 
+  const navigationRef = useNavigationContainerRef();
+  const routeNameRef = useRef();
+
   return (
-    <NavigationContainer>
+    <NavigationContainer
+    ref={navigationRef}
+    onReady={() => {
+      routeNameRef.current = navigationRef.getCurrentRoute().name;
+    }}
+    onStateChange={async () => {
+      const previousRouteName = routeNameRef.current;
+      const currentRouteName = navigationRef.getCurrentRoute().name;
+
+      if (previousRouteName !== currentRouteName) {
+        // Save the current route name for later comparison
+        routeNameRef.current = currentRouteName;
+        await analytics().logScreenView({
+          screen_name: currentRouteName,
+          screen_class: currentRouteName,
+        });
+        // Replace the line below to add the tracker from a mobile analytics SDK
+      
+      
+      }
+    }}
+  >
       <Stack.Navigator>
       <Stack.Screen
           name="SplashScreen"
