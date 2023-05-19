@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {View, Image} from 'react-native';
 import analytics from '@react-native-firebase/analytics';
+import { ImagesAssets } from '../../assets/images/ImagesAssets';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Background from '../components/Background';
@@ -61,7 +62,7 @@ const SplashScreen = props => {
             height: '28%',
             aspectRatio: 4 / 3,
           }}
-          source={require('../../images/logo.png')}
+          source={ImagesAssets.logo}
         />
       </View>
     </Background>

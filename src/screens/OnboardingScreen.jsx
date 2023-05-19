@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import {Text, TouchableOpacity, Image} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { ImagesAssets } from '../../assets/images/ImagesAssets';
+
 //import analytics from '@react-native-firebase/analytics';
 
 import Background from '../components/Background';
@@ -30,7 +32,7 @@ const OnboardingScreen = props => {
           // width: '50%',
           marginTop: '10%',
         }}
-        source={require('../../images/onboarding-screen-design.png')}
+        source={ImagesAssets.onboardingScreenDesign}
       />
 
       <Text

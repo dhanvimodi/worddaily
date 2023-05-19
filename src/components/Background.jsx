@@ -1,5 +1,7 @@
 import React  from 'react';
 import { View,Image, ImageBackground} from 'react-native';
+import { ImagesAssets } from '../../assets/images/ImagesAssets';
+
 const Background = (props) => {
 
 
@@ -12,7 +14,7 @@ const Background = (props) => {
     }}
     >
         <ImageBackground
-        source={require("../../images/BackDrop1.png")}
+        source={ImagesAssets.backDrop1}
         style={{
             height:"100%",
             width:"100%",
