@@ -60,6 +60,7 @@ target 'worddaily' do
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
   end
   pod 'FirebaseCoreInternal', :modular_headers => true
+  pod 'FirebaseCore', :modular_headers => true
   pod 'GoogleUtilities', :modular_headers => true
   pod 'RNFBAnalytics', :path => '../node_modules/@react-native-firebase/analytics'
 end
