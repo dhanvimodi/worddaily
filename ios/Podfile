@@ -25,7 +25,7 @@ end
 target 'worddaily' do
   config = use_native_modules!
 
-  
+
   # Flags change depending on the env values.
   flags = get_default_flags()
 
@@ -61,5 +61,5 @@ target 'worddaily' do
   end
   pod 'FirebaseCoreInternal', :modular_headers => true
   pod 'GoogleUtilities', :modular_headers => true
-  pod 'RNFBAnalytics', :path => '../node_modules/@react-native-firebase/analytics/ios'
+  pod 'RNFBAnalytics', :path => '../node_modules/@react-native-firebase/analytics'
 end
