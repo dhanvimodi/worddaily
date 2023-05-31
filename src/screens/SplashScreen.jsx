@@ -61,7 +61,7 @@ const SplashScreen = props => {
             height: '28%',
             aspectRatio: 4 / 3,
           }}
-          source={require('../../images/logo.png')}
+          source={require('../../images/splash-screen.png')}
         />
       </View>
     </Background>
