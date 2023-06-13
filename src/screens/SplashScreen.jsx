@@ -4,6 +4,8 @@ import analytics from '@react-native-firebase/analytics';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Background from '../components/Background';
+import styles from '../styles/SplashScreen';
+
 const SplashScreen = props => {
   useEffect(() => {
    // console.log('In use effect');
@@ -50,17 +52,9 @@ const SplashScreen = props => {
   return (
     <Background>
       <View
-        style={{
-          height: '100%',
-          width: '100%',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
+        style={styles.container}>
         <Image
-          style={{
-            height: '28%',
-            aspectRatio: 4 / 3,
-          }}
+          style={styles.image}
           source={require('../../images/splash-screen.png')}
         />
       </View>

@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import analytics from '@react-native-firebase/analytics';
 
 import Background from '../components/Background';
+import styles from '../styles/InfoScreen';
 
 const InfoScreen = props => {
   const [name, setName] = useState('');
@@ -44,12 +45,7 @@ const InfoScreen = props => {
   return (
     <Background>
       <View
-        style={{
-          height: '100%',
-          width: '100%',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
+        style={styles.container}>
         {/* <Text
           style={{
             marginTop: '20%',
@@ -72,35 +68,12 @@ const InfoScreen = props => {
           Word Gurus!
         </Text> */}
         <Text
-          style={{
-            marginTop: '15%',
-            color: '#000',
-            fontSize: 22,
-            width: '70%',
-            letterSpacing: 2,
-            textAlign: 'center',
-            fontFamily: 'Montserrat-Regular',
-          }}>
+          style={styles.heading}>
           What should we call you?
         </Text>
 
         <TextInput
-          style={{
-            height: '7%',
-            width: '60%',
-            marginTop: '15%',
-            borderRadius: 10,
-            color: '#000',
-            paddingLeft: 10,
-            fontFamily: 'Montserrat-Regular',
-            fontSize: 16,
-            borderBottomWidth: 3,
-            borderRightWidth: 3,
-            borderBottomColor: '#000',
-            borderRightColor: '#000',
-            //borderColor: '#e5c84c',
-            backgroundColor: 'white',
-          }}
+          style={styles.inputBox}
           maxLength={15}
           placeholder="Enter your name"
           placeholderTextColor="#cacaca"
@@ -111,36 +84,18 @@ const InfoScreen = props => {
         <TouchableOpacity
           activeOpacity={0.9}
           onPress={changeScreen}
-          style={{
-            marginTop: '40%',
-            height: '10%',
-            width: '60%',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+          style={styles.buttonContainer}>
           <View
             // source={require('../../images/Button.png')}
 
-            style={{
-              backgroundColor: '#162016',
-              height: '100%',
-              width: '100%',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: 7,
-            }}
+            style={styles.buttonInnerContainer}
             // imageStyle={{
             //   height: '100%',
             //   width: '100%',
             // }}
           >
             <Text
-              style={{
-                color: 'white',
-                fontSize: 28,
-                textAlign: 'center',
-                fontFamily: 'Montserrat-Regular',
-              }}>
+              style={styles.buttonText}>
               Let's Go!
             </Text>
           </View>

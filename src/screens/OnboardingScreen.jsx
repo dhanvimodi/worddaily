@@ -4,6 +4,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 //import analytics from '@react-native-firebase/analytics';
 
 import Background from '../components/Background';
+import styles from '../styles/OnboardingScreen';
+
 const OnboardingScreen = props => {
   // useEffect(() => {
   //   console.log("In use effect in onboarding screen")
@@ -24,46 +26,23 @@ const OnboardingScreen = props => {
   return (
     <Background>
       <Image
-        style={{
-          height: '35%',
-          aspectRatio: 1.8 / 2,
-          // width: '50%',
-          marginTop: '10%',
-        }}
+        style={styles.image}
         source={require('../../images/onboarding-screen-design.png')}
       />
 
       <Text
-        style={{
-          marginTop: '10%',
-          color: 'black',
-          fontSize: 45,
-          width: '70%',
-          letterSpacing: 1,
-          // textAlign: 'center',
-        }}>
+        style={styles.text}>
         Let's get started
       </Text>
 
       <Text
-        style={{
-          marginTop: '6%',
-          color: 'black',
-          fontSize: 20,
-          width: '70%',
-          letterSpacing: 1,
-          //textAlign: 'center',
-        }}>
+        style={styles.descriptionText}>
         Learn a new word daily & become a Word Guru
       </Text>
       <TouchableOpacity
         activeOpacity={0.9}
         onPress={changeScreen}
-        style={{
-          marginTop: '15%',
-          alignSelf: 'flex-end',
-          marginRight: '15%',
-        }}>
+        style={styles.buttonContainer}>
         <Ionicons name="arrow-forward-circle-sharp" size={80} color="#000" />
         {/* <ImageBackground
           source={require('../../images/Button.png')}

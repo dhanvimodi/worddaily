@@ -3,7 +3,7 @@ import {Text, View} from 'react-native';
 import Background from '../components/Background';
 import {getData} from '../utils/helperFunctions';
 import analytics from '@react-native-firebase/analytics';
-
+import styles from '../styles/HomeScreen';
 const HomeScreen = props => {
   const [name, setName] = useState(props.route.params.name);
   const [data, setData] = useState({});
@@ -40,96 +40,39 @@ const HomeScreen = props => {
   return (
     <Background>
       <View
-        style={{
-          height: '100%',
-          width: '100%',
-          justifyContent: 'center',
-          alignItems: 'flex-start',
-          // marginLeft:"10%",
-          // width:"50%",
-          //  backgroundColor:"pink"
-        }}>
+        style={styles.container}>
         <View
-          style={{
-            marginLeft: '10%',
-            width: '80%',
-            height: '100%',
-            // justifyContent:"center"
-          }}>
+          style={styles.innerContainer}>
           <Text
-            style={{
-              color: '#1e1e1e',
-              fontWeight: 'bold',
-              letterSpacing: 2,
-              fontSize: 20,
-              marginTop: '30%',
-            }}>
+            style={styles.name}>
             Hi {name},
           </Text>
           <View
-            style={{
-              // justifyContent:"center",
-              height: '70%',
-              //backgroundColor:"pink"
-            }}>
+            style={styles.wordContainer}>
             <Text
-              style={{
-                marginTop: '20%',
-                color: '#162016',
-                letterSpacing: 3,
-                fontSize: 18,
-              }}>
+              style={styles.heading}>
               word of the day :
             </Text>
             <Text
-              style={{
-                color: '#000',
-                letterSpacing: 2,
-                fontSize: 32,
-                fontWeight: 'bold',
-                marginTop: '10%',
-                fontFamily: 'Montserrat-Bold',
-              }}>
+              style={styles.word}>
               {data.word}
             </Text>
 
             <Text
-              style={{
-                color: '#162017',
-                letterSpacing: 3,
-                fontSize: 18,
-                marginTop: '3%',
-              }}>
+              style={styles.phonetic}>
               {data.phonetic}
             </Text>
             <Text
-              style={{
-                color: '#162017',
-                letterSpacing: 3,
-                fontSize: 18,
-                marginTop: '2%',
-              }}>
+              style={styles.partOfSpeech}>
               {data.partOfSpeech}
             </Text>
             <Text
-              style={{
-                color: '#000',
-                fontSize: 21,
-                marginTop: '10%',
-                letterSpacing: 2,
-                fontFamily: 'Montserrat-Medium',
-              }}>
+              style={styles.meaning}>
               {data.meaning}
             </Text>
 
             <Text
-              style={{
-                color: '#000',
-                fontSize: 19,
-                marginTop: '15%',
-                letterSpacing: 2,
-                fontFamily: 'Montserrat-Regular',
-              }}>
+              style={styles.sentence}>
               "{data.sentence}"
             </Text>
           </View>
