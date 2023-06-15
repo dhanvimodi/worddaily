@@ -24,7 +24,9 @@ const OnboardingScreen = props => {
   }
 
   return (
-    <Background>
+    // <Background>
+    <View
+        style={styles.container}>
       <Image
         style={styles.image}
         source={require('../../images/onboarding-screen-design.png')}
@@ -68,7 +70,8 @@ const OnboardingScreen = props => {
           </Text>
         </ImageBackground> */}
       </TouchableOpacity>
-    </Background>
+      </View>
+    // {/* </Background> */}
   );
 };
 

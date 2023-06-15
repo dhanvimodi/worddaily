@@ -1,6 +1,13 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+  container:{
+    height: '100%',
+    width: '100%',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    backgroundColor:"#ddd8c4",
+  },
     image:{
         height: '35%',
         aspectRatio: 1.8 / 2,

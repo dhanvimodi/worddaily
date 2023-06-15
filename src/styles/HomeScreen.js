@@ -2,28 +2,45 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container:{
-        height: '100%',
+       height: '100%',
         width: '100%',
+       // backgroundColor:"#ECCCAD",
+      backgroundColor:"#ddd8c4",
+      // backgroundColor:"#D2BAAF",
+
+      //  marginTop:'20%',
+       // flex:1,
+
         justifyContent: 'center',
-        alignItems: 'flex-start'
+        alignItems: 'center'
       },
       innerContainer:{
-        marginLeft: '10%',
-        width: '80%',
-        height: '100%'
+      //  marginLeft: '10%',
+      //  width: '80%',
+        flex:1
+      //  height: '100%'
       },
       name:{
         color: '#1e1e1e',
         fontWeight: 'bold',
         letterSpacing: 2,
         fontSize: 20,
-        marginTop: '30%',
+      //  marginTop: '30%',
       },
       wordContainer:{
-        height: '70%'
+        justifyContent:'center',
+        
+        alignItems:'center',
+        textAlign:'center',
+        marginLeft:'5%',
+        marginRight:'5%',
+       // width: '90%',
+       // backgroundColor:'pink',
+       // marginTop:'40%',
+
       },
       heading:{
-        marginTop: '20%',
+      //  marginTop: '20%',
         color: '#162016',
         letterSpacing: 3,
         fontSize: 18,
@@ -33,34 +50,38 @@ const styles = StyleSheet.create({
         letterSpacing: 2,
         fontSize: 32,
         fontWeight: 'bold',
-        marginTop: '10%',
+       // marginTop: '10%',
         fontFamily: 'Montserrat-Bold',
       },
       phonetic:{
         color: '#162017',
         letterSpacing: 3,
         fontSize: 18,
-        marginTop: '3%',
+       // marginTop: '2%',
       },
       partOfSpeech:{
         color: '#162017',
         letterSpacing: 3,
-        fontSize: 18,
-        marginTop: '2%',
+        fontSize: 16,
+        marginTop: '10%',
+        textAlign:'left'
       },
       meaning:{
         color: '#000',
-        fontSize: 21,
-        marginTop: '10%',
+        fontSize: 17,
+        textAlign:'center',
+       // marginTop: '10%',
         letterSpacing: 2,
-        fontFamily: 'Montserrat-Medium',
+        fontFamily: 'Montserrat-Regular',
       },
       sentence:{
         color: '#000',
-        fontSize: 19,
+        fontSize: 17,
         marginTop: '15%',
         letterSpacing: 2,
         fontFamily: 'Montserrat-Regular',
+                textAlign:'center',
+
       }
 
 })

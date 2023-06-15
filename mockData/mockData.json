@@ -1,212 +1,1644 @@
 [
-    {
-      "word": "Serendipity",
-      "meaning": "Luck that takes the form of finding valuable or pleasant things that are not looked for.",
-      "sentence": "She discovered the shop by serendipity after getting lost.",
-      "phonetic": "ˌserənˈdipədē",
-      "partOfSpeech": "Noun"
-    },
-    {
-      "word": "Maelstrom",
-      "meaning": "A situation or state of confused movement or violent turmoil.",
-      "sentence": "The boat was caught in a maelstrom of waves and wind.",
-      "phonetic": "ˈmeɪlstrəm",
-      "partOfSpeech": "Noun"
-    },
-    {
-      "word": "Propinquity",
-      "meaning": "The state of being close to someone or something; proximity.",
-      "sentence": "The propinquity of their desks made it easy for them to collaborate.",
-      "phonetic": "prəˈpɪŋkwəti",
-      "partOfSpeech": "Noun"
-    },
-    {
-      "word": "Euphony",
-      "meaning": "The quality of being pleasing to the ear.",
-      "sentence": "The song was filled with euphony, making it very enjoyable to listen to.",
-      "phonetic": "ˈjuːfəni",
-      "partOfSpeech": "Noun"
-    },
-    {
-      "word": "Labyrinth",
-      "meaning": "A complicated irregular network of passages or paths in which it is difficult to find one's way; a maze.",
-      "sentence": "She got lost in the labyrinth of hallways in the old building.",
-      "phonetic": "ˈlæbərɪnθ",
-      "partOfSpeech": "Noun"
-    },
-    {
-      "word": "Mollify",
-      "meaning": "Appease the anger or anxiety of (someone).",
-      "sentence": "She tried to mollify her upset coworker with kind words.",
-      "phonetic": "ˈmɒlɪfʌɪ",
-      "partOfSpeech": "Verb"
-    },
-    {
-      "word": "Ephemeral",
-      "meaning": "Lasting for a very short time.",
-      "sentence": "The beauty of the cherry blossoms is ephemeral.",
-      "phonetic": "ɪˈfɛm(ə)r(ə)l",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Pernicious",
-      "meaning": "Having a harmful effect, especially in a gradual or subtle way.",
-      "sentence": "The pernicious effects of smoking are well documented.",
-      "phonetic": "pəˈnɪʃəs",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Serene",
-      "meaning": "Calm, peaceful, and untroubled; tranquil.",
-      "sentence": "The view of the sunset over the ocean was serene and beautiful.",
-      "phonetic": "səˈriːn",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Propensity",
-      "meaning": "An inclination or natural tendency to behave in a particular way.",
-      "sentence": "Her propensity for always being on time made her a reliable employee.",
-      "phonetic": "prəˈpɛnsɪti",
-      "partOfSpeech": "Noun"
-    },
-    {
-      "word": "Supplant",
-      "meaning": "Supersede and replace.",
-      "sentence": "The new technology will supplant the old system.",
-      "phonetic": "səˈplɑːnt",
-      "partOfSpeech": "Verb"
-    },
-    {
-      "word": "Laconic",
-      "meaning": "Using very few words.",
-      "sentence": "His laconic response was both surprising and effective.",
-      "phonetic": "ləˈkɒnɪk",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Altruistic",
-      "meaning": "Showing a disinterested and selfless concern for the well-being of others; unselfish.",
-      "sentence": "His altruistic behavior earned him the respect of his peers.",
-      "phonetic": "ælˈtruːɪstɪk",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Ineffable",
-      "meaning": "Too great or extreme to be expressed or described in words.",
-      "sentence": "The beauty of the mountains was ineffable.",
-      "phonetic": "ɪnˈɛfəb(ə)l",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Truculent",
-      "meaning": "Eager or quick to argue or fight; aggressively defiant.",
-      "sentence": "His truculent behavior was making it difficult",
-      "phonetic": "trŭk′yə-lənt",
-      "partOfSpeech": "adjective"
-    },
-    {
-      "word": "Garrulous",
-      "meaning": "Excessively talkative, especially on trivial matters.",
-      "sentence": "The garrulous old man wouldn't stop talking about his pet bird.",
-      "phonetic": "ˈɡærʊləs",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Ostentatious",
-      "meaning": "Characterized by vulgar or pretentious display; designed to impress or attract notice.",
-      "sentence": "Her ostentatious jewelry made her stand out in the crowd.",
-      "phonetic": "ˌɒstɛnˈteɪʃəs",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Quixotic",
-      "meaning": "Exceedingly idealistic; unrealistic and impractical.",
-      "sentence": "His quixotic dream of world peace was admirable but unlikely.",
-      "phonetic": "kwɪkˈsɒtɪk",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Ubiquitous",
-      "meaning": "Present, appearing, or found everywhere.",
-      "sentence": "Smartphones have become ubiquitous in our daily lives.",
-      "phonetic": "juːˈbɪkwɪtəs",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Vitriolic",
-      "meaning": "Filled with bitter criticism or malice.",
-      "sentence": "Her vitriolic comments about her ex-husband were hurtful.",
-      "phonetic": "ˌvɪtrɪˈɒlɪk",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Zealous",
-      "meaning": "Having or showing great enthusiasm or zeal.",
-      "sentence": "The zealous volunteer worked tirelessly to help others.",
-      "phonetic": "ˈzɛləs",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Hegemony",
-      "meaning": "Leadership or dominance, especially by one state or social group over others.",
-      "sentence": "The rise of China has led to concerns about its potential hegemony.",
-      "phonetic": "hɪˈɡɛməni",
-      "partOfSpeech": "Noun"
-    },
-    {
-      "word": "Inscrutable",
-      "meaning": "Impossible to understand or interpret.",
-      "sentence": "His inscrutable expression gave no indication of his thoughts.",
-      "phonetic": "ɪnˈskruːtəbl",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Magnanimous",
-      "meaning": "Very generous or forgiving, especially toward a rival or someone less powerful than oneself.",
-      "sentence": "She was magnanimous in victory, congratulating her opponents with sincerity.",
-      "phonetic": "mæɡˈnænɪməs",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Paradigm",
-      "meaning": "A typical example or pattern of something; a model.",
-      "sentence": "This research provides a new paradigm for understanding the issue.",
-      "phonetic": "ˈpærədaɪm",
-      "partOfSpeech": "Noun"
-    },
-    {
-      "word": "Clandestine",
-      "meaning": "Kept secret or done secretively, especially because illicit.",
-      "sentence": "The group held clandestine meetings in a remote location.",
-      "phonetic": "klænˈdɛstɪn",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Disparage",
-      "meaning": "Regard or represent as being of little worth.",
-      "sentence": "She disparaged his work in front of his colleagues.",
-      "phonetic": "dɪˈsparɪdʒ",
-      "partOfSpeech": "Verb"
-    },
-    {
-      "word": "Facetious",
-      "meaning": "Treating serious issues with deliberately inappropriate humor.",
-      "sentence": "His facetious comments about the pandemic were insensitive.",
-      "phonetic": "fəˈsiːʃəs",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Petulant",
-      "meaning": "Childishly sulky or bad-tempered.",
-      "sentence": "He threw a petulant tantrum when he didn't get his way.",
-      "phonetic": "ˈpɛtjʊlənt",
-      "partOfSpeech": "Adjective"
-    },
-    {
-      "word": "Surreptitious",
-      "meaning": "Kept secret, especially because it would not be approved of.",
-      "sentence": "He made a surreptitious attempt to peek at her diary.",
-      "phonetic": "ˌsʌrəpˈtɪʃəs",
-      "partOfSpeech": "Adjective"
-    }
+  {
+    "id": "1",
+    "word": "Adore",
+    "meaning": "To love and admire someone deeply.",
+    "sentence": "She adores her little sister and spends a lot of time playing with her.",
+    "phonetic": "əˈdɔːr",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "2",
+    "word": "Astonish",
+    "meaning": "To surprise or impress someone greatly.",
+    "sentence": "The magician's tricks never fail to astonish the audience.",
+    "phonetic": "əˈstɒnɪʃ",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "3",
+    "word": "Amiable",
+    "meaning": "Having or displaying a friendly and pleasant manner.",
+    "sentence": "He was an amiable man who was well-liked by everyone.",
+    "phonetic": "ˈeɪmiəb(ə)l",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "4",
+    "word": "Abundance",
+    "meaning": "A very large quantity or amount of something.",
+    "sentence": "The garden was filled with an abundance of flowers.",
+    "phonetic": "əˈbʌndəns",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "5",
+    "word": "Admire",
+    "meaning": "To regard with respect, approval, or warm approval.",
+    "sentence": "I admire her dedication to her work and her positive attitude.",
+    "phonetic": "ədˈmaɪər",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "6",
+    "word": "Authentic",
+    "meaning": "Of undisputed origin and not a copy; genuine.",
+    "sentence": "The painting was confirmed to be authentic by art experts.",
+    "phonetic": "ɔːˈθɛntɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "7",
+    "word": "Awe",
+    "meaning": "A feeling of reverential respect mixed with fear or wonder.",
+    "sentence": "The grandeur of the mountains filled her with awe.",
+    "phonetic": "ɔː",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "8",
+    "word": "Adventurous",
+    "meaning": "Willing to take risks or try out new methods, ideas, or experiences.",
+    "sentence": "She had an adventurous spirit and loved to explore new places.",
+    "phonetic": "ədˈvɛnʧ(ə)rəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "9",
+    "word": "Awake",
+    "meaning": "To stop sleeping and become conscious.",
+    "sentence": "I usually awake early in the morning to start my day.",
+    "phonetic": "əˈweɪk",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "10",
+    "word": "Ambitious",
+    "meaning": "Having a strong desire and determination to succeed.",
+    "sentence": "She is an ambitious young woman who aims to become a CEO one day.",
+    "phonetic": "æmˈbɪʃəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "11",
+    "word": "Articulate",
+    "meaning": "Expressing oneself clearly and effectively.",
+    "sentence": "She was known for her ability to articulate her thoughts and ideas eloquently.",
+    "phonetic": "ɑːrˈtɪkjʊlət",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "12",
+    "word": "Ambivalent",
+    "meaning": "Having mixed feelings or contradictory ideas about someone or something.",
+    "sentence": "He felt ambivalent about accepting the job offer because it required him to relocate.",
+    "phonetic": "æmˈbɪvələnt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "13",
+    "word": "Adversity",
+    "meaning": "Difficulties or misfortune experienced in life.",
+    "sentence": "She faced many adversities throughout her career but never gave up.",
+    "phonetic": "ədˈvɜːrsəti",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "14",
+    "word": "Alleviate",
+    "meaning": "To make suffering, pain, or hardship less severe or intense.",
+    "sentence": "The medicine helped alleviate his headache and provided relief.",
+    "phonetic": "əˈliːvieɪt",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "15",
+    "word": "Aesthetic",
+    "meaning": "Concerned with beauty or the appreciation of beauty.",
+    "sentence": "She has a great sense of aesthetic and enjoys creating visually pleasing designs.",
+    "phonetic": "iːsˈθɛtɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "16",
+    "word": "Accommodate",
+    "meaning": "To provide lodging or space for someone or something.",
+    "sentence": "The hotel can accommodate up to 200 guests in its spacious rooms.",
+    "phonetic": "əˈkɒmədeɪt",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "17",
+    "word": "Anxiety",
+    "meaning": "A feeling of unease, such as worry or fear, often related to an upcoming event or uncertain outcome.",
+    "sentence": "He experienced anxiety before his important job interview.",
+    "phonetic": "æŋˈzaɪəti",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "18",
+    "word": "Artificial",
+    "meaning": "Made or produced by human beings rather than occurring naturally.",
+    "sentence": "The flowers in the vase were artificial, but they looked remarkably real.",
+    "phonetic": "ɑːrˈtɪfɪʃ(ə)l",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "19",
+    "word": "Apprehensive",
+    "meaning": "Feeling anxious or fearful about something that might happen.",
+    "sentence": "She was apprehensive about speaking in front of a large audience.",
+    "phonetic": "ˌæprɪˈhɛnsɪv",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "20",
+    "word": "Adorn",
+    "meaning": "To decorate or add beauty to something.",
+    "sentence": "The walls of the room were adorned with beautiful paintings.",
+    "phonetic": "əˈdɔːrn",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "21",
+    "word": "Acrimonious",
+    "meaning": "Characterized by bitterness, resentment, or sharpness in speech or behavior.",
+    "sentence": "The divorce proceedings were filled with acrimonious arguments between the couple.",
+    "phonetic": "ˌækrɪˈmoʊniəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "22",
+    "word": "Auspicious",
+    "meaning": "Conducive to success; favorable or promising.",
+    "sentence": "The new year started with an auspicious event that brought good fortune to everyone.",
+    "phonetic": "ɔːˈspɪʃəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "23",
+    "word": "Ascertain",
+    "meaning": "To find out or determine with certainty.",
+    "sentence": "He conducted a series of experiments to ascertain the cause of the problem.",
+    "phonetic": "ˌæsərˈteɪn",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "24",
+    "word": "Austerity",
+    "meaning": "Strictness or severity in living conditions, especially as a result of economic difficulties.",
+    "sentence": "The government implemented austerity measures to reduce the national debt.",
+    "phonetic": "ɔːˈstɛrəti",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "25",
+    "word": "Anomaly",
+    "meaning": "Something that deviates from what is standard, normal, or expected.",
+    "sentence": "The sudden drop in temperature in the middle of summer was an anomaly.",
+    "phonetic": "əˈnɒməli",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "26",
+    "word": "Benevolent",
+    "meaning": "Kind and generous, characterized by goodwill and a desire to do good.",
+    "sentence": "The philanthropist was known for his benevolent acts of charity.",
+    "phonetic": "bɪˈnɛvələnt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "27",
+    "word": "Belligerent",
+    "meaning": "Hostile, aggressive, or inclined to fight or argue.",
+    "sentence": "The two belligerent nations engaged in a long-standing conflict.",
+    "phonetic": "bəˈlɪdʒərənt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "28",
+    "word": "Bureaucracy",
+    "meaning": "A system of government or organization characterized by complex administrative procedures and excessive red tape.",
+    "sentence": "The bureaucratic process made it difficult to get the necessary permits.",
+    "phonetic": "bjʊəˈrɑːkrəsi",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "29",
+    "word": "Beneath",
+    "meaning": "In a lower position or place; under.",
+    "sentence": "She found a hidden treasure buried beneath the old tree.",
+    "phonetic": "bɪˈniːθ",
+    "partOfSpeech": "Preposition"
+  },
+  {
+    "id": "30",
+    "word": "Bewilder",
+    "meaning": "To cause someone to become confused or perplexed.",
+    "sentence": "The complex instructions bewildered the new recruits.",
+    "phonetic": "bɪˈwɪldər",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "31",
+    "word": "Blatant",
+    "meaning": "Done openly and unashamedly; obvious or conspicuous.",
+    "sentence": "His blatant disregard for the rules was evident to everyone.",
+    "phonetic": "ˈbleɪtnt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "32",
+    "word": "Broach",
+    "meaning": "To raise a sensitive or difficult subject for discussion.",
+    "sentence": "He decided to broach the topic of salary during the job interview.",
+    "phonetic": "broʊtʃ",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "33",
+    "word": "Brevity",
+    "meaning": "Concise and exact use of words in writing or speech.",
+    "sentence": "The speaker's speech was admired for its brevity and clarity.",
+    "phonetic": "ˈbrɛvəti",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "34",
+    "word": "Blatantly",
+    "meaning": "In an open and unashamed manner; in an obvious or conspicuous way.",
+    "sentence": "He blatantly ignored the rules and continued to behave as he pleased.",
+    "phonetic": "ˈbleɪtntli",
+    "partOfSpeech": "Adverb"
+  },
+  {
+    "id": "35",
+    "word": "Benevolence",
+    "meaning": "The quality of being well-meaning, kind, and generous.",
+    "sentence": "Her acts of benevolence helped many people in need.",
+    "phonetic": "bɪˈnɛvələns",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "36",
+    "word": "Conundrum",
+    "meaning": "A confusing or difficult problem or question that is challenging to solve.",
+    "sentence": "The puzzle presented a conundrum that stumped even the brightest minds.",
+    "phonetic": "kəˈnʌndrəm",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "37",
+    "word": "Cryptic",
+    "meaning": "Having a meaning that is mysterious, obscure, or difficult to understand.",
+    "sentence": "The message was written in cryptic code and required decoding.",
+    "phonetic": "ˈkrɪptɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "38",
+    "word": "Circumspect",
+    "meaning": "Wary and unwilling to take risks; cautious and prudent.",
+    "sentence": "He approached the situation with a circumspect attitude, considering all potential risks.",
+    "phonetic": "ˈsɜːrkəmspekt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "39",
+    "word": "Coalesce",
+    "meaning": "To come together and form one mass or whole; merge or unite.",
+    "sentence": "The separate groups coalesced to form a strong coalition.",
+    "phonetic": "koʊəˈlɛs",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "40",
+    "word": "Cognizant",
+    "meaning": "Having knowledge, awareness, or understanding of something.",
+    "sentence": "She was cognizant of the risks involved but decided to proceed anyway.",
+    "phonetic": "ˈkɒɡnɪzənt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "41",
+    "word": "Clandestine",
+    "meaning": "Done in a secret or concealed manner, especially for illicit purposes.",
+    "sentence": "They met in a clandestine location to discuss their covert operation.",
+    "phonetic": "klænˈdɛstɪn",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "42",
+    "word": "Cursory",
+    "meaning": "Hasty, brief, and without attention to detail; superficial.",
+    "sentence": "He gave the report only a cursory glance before moving on to other tasks.",
+    "phonetic": "ˈkɜːrsəri",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "43",
+    "word": "Candid",
+    "meaning": "Truthful, straightforward, and honest, often to the point of being blunt or frank.",
+    "sentence": "She appreciated his candid feedback, even though it was tough to hear.",
+    "phonetic": "ˈkændɪd",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "44",
+    "word": "Capricious",
+    "meaning": "Given to sudden and unaccountable changes of mood or behavior; unpredictable.",
+    "sentence": "Her capricious nature made it difficult to anticipate her reactions.",
+    "phonetic": "kəˈprɪʃəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "45",
+    "word": "Convoluted",
+    "meaning": "Extremely complex, intricate, or difficult to follow.",
+    "sentence": "The plot of the novel was so convoluted that it required multiple readings to understand.",
+    "phonetic": "ˈkɑːnvəluːtɪd",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "46",
+    "word": "Disparage",
+    "meaning": "To belittle, criticize, or speak negatively about someone or something.",
+    "sentence": "She had a tendency to disparage others' achievements to make herself feel superior.",
+    "phonetic": "dɪˈspærɪdʒ",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "47",
+    "word": "Dissonance",
+    "meaning": "Lack of harmony or agreement, especially in musical tones or ideas.",
+    "sentence": "The dissonance between their opinions led to heated arguments.",
+    "phonetic": "ˈdɪsənəns",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "48",
+    "word": "Dearth",
+    "meaning": "A scarcity or lack of something; an inadequate supply.",
+    "sentence": "There was a dearth of food and water in the drought-stricken region.",
+    "phonetic": "dɜːrθ",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "49",
+    "word": "Debacle",
+    "meaning": "A sudden and disastrous failure or collapse; a fiasco.",
+    "sentence": "The company's bankruptcy was a result of the financial debacle.",
+    "phonetic": "dɪˈbɑːkl",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "50",
+    "word": "Dubious",
+    "meaning": "Fraught with uncertainty or doubt; skeptical or hesitant.",
+    "sentence": "His promises seemed dubious, and many questioned their validity.",
+    "phonetic": "ˈduːbiəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "51",
+    "word": "Dichotomy",
+    "meaning": "A division or contrast between two opposing things or ideas.",
+    "sentence": "The novel explored the dichotomy between good and evil.",
+    "phonetic": "daɪˈkɒtəmi",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "52",
+    "word": "Deterrent",
+    "meaning": "Something that discourages or prevents someone from taking a particular course of action.",
+    "sentence": "The presence of security cameras acts as a deterrent to potential thieves.",
+    "phonetic": "dɪˈtɜːrənt",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "53",
+    "word": "Demeanor",
+    "meaning": "The outward behavior or appearance of a person; their facial expression, body language, and overall attitude.",
+    "sentence": "Despite feeling nervous, she maintained a calm and confident demeanor.",
+    "phonetic": "dɪˈmiːnər",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "54",
+    "word": "Disparate",
+    "meaning": "Distinctly different or unrelated; not comparable.",
+    "sentence": "The two artists had disparate styles, making their works easily distinguishable.",
+    "phonetic": "ˈdɪspərət",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "55",
+    "word": "Delineate",
+    "meaning": "To describe, portray, or outline with precision and detail.",
+    "sentence": "The architect delineated the floor plan of the new building.",
+    "phonetic": "dɪˈlɪniˌeɪt",
+    "partOfSpeech": "Verb"
+  },
+
+  {
+    "id": "56",
+    "word": "Ephemeral",
+    "meaning": "Lasting for a very short time; fleeting or transitory.",
+    "sentence": "The beauty of cherry blossoms is ephemeral, as they bloom for only a few weeks.",
+    "phonetic": "ɪˈfɛmərəl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "57",
+    "word": "Equivocate",
+    "meaning": "To use ambiguous language to deceive or avoid committing to a definite stance or answer.",
+    "sentence": "The politician would often equivocate when asked direct questions about his policies.",
+    "phonetic": "ɪˈkwɪvəˌkeɪt",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "58",
+    "word": "Exacerbate",
+    "meaning": "To make a problem, situation, or condition worse or more intense.",
+    "sentence": "His careless actions only served to exacerbate the already tense situation.",
+    "phonetic": "ɪɡˈzæsərˌbeɪt",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "59",
+    "word": "Eccentric",
+    "meaning": "Unconventional, peculiar, or slightly strange in behavior, appearance, or character.",
+    "sentence": "The eccentric artist was known for her avant-garde style and eccentric personality.",
+    "phonetic": "ɪkˈsɛntrɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "60",
+    "word": "Elusive",
+    "meaning": "Difficult to find, catch, achieve, or remember; evasive or elusive.",
+    "sentence": "The fugitive remained elusive despite an extensive manhunt by the authorities.",
+    "phonetic": "ɪˈluːsɪv",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "61",
+    "word": "Exorbitant",
+    "meaning": "Unreasonably high or excessive in amount, price, or degree.",
+    "sentence": "The hotel charges exorbitant rates during peak tourist season.",
+    "phonetic": "ɪɡˈzɔrbɪtənt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "62",
+    "word": "Egregious",
+    "meaning": "Outstandingly bad or shocking; flagrant or blatant.",
+    "sentence": "The company's negligence resulted in an egregious error that caused harm to many.",
+    "phonetic": "ɪˈɡriːdʒəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "63",
+    "word": "Endeavor",
+    "meaning": "To make a determined effort; strive or attempt.",
+    "sentence": "She will endeavor to complete the project before the deadline.",
+    "phonetic": "ɪnˈdɛvər",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "64",
+    "word": "Enigma",
+    "meaning": "A person or thing that is mysterious, puzzling, or difficult to understand.",
+    "sentence": "The disappearance of the ancient civilization remains an enigma to archaeologists.",
+    "phonetic": "ɪˈnɪɡmə",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "65",
+    "word": "Euphoria",
+    "meaning": "A feeling or state of intense excitement, happiness, or joy.",
+    "sentence": "Winning the championship filled the team with euphoria and jubilation.",
+    "phonetic": "juːˈfɔriə",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "66",
+    "word": "Fallacious",
+    "meaning": "Based on a mistaken belief or unsound reasoning; deceptive or misleading.",
+    "sentence": "The argument presented by the speaker was fallacious and lacked logical coherence.",
+    "phonetic": "fəˈleɪʃəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "67",
+    "word": "Furtive",
+    "meaning": "Attempting to avoid notice or attention, typically because of guilt or a desire to conceal something.",
+    "sentence": "He cast a furtive glance around the room before slipping out unnoticed.",
+    "phonetic": "ˈfɜːrtɪv",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "68",
+    "word": "Fathom",
+    "meaning": "To understand or comprehend (a difficult or complex idea) after much thought.",
+    "sentence": "She struggled to fathom the depths of his philosophical theories.",
+    "phonetic": "ˈfæðəm",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "69",
+    "word": "Facade",
+    "meaning": "An outward appearance that conceals the true nature of something; a deceptive front.",
+    "sentence": "Behind his friendly facade, he harbored malicious intentions.",
+    "phonetic": "fəˈsɑːd",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "70",
+    "word": "Frivolous",
+    "meaning": "Not having any serious purpose or value; trivial or silly.",
+    "sentence": "She spent her inheritance on frivolous luxuries instead of investing it wisely.",
+    "phonetic": "ˈfrɪvələs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "71",
+    "word": "Frenetic",
+    "meaning": "Fast and energetic in a rather wild or uncontrolled way; frenzied or frantic.",
+    "sentence": "The frenetic pace of the city can be overwhelming for some people.",
+    "phonetic": "frəˈnɛtɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "72",
+    "word": "Formidable",
+    "meaning": "Inspiring fear, respect, or awe due to being impressive, powerful, or capable.",
+    "sentence": "The champion boxer was known for his formidable strength and skill.",
+    "phonetic": "fɔːrˈmɪdəbəl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "73",
+    "word": "Fluctuate",
+    "meaning": "To rise and fall irregularly in number, amount, or value; vary or oscillate.",
+    "sentence": "The stock prices fluctuate daily, reflecting the volatility of the market.",
+    "phonetic": "ˈflʌktʃueɪt",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "74",
+    "word": "Foster",
+    "meaning": "To encourage or promote the development or growth of something.",
+    "sentence": "The organization works to foster a sense of community and support among its members.",
+    "phonetic": "ˈfɒstər",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "75",
+    "word": "Flamboyant",
+    "meaning": "Tending to attract attention because of one's exuberance, confidence, or stylishness; showy or extravagant.",
+    "sentence": "The fashion designer is known for his flamboyant runway shows and bold designs.",
+    "phonetic": "flæmˈbɔɪənt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "76",
+    "word": "Galvanize",
+    "meaning": "To shock or excite someone into taking action; stimulate or motivate.",
+    "sentence": "The inspiring speech galvanized the crowd to rally for change.",
+    "phonetic": "ˈɡælvəˌnaɪz",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "77",
+    "word": "Grandiose",
+    "meaning": "Impressive or ambitious in a way that is intended to attract attention or admiration; extravagant or pretentious.",
+    "sentence": "He had grandiose plans for his business empire, but they were never realized.",
+    "phonetic": "ˈɡrændiˌoʊs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "78",
+    "word": "Gratuitous",
+    "meaning": "Unnecessary, uncalled for, or lacking justification; done without a good reason.",
+    "sentence": "The violence in the movie seemed gratuitous and served no purpose in the plot.",
+    "phonetic": "ɡrəˈtuːɪtəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "79",
+    "word": "Gregarious",
+    "meaning": "Fond of the company of others; sociable, outgoing, or friendly.",
+    "sentence": "She was a gregarious person who enjoyed socializing and meeting new people.",
+    "phonetic": "ɡrɪˈɡɛəriəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "80",
+    "word": "Grueling",
+    "meaning": "Exhausting or demanding great effort, stamina, or perseverance; physically or mentally challenging.",
+    "sentence": "The athletes underwent a grueling training regimen in preparation for the marathon.",
+    "phonetic": "ˈɡruːlɪŋ",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "81",
+    "word": "Garrulous",
+    "meaning": "Excessively talkative, especially on trivial matters; loquacious or rambling.",
+    "sentence": "The garrulous old man would often ramble on for hours without a pause.",
+    "phonetic": "ˈɡærələs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "82",
+    "word": "Guile",
+    "meaning": "Sly or cunning intelligence; craftiness or deceitfulness.",
+    "sentence": "He relied on his guile to outsmart his opponents and win the game.",
+    "phonetic": "ɡaɪl",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "83",
+    "word": "Gallant",
+    "meaning": "Brave, heroic, or chivalrous in manner; showing politeness and respect towards women.",
+    "sentence": "He was a gallant knight who always protected the weak and defended justice.",
+    "phonetic": "ˈɡælənt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "84",
+    "word": "Gregarious",
+    "meaning": "Fond of the company of others; sociable, outgoing, or friendly.",
+    "sentence": "She was a gregarious person who enjoyed socializing and meeting new people.",
+    "phonetic": "ɡrɪˈɡɛəriəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "85",
+    "word": "Gusto",
+    "meaning": "Enthusiastic and vigorous enjoyment or appreciation; zest or zeal.",
+    "sentence": "He approached his work with gusto, tackling every task with energy and passion.",
+    "phonetic": "ˈɡʌstoʊ",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "95",
+    "word": "Hierarchy",
+    "meaning": "A system or organization in which people or groups are ranked according to their status or authority.",
+    "sentence": "The corporate hierarchy determines the chain of command within the company.",
+    "phonetic": "ˈhaɪərɑːrki",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "96",
+    "word": "Hypothetical",
+    "meaning": "Based on or involving a hypothesis; theoretical or supposed.",
+    "sentence": "Let's consider a hypothetical situation where all resources are unlimited.",
+    "phonetic": "ˌhaɪpəˈθɛtɪkəl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "97",
+    "word": "Herald",
+    "meaning": "To announce or proclaim; to be a sign or indication of something to come.",
+    "sentence": "The arrival of the royal procession heralded the beginning of the ceremony.",
+    "phonetic": "ˈhɛrəld",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "98",
+    "word": "Humble",
+    "meaning": "Having or showing a modest or low estimate of one's importance; unassuming or not arrogant.",
+    "sentence": "Despite his success, he remained humble and treated everyone with kindness.",
+    "phonetic": "ˈhʌmbəl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "99",
+    "word": "Homogeneous",
+    "meaning": "Consisting of parts or elements that are all of the same kind; uniform or consistent.",
+    "sentence": "The mixture should be stirred until it becomes homogeneous in texture.",
+    "phonetic": "ˌhoʊmoʊˈdʒiːniəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "100",
+    "word": "Hesitate",
+    "meaning": "To pause or hold back in uncertainty or unwillingness; to be reluctant or indecisive.",
+    "sentence": "She hesitated before making a decision, weighing the pros and cons in her mind.",
+    "phonetic": "ˈhɛzɪteɪt",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "101",
+    "word": "Hypocrite",
+    "meaning": "A person who pretends to have moral standards or beliefs that they do not actually possess; a person who acts in contradiction to their stated beliefs.",
+    "sentence": "He claimed to be a champion of environmentalism, but his actions as a polluter revealed him to be a hypocrite.",
+    "phonetic": "ˈhɪpəkrɪt",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "102",
+    "word": "Heed",
+    "meaning": "To pay attention to, take notice of, or consider carefully.",
+    "sentence": "It is important to heed the advice of experienced professionals in the field.",
+    "phonetic": "hiːd",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "103",
+    "word": "Hindsight",
+    "meaning": "Understanding of a situation or event only after it has happened; looking back on past events with knowledge or insight.",
+    "sentence": "In hindsight, she realized she should have made a different decision.",
+    "phonetic": "ˈhaɪndsaɪt",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "104",
+    "word": "Harmony",
+    "meaning": "The state of being in agreement, peaceful coexistence, or pleasing combination of elements.",
+    "sentence": "The music filled the room with harmony, creating a peaceful atmosphere.",
+    "phonetic": "ˈhɑːrməni",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "105",
+    "word": "Hostile",
+    "meaning": "Showing or feeling opposition or unfriendliness; antagonistic or aggressive.",
+    "sentence": "The two teams had a hostile rivalry, often engaging in heated confrontations.",
+    "phonetic": "ˈhɑːstaɪl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "106",
+    "word": "Humility",
+    "meaning": "The quality of being humble or modest; the absence of arrogance or pride.",
+    "sentence": "His success did not diminish his humility; he remained down-to-earth and grateful.",
+    "phonetic": "hjuːˈmɪlɪti",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "107",
+    "word": "Hazard",
+    "meaning": "A danger or risk; something that may cause harm or injury.",
+    "sentence": "The icy road posed a hazard to drivers, increasing the risk of accidents.",
+    "phonetic": "ˈhæzərd",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "108",
+    "word": "Hinder",
+    "meaning": "To create difficulties or obstacles that delay or prevent something; to obstruct or impede.",
+    "sentence": "The heavy rain hindered the progress of the construction project.",
+    "phonetic": "ˈhɪndər",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "109",
+    "word": "Harmonious",
+    "meaning": "Forming a pleasing or consistent whole; characterized by agreement or compatibility.",
+    "sentence": "The members of the band had a harmonious relationship, working together seamlessly.",
+    "phonetic": "hɑːrˈmoʊniəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "110",
+    "word": "Infer",
+    "meaning": "To deduce or conclude based on evidence, reasoning, or information.",
+    "sentence": "From the clues given, we can infer that he is the prime suspect.",
+    "phonetic": "ɪnˈfɜːr",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "111",
+    "word": "Intricate",
+    "meaning": "Complex or detailed; having many small parts or elements.",
+    "sentence": "The artist created an intricate design with intricate patterns and delicate lines.",
+    "phonetic": "ˈɪntrɪkət",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "112",
+    "word": "Innovate",
+    "meaning": "To introduce new ideas, methods, or products; to make changes in something established.",
+    "sentence": "The company constantly strives to innovate and stay ahead of the competition.",
+    "phonetic": "ˈɪnəveɪt",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "113",
+    "word": "Inevitable",
+    "meaning": "Certain to happen; unavoidable or bound to occur.",
+    "sentence": "Change is inevitable, and we must learn to adapt to new circumstances.",
+    "phonetic": "ɪnˈɛvɪtəbəl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "114",
+    "word": "Impede",
+    "meaning": "To obstruct, hinder, or interfere with the progress or movement of something.",
+    "sentence": "The heavy traffic impeded our journey, causing delays and frustration.",
+    "phonetic": "ɪmˈpiːd",
+    "partOfSpeech": "Verb"
+  },
+
+  {
+    "id": "115",
+    "word": "Juxtapose",
+    "meaning": "To place side by side for the purpose of comparison or contrast.",
+    "sentence": "The artist juxtaposed vibrant colors to create a visually striking composition.",
+    "phonetic": "ˌdʒʌkstəˈpoʊz",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "116",
+    "word": "Jargon",
+    "meaning": "Specialized terminology or technical language used by a particular group or profession.",
+    "sentence": "The medical jargon used by doctors can be difficult for patients to understand.",
+    "phonetic": "ˈdʒɑːrɡən",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "117",
+    "word": "Justify",
+    "meaning": "To provide or show a valid reason or explanation for something; to defend or prove as right or reasonable.",
+    "sentence": "He tried to justify his actions by claiming self-defense.",
+    "phonetic": "ˈdʒʌstɪfaɪ",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "118",
+    "word": "Jeopardy",
+    "meaning": "Danger or risk of loss, harm, or failure; being in a hazardous or precarious situation.",
+    "sentence": "His reckless behavior put his own life in jeopardy.",
+    "phonetic": "ˈdʒɛpərdi",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "119",
+    "word": "Jeopardize",
+    "meaning": "To put something or someone in danger or at risk; to jeopardize the safety, success, or well-being of.",
+    "sentence": "His irresponsible actions could jeopardize the entire project.",
+    "phonetic": "ˈdʒɛpərdaɪz",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "120",
+    "word": "Keen",
+    "meaning": "Having a sharp or eager intellect or perception; quick to understand or react.",
+    "sentence": "She has a keen sense of observation, noticing even the smallest details.",
+    "phonetic": "kiːn",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "121",
+    "word": "Knack",
+    "meaning": "A special skill or talent for doing something easily or naturally.",
+    "sentence": "He has a knack for solving puzzles; he can solve them quickly and effortlessly.",
+    "phonetic": "næk",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "122",
+    "word": "Kinship",
+    "meaning": "A connection or similarity between people or things; a sense of being related or connected.",
+    "sentence": "There is a strong kinship between the two artists; their styles and themes are similar.",
+    "phonetic": "ˈkɪnʃɪp",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "123",
+    "word": "Knotty",
+    "meaning": "Difficult, complex, or intricate; involving problems or challenges.",
+    "sentence": "He faced a knotty mathematical problem that took him hours to solve.",
+    "phonetic": "ˈnɑːti",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "124",
+    "word": "Kinetic",
+    "meaning": "Related to or produced by motion; characterized by movement or energy.",
+    "sentence": "The kinetic sculpture captivated viewers with its dynamic and ever-changing form.",
+    "phonetic": "kɪˈnɛtɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "125",
+    "word": "Lethargic",
+    "meaning": "Feeling sluggish, lacking energy or motivation; being drowsy or slow-moving.",
+    "sentence": "After a long day of work, she felt lethargic and had no desire to do anything.",
+    "phonetic": "ləˈθɑːrdʒɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "126",
+    "word": "Lucid",
+    "meaning": "Clear and easily understood; rational, sane, or mentally sharp.",
+    "sentence": "Even though she was in pain, she remained lucid and able to express her wishes.",
+    "phonetic": "ˈluːsɪd",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "127",
+    "word": "Lavish",
+    "meaning": "Characterized by or involving extravagant, abundant, or luxurious spending or display.",
+    "sentence": "The wedding reception was a lavish affair, with a grand venue and gourmet food.",
+    "phonetic": "ˈlævɪʃ",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "128",
+    "word": "Luminous",
+    "meaning": "Radiating or reflecting light; glowing or shining brightly.",
+    "sentence": "The stars appeared luminous in the dark sky, illuminating the night with their brilliance.",
+    "phonetic": "ˈluːmɪnəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "129",
+    "word": "Loquacious",
+    "meaning": "Tending to talk a great deal; talkative or chatty.",
+    "sentence": "She is known for being loquacious; she can engage in conversations for hours.",
+    "phonetic": "loʊˈkweɪʃəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "130",
+    "word": "Meticulous",
+    "meaning": "Showing great attention to detail; thorough, careful, and precise in work or tasks.",
+    "sentence": "He was meticulous in his research, leaving no stone unturned to gather accurate information.",
+    "phonetic": "məˈtɪkjələs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "131",
+    "word": "Mundane",
+    "meaning": "Lacking interest or excitement; dull, ordinary, or commonplace.",
+    "sentence": "He found his job mundane, doing the same tasks day in and day out.",
+    "phonetic": "mʌnˈdeɪn",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "132",
+    "word": "Majestic",
+    "meaning": "Having grandeur, dignity, or beauty; impressive or awe-inspiring in appearance or scale.",
+    "sentence": "The majestic mountain range stretched as far as the eye could see, creating a breathtaking view.",
+    "phonetic": "məˈdʒɛstɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "133",
+    "word": "Melancholy",
+    "meaning": "A feeling of sadness, pensive thoughtfulness, or a deep, gentle sadness.",
+    "sentence": "As the rain fell, a sense of melancholy settled over her, evoking memories of the past.",
+    "phonetic": "ˈmɛlənkɑːli",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "134",
+    "word": "Mitigate",
+    "meaning": "To make less severe, intense, or harmful; to alleviate or lessen the impact of something negative.",
+    "sentence": "Planting more trees can help mitigate the effects of climate change.",
+    "phonetic": "ˈmɪtɪɡeɪt",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "135",
+    "word": "Nurture",
+    "meaning": "To care for, nourish, or encourage the growth and development of someone or something.",
+    "sentence": "Parents play a vital role in nurturing their children and helping them thrive.",
+    "phonetic": "ˈnɜːrtʃər",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "136",
+    "word": "Nostalgia",
+    "meaning": "A sentimental longing or wistful affection for the past, typically for a period or place with happy personal associations.",
+    "sentence": "Visiting her childhood home filled her with nostalgia as she reminisced about her youth.",
+    "phonetic": "nɑːˈstældʒə",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "137",
+    "word": "Novice",
+    "meaning": "A person who is new or inexperienced in a particular activity, skill, or field.",
+    "sentence": "She is a novice guitarist, having just started learning how to play a few months ago.",
+    "phonetic": "ˈnɑːvɪs",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "138",
+    "word": "Nurture",
+    "meaning": "To care for, nourish, or encourage the growth and development of someone or something.",
+    "sentence": "Parents play a vital role in nurturing their children and helping them thrive.",
+    "phonetic": "ˈnɜːrtʃər",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "139",
+    "word": "Nostalgia",
+    "meaning": "A sentimental longing or wistful affection for the past, typically for a period or place with happy personal associations.",
+    "sentence": "Visiting her childhood home filled her with nostalgia as she reminisced about her youth.",
+    "phonetic": "nɑːˈstældʒə",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "135",
+    "word": "Nurture",
+    "meaning": "To care for, nourish, or encourage the growth and development of someone or something.",
+    "sentence": "Parents play a vital role in nurturing their children and helping them thrive.",
+    "phonetic": "ˈnɜːrtʃər",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "136",
+    "word": "Nostalgia",
+    "meaning": "A sentimental longing or wistful affection for the past, typically for a period or place with happy personal associations.",
+    "sentence": "Visiting her childhood home filled her with nostalgia as she reminisced about her youth.",
+    "phonetic": "nɑːˈstældʒə",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "137",
+    "word": "Novice",
+    "meaning": "A person who is new or inexperienced in a particular activity, skill, or field.",
+    "sentence": "She is a novice guitarist, having just started learning how to play a few months ago.",
+    "phonetic": "ˈnɑːvɪs",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "138",
+    "word": "Nurture",
+    "meaning": "To care for, nourish, or encourage the growth and development of someone or something.",
+    "sentence": "Parents play a vital role in nurturing their children and helping them thrive.",
+    "phonetic": "ˈnɜːrtʃər",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "139",
+    "word": "Nostalgia",
+    "meaning": "A sentimental longing or wistful affection for the past, typically for a period or place with happy personal associations.",
+    "sentence": "Visiting her childhood home filled her with nostalgia as she reminisced about her youth.",
+    "phonetic": "nɑːˈstældʒə",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "140",
+    "word": "Persevere",
+    "meaning": "To persist in an action, belief, or purpose despite difficulties, obstacles, or setbacks.",
+    "sentence": "She had to persevere through numerous challenges to achieve her goal.",
+    "phonetic": "ˌpɜːrsəˈvɪr",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "141",
+    "word": "Prudent",
+    "meaning": "Exercising good judgment, wisdom, and caution in practical matters; sensible and careful.",
+    "sentence": "She made a prudent decision by saving money for emergencies instead of spending it all.",
+    "phonetic": "ˈpruːdnt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "142",
+    "word": "Ponder",
+    "meaning": "To think about or consider something carefully and deeply; to reflect or meditate upon.",
+    "sentence": "He sat by the river, pondering the meaning of life and the choices he had made.",
+    "phonetic": "ˈpɑːndər",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "143",
+    "word": "Paradox",
+    "meaning": "A seemingly contradictory statement, situation, or phenomenon that may reveal a deeper truth.",
+    "sentence": "The concept of time travel is a fascinating paradox, challenging our understanding of cause and effect.",
+    "phonetic": "ˈpærədɑːks",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "144",
+    "word": "Profound",
+    "meaning": "Having deep meaning or significance; showing great intellectual or emotional depth.",
+    "sentence": "The book contained profound insights into the human condition and sparked introspection.",
+    "phonetic": "prəˈfaʊnd",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "145",
+    "word": "Resilient",
+    "meaning": "Having the ability to recover quickly from difficulties or bounce back from adversity.",
+    "sentence": "Despite facing many challenges, she remained resilient and continued to pursue her dreams.",
+    "phonetic": "rɪˈzɪliənt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "146",
+    "word": "Rationale",
+    "meaning": "The underlying reason or justification for a decision, action, or belief.",
+    "sentence": "The rationale behind the new policy was to ensure the safety of all employees.",
+    "phonetic": "ˌræʃəˈnæl",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "147",
+    "word": "Reconcile",
+    "meaning": "To restore friendly relations or resolve a conflict between individuals or groups; to make compatible or harmonize conflicting ideas or beliefs.",
+    "sentence": "They were able to reconcile their differences and work together towards a common goal.",
+    "phonetic": "ˈrɛkənsaɪl",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "148",
+    "word": "Renowned",
+    "meaning": "Famous or well-known for a particular skill, achievement, or quality.",
+    "sentence": "She is a renowned scientist, known for her groundbreaking research in the field.",
+    "phonetic": "rɪˈnaʊnd",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "149",
+    "word": "Resolute",
+    "meaning": "Determined, purposeful, and unwavering in one's beliefs, decisions, or actions.",
+    "sentence": "She remained resolute in her commitment to making a positive change in her community.",
+    "phonetic": "ˈrɛzəˌlut",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "150",
+    "word": "Surreptitious",
+    "meaning": "Done, made, or acquired by stealth; acting or proceeding in a covert or secretive manner.",
+    "sentence": "He made a surreptitious glance at his phone to check the time during the meeting.",
+    "phonetic": "ˌsərəpˈtɪʃəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "151",
+    "word": "Sage",
+    "meaning": "A wise and knowledgeable person, often respected for their experience and good judgment.",
+    "sentence": "He sought advice from a sage to help him make an important life decision.",
+    "phonetic": "seɪdʒ",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "152",
+    "word": "Serene",
+    "meaning": "Calm, peaceful, and untroubled; free from stress or disturbance.",
+    "sentence": "She found solace in the serene beauty of nature, allowing her mind to relax.",
+    "phonetic": "səˈriːn",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "153",
+    "word": "Stellar",
+    "meaning": "Of or relating to a star or stars; exceptionally good or outstanding.",
+    "sentence": "The band gave a stellar performance, leaving the audience in awe.",
+    "phonetic": "ˈstɛlər",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "154",
+    "word": "Synchronize",
+    "meaning": "To cause to occur or operate at the same time or rate; to coordinate or align in time.",
+    "sentence": "The dancers synchronized their movements perfectly to the rhythm of the music.",
+    "phonetic": "ˈsɪŋkrəˌnaɪz",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "155",
+    "word": "Sagacious",
+    "meaning": "Having or showing keen mental discernment and good judgment; wise, insightful, and shrewd.",
+    "sentence": "The CEO was known for his sagacious decision-making and strategic thinking.",
+    "phonetic": "səˈɡeɪʃəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "156",
+    "word": "Serenade",
+    "meaning": "To entertain or express love or admiration to someone through music or song, typically performed outside at night.",
+    "sentence": "He serenaded his partner with a beautiful love song under the starry sky.",
+    "phonetic": "ˌsɛrəˈneɪd",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "157",
+    "word": "Tangible",
+    "meaning": "Perceptible by touch; capable of being touched or felt; real or concrete.",
+    "sentence": "She wanted to see tangible results from her hard work and efforts.",
+    "phonetic": "ˈtændʒəbəl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "158",
+    "word": "Tenacious",
+    "meaning": "Persistent, determined, and unwilling to give up or let go; holding firmly to something.",
+    "sentence": "She showed a tenacious spirit in pursuing her goals despite facing many obstacles.",
+    "phonetic": "təˈneɪʃəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "159",
+    "word": "Transcend",
+    "meaning": "To go beyond or rise above the limits or boundaries of something; to surpass or exceed.",
+    "sentence": "His artwork had the power to transcend cultural differences and touch people's hearts.",
+    "phonetic": "trænˈsɛnd",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "160",
+    "word": "Tranquil",
+    "meaning": "Free from disturbance, calm, and peaceful; serene and quiet.",
+    "sentence": "She found solace in the tranquil beauty of the countryside, away from the noise of the city.",
+    "phonetic": "ˈtræŋkwɪl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "161",
+    "word": "Thrive",
+    "meaning": "To grow, develop, or be successful in a healthy or vigorous way; to flourish or prosper.",
+    "sentence": "With dedication and hard work, she was able to thrive in her chosen career.",
+    "phonetic": "θraɪv",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "162",
+    "word": "Vivid",
+    "meaning": "Producing clear and intense mental images; lively, bright, and colorful.",
+    "sentence": "She had a vivid imagination and could picture scenes with great detail.",
+    "phonetic": "ˈvɪvɪd",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "163",
+    "word": "Vulnerable",
+    "meaning": "Open to physical or emotional harm, attack, or criticism; susceptible to being wounded or hurt.",
+    "sentence": "She felt vulnerable after sharing her personal story with the audience.",
+    "phonetic": "ˈvʌlnərəbl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "164",
+    "word": "Virtuoso",
+    "meaning": "A person highly skilled in a particular art, especially music; an expert or master.",
+    "sentence": "He played the piano with the skill and precision of a virtuoso.",
+    "phonetic": "ˌvɜːrtʃuˈoʊsoʊ",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "165",
+    "word": "Vex",
+    "meaning": "To annoy, frustrate, or provoke someone; to cause distress or agitation.",
+    "sentence": "The constant noise from the construction site vexed her and made it difficult to concentrate.",
+    "phonetic": "vɛks",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "166",
+    "word": "Vibrant",
+    "meaning": "Full of energy, enthusiasm, and life; bright, vivid, and striking.",
+    "sentence": "The city's vibrant nightlife and bustling streets made it an exciting place to visit.",
+    "phonetic": "ˈvaɪbrənt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "167",
+    "word": "Ubiquitous",
+    "meaning": "Present, appearing, or found everywhere; being or seeming to be everywhere at the same time.",
+    "sentence": "Smartphones have become ubiquitous in modern society.",
+    "phonetic": "juˈbɪkwɪtəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "168",
+    "word": "Ultimate",
+    "meaning": "Being or happening at the end of a process; final or eventual; surpassing all others; maximum or supreme.",
+    "sentence": "Winning the championship was the ultimate goal for the team.",
+    "phonetic": "ˈʌltɪmət",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "169",
+    "word": "Unanimous",
+    "meaning": "Agreed upon or supported by everyone involved; having the agreement and consent of all.",
+    "sentence": "The decision to move forward with the project was unanimous among the board members.",
+    "phonetic": "juˈnænɪməs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "170",
+    "word": "Unprecedented",
+    "meaning": "Never done or experienced before; without previous example; novel or unparalleled.",
+    "sentence": "The pandemic brought about unprecedented challenges for the healthcare system.",
+    "phonetic": "ʌnˈprɛsɪdɛntɪd",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "171",
+    "word": "Unveil",
+    "meaning": "To make known or reveal something previously concealed or hidden; to remove a covering from.",
+    "sentence": "The artist unveiled his latest masterpiece at the gallery opening.",
+    "phonetic": "ʌnˈveɪl",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "172",
+    "word": "Whimsical",
+    "meaning": "Playfully quaint or fanciful, especially in an appealing or amusing way.",
+    "sentence": "The children were captivated by the whimsical illustrations in the storybook.",
+    "phonetic": "ˈwɪmzɪkəl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "173",
+    "word": "Wanderlust",
+    "meaning": "A strong desire or impulse to travel and explore the world.",
+    "sentence": "She always had a sense of wanderlust, constantly seeking new adventures.",
+    "phonetic": "ˈwɑːndərlʌst",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "174",
+    "word": "Wholesome",
+    "meaning": "Conducive to or promoting moral or general well-being; characterized by health and vitality.",
+    "sentence": "The family spent a wholesome day together, enjoying outdoor activities and bonding.",
+    "phonetic": "ˈhoʊlsəm",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "175",
+    "word": "Witty",
+    "meaning": "Showing quick and inventive verbal humor; cleverly amusing and entertaining.",
+    "sentence": "He was known for his witty remarks and ability to make people laugh.",
+    "phonetic": "ˈwɪti",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "176",
+    "word": "Wistful",
+    "meaning": "Having or showing a feeling of vague or regretful longing; yearning or melancholy in a gentle way.",
+    "sentence": "She gazed out the window with a wistful expression, lost in nostalgic memories.",
+    "phonetic": "ˈwɪstfəl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "177",
+    "word": "Zenith",
+    "meaning": "The highest point or peak; the culmination or apex of something.",
+    "sentence": "His success reached its zenith when he won the prestigious award.",
+    "phonetic": "ˈzɛnɪθ",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "178",
+    "word": "Zephyr",
+    "meaning": "A gentle, mild breeze; a soft wind.",
+    "sentence": "The zephyr carried the sweet scent of flowers across the meadow.",
+    "phonetic": "ˈzɛfər",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "179",
+    "word": "Zestful",
+    "meaning": "Full of energy, enthusiasm, or excitement; lively and spirited.",
+    "sentence": "The team displayed a zestful performance in the championship game.",
+    "phonetic": "ˈzɛstfəl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "180",
+    "word": "Serendipity",
+    "meaning": "Luck that takes the form of finding valuable or pleasant things that are not looked for.",
+    "sentence": "She discovered the shop by serendipity after getting lost.",
+    "phonetic": "ˌserənˈdipədē",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "181",
+    "word": "Maelstrom",
+    "meaning": "A situation or state of confused movement or violent turmoil.",
+    "sentence": "The boat was caught in a maelstrom of waves and wind.",
+    "phonetic": "ˈmeɪlstrəm",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "182",
+    "word": "Propinquity",
+    "meaning": "The state of being close to someone or something; proximity.",
+    "sentence": "The propinquity of their desks made it easy for them to collaborate.",
+    "phonetic": "prəˈpɪŋkwəti",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "183",
+    "word": "Euphony",
+    "meaning": "The quality of being pleasing to the ear.",
+    "sentence": "The song was filled with euphony, making it very enjoyable to listen to.",
+    "phonetic": "ˈjuːfəni",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "184",
+    "word": "Labyrinth",
+    "meaning": "A complicated irregular network of passages or paths in which it is difficult to find one's way; a maze.",
+    "sentence": "She got lost in the labyrinth of hallways in the old building.",
+    "phonetic": "ˈlæbərɪnθ",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "185",
+    "word": "Mollify",
+    "meaning": "Appease the anger or anxiety of (someone).",
+    "sentence": "She tried to mollify her upset coworker with kind words.",
+    "phonetic": "ˈmɒlɪfʌɪ",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "186",
+    "word": "Ephemeral",
+    "meaning": "Lasting for a very short time.",
+    "sentence": "The beauty of the cherry blossoms is ephemeral.",
+    "phonetic": "ɪˈfɛm(ə)r(ə)l",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "187",
+    "word": "Pernicious",
+    "meaning": "Having a harmful effect, especially in a gradual or subtle way.",
+    "sentence": "The pernicious effects of smoking are well documented.",
+    "phonetic": "pəˈnɪʃəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "188",
+    "word": "Serene",
+    "meaning": "Calm, peaceful, and untroubled; tranquil.",
+    "sentence": "The view of the sunset over the ocean was serene and beautiful.",
+    "phonetic": "səˈriːn",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "189",
+    "word": "Propensity",
+    "meaning": "An inclination or natural tendency to behave in a particular way.",
+    "sentence": "Her propensity for always being on time made her a reliable employee.",
+    "phonetic": "prəˈpɛnsɪti",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "190",
+    "word": "Supplant",
+    "meaning": "Supersede and replace.",
+    "sentence": "The new technology will supplant the old system.",
+    "phonetic": "səˈplɑːnt",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "191",
+    "word": "Laconic",
+    "meaning": "Using very few words.",
+    "sentence": "His laconic response was both surprising and effective.",
+    "phonetic": "ləˈkɒnɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "192",
+    "word": "Altruistic",
+    "meaning": "Showing a disinterested and selfless concern for the well-being of others; unselfish.",
+    "sentence": "His altruistic behavior earned him the respect of his peers.",
+    "phonetic": "ælˈtruːɪstɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "193",
+    "word": "Ineffable",
+    "meaning": "Too great or extreme to be expressed or described in words.",
+    "sentence": "The beauty of the mountains was ineffable.",
+    "phonetic": "ɪnˈɛfəb(ə)l",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "194",
+    "word": "Truculent",
+    "meaning": "Eager or quick to argue or fight; aggressively defiant.",
+    "sentence": "His truculent behavior was making it difficult",
+    "phonetic": "trŭk′yə-lənt",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "195",
+    "word": "Garrulous",
+    "meaning": "Excessively talkative, especially on trivial matters.",
+    "sentence": "The garrulous old man wouldn't stop talking about his pet bird.",
+    "phonetic": "ˈɡærʊləs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "196",
+    "word": "Ostentatious",
+    "meaning": "Characterized by vulgar or pretentious display; designed to impress or attract notice.",
+    "sentence": "Her ostentatious jewelry made her stand out in the crowd.",
+    "phonetic": "ˌɒstɛnˈteɪʃəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "197",
+    "word": "Quixotic",
+    "meaning": "Exceedingly idealistic; unrealistic and impractical.",
+    "sentence": "His quixotic dream of world peace was admirable but unlikely.",
+    "phonetic": "kwɪkˈsɒtɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "198",
+    "word": "Ubiquitous",
+    "meaning": "Present, appearing, or found everywhere.",
+    "sentence": "Smartphones have become ubiquitous in our daily lives.",
+    "phonetic": "juːˈbɪkwɪtəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "199",
+    "word": "Vitriolic",
+    "meaning": "Filled with bitter criticism or malice.",
+    "sentence": "Her vitriolic comments about her ex-husband were hurtful.",
+    "phonetic": "ˌvɪtrɪˈɒlɪk",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "200",
+    "word": "Zealous",
+    "meaning": "Having or showing great enthusiasm or zeal.",
+    "sentence": "The zealous volunteer worked tirelessly to help others.",
+    "phonetic": "ˈzɛləs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "201",
+    "word": "Hegemony",
+    "meaning": "Leadership or dominance, especially by one state or social group over others.",
+    "sentence": "The rise of China has led to concerns about its potential hegemony.",
+    "phonetic": "hɪˈɡɛməni",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "202",
+    "word": "Inscrutable",
+    "meaning": "Impossible to understand or interpret.",
+    "sentence": "His inscrutable expression gave no indication of his thoughts.",
+    "phonetic": "ɪnˈskruːtəbl",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "203",
+    "word": "Magnanimous",
+    "meaning": "Very generous or forgiving, especially toward a rival or someone less powerful than oneself.",
+    "sentence": "She was magnanimous in victory, congratulating her opponents with sincerity.",
+    "phonetic": "mæɡˈnænɪməs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "204",
+    "word": "Paradigm",
+    "meaning": "A typical example or pattern of something; a model.",
+    "sentence": "This research provides a new paradigm for understanding the issue.",
+    "phonetic": "ˈpærədaɪm",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "id": "205",
+    "word": "Clandestine",
+    "meaning": "Kept secret or done secretively, especially because illicit.",
+    "sentence": "The group held clandestine meetings in a remote location.",
+    "phonetic": "klænˈdɛstɪn",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "206",
+    "word": "Disparage",
+    "meaning": "Regard or represent as being of little worth.",
+    "sentence": "She disparaged his work in front of his colleagues.",
+    "phonetic": "dɪˈsparɪdʒ",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "id": "207",
+    "word": "Facetious",
+    "meaning": "Treating serious issues with deliberately inappropriate humor.",
+    "sentence": "His facetious comments about the pandemic were insensitive.",
+    "phonetic": "fəˈsiːʃəs",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "208",
+    "word": "Petulant",
+    "meaning": "Childishly sulky or bad-tempered.",
+    "sentence": "He threw a petulant tantrum when he didn't get his way.",
+    "phonetic": "ˈpɛtjʊlənt",
+    "partOfSpeech": "Adjective"
+  },
+  {
+    "id": "209",
+    "word": "Surreptitious",
+    "meaning": "Kept secret, especially because it would not be approved of.",
+    "sentence": "He made a surreptitious attempt to peek at her diary.",
+    "phonetic": "ˌsʌrəpˈtɪʃəs",
+    "partOfSpeech": "Adjective"
+  }
 ]

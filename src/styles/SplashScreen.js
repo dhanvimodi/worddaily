@@ -6,6 +6,9 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
+       // backgroundColor:"#EFE8D8",
+       backgroundColor:"#ddd8c4",
+       //backgroundColor:"#F5F7FB",
       },
       image:{
         height: '28%',

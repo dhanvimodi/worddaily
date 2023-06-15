@@ -1,13 +1,17 @@
-import React, {useEffect, useState} from 'react';
-import {Text, View} from 'react-native';
+import React, {useEffect, useState, useRef} from 'react';
+import {FlatList, Text, View, Dimensions, Button} from 'react-native';
 import Background from '../components/Background';
 import {getData} from '../utils/helperFunctions';
 import analytics from '@react-native-firebase/analytics';
 import styles from '../styles/HomeScreen';
+
+import mockData from "../../mockData/mockData.json"
+import WordList from '../components/WordList';
+
 const HomeScreen = props => {
   const [name, setName] = useState(props.route.params.name);
-  const [data, setData] = useState({});
-
+  const [data, setData] = useState(mockData);
+  const flatListRef = useRef(null);
   // useEffect(() => {
 
   //   trackScreenView('HomeScreen');
@@ -22,63 +26,48 @@ const HomeScreen = props => {
   // }
 
   useEffect(() => {
-    fetchData();
+    // fetchData();
+    randomizeData();
   }, []);
 
-  async function fetchData() {
-    const [todaysData, numberOfDaysVisited] = await getData();
-    setData(todaysData);
-    try {
-      await analytics().logEvent('data_retrieved', {
-        data: todaysData,
-        numberOfDaysVisited: numberOfDaysVisited,
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // async function fetchData() {
+  //   const [todaysData, numberOfDaysVisited] = await getData();
+  //   setData(todaysData);
+  //   try {
+  //     await analytics().logEvent('data_retrieved', {
+  //       data: todaysData,
+  //       numberOfDaysVisited: numberOfDaysVisited,
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+
+  function randomizeData() {
+    const randomizedData = [...data].sort(() => Math.random() - 0.5);
+    setData(randomizedData);
+  };
+
+  const renderItem = ({ item, index }) => {
+    return <WordList data={item} />;
+  };
   return (
-    <Background>
+    // <Background>
       <View
         style={styles.container}>
         <View
           style={styles.innerContainer}>
-          <Text
-            style={styles.name}>
-            Hi {name},
-          </Text>
-          <View
-            style={styles.wordContainer}>
-            <Text
-              style={styles.heading}>
-              word of the day :
-            </Text>
-            <Text
-              style={styles.word}>
-              {data.word}
-            </Text>
-
-            <Text
-              style={styles.phonetic}>
-              {data.phonetic}
-            </Text>
-            <Text
-              style={styles.partOfSpeech}>
-              {data.partOfSpeech}
-            </Text>
-            <Text
-              style={styles.meaning}>
-              {data.meaning}
-            </Text>
-
-            <Text
-              style={styles.sentence}>
-              "{data.sentence}"
-            </Text>
-          </View>
+          <FlatList
+            ref={flatListRef}
+            data={data}
+            keyExtractor={(item,index)=>index}
+            renderItem={renderItem}
+            pagingEnabled={true}
+            decelerationRate={'normal'}
+            />
         </View>
       </View>
-    </Background>
+    // </Background>
   );
 };
 {

@@ -50,7 +50,7 @@ const SplashScreen = props => {
     }
   };
   return (
-    <Background>
+    // <Background>
       <View
         style={styles.container}>
         <Image
@@ -58,7 +58,7 @@ const SplashScreen = props => {
           source={require('../../images/splash-screen.png')}
         />
       </View>
-    </Background>
+    // </Background>
   );
 };
 
