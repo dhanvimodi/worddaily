@@ -54,4 +54,4 @@ const WordList = ({data}) => {
     )
 }
 
-export default WordList;
+export default React.memo(WordList);

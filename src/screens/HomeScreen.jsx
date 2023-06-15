@@ -64,6 +64,7 @@ const HomeScreen = props => {
             renderItem={renderItem}
             pagingEnabled={true}
             decelerationRate={'normal'}
+            initialNumToRender={10}
             />
         </View>
       </View>
