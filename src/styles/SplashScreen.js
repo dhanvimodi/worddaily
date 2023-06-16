@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
        // backgroundColor:"#EFE8D8",
-       backgroundColor:"#ddd8c4",
+       backgroundColor:"#dfdfdf",
        //backgroundColor:"#F5F7FB",
       },
       image:{

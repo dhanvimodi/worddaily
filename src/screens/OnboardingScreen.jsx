@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Text, TouchableOpacity, Image} from 'react-native';
+import {Text, TouchableOpacity, Image, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 //import analytics from '@react-native-firebase/analytics';
 

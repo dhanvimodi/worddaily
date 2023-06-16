@@ -3,14 +3,20 @@ import {FlatList, Text, View, Dimensions, Button} from 'react-native';
 import Background from '../components/Background';
 import {getData} from '../utils/helperFunctions';
 import analytics from '@react-native-firebase/analytics';
+import Tts from 'react-native-tts';
+
 import styles from '../styles/HomeScreen';
 
-import mockData from "../../mockData/mockData.json"
+import mockData from '../../mockData/mockData.json';
 import WordList from '../components/WordList';
+import Card from '../components/Card';
+import Vocab from './VocabScreen';
 
 const HomeScreen = props => {
   const [name, setName] = useState(props.route.params.name);
   const [data, setData] = useState(mockData);
+  const [todaysData, setTodaysData] = useState([]);
+
   const flatListRef = useRef(null);
   // useEffect(() => {
 
@@ -26,48 +32,134 @@ const HomeScreen = props => {
   // }
 
   useEffect(() => {
-    // fetchData();
+     fetchData();
     randomizeData();
   }, []);
 
-  // async function fetchData() {
-  //   const [todaysData, numberOfDaysVisited] = await getData();
-  //   setData(todaysData);
-  //   try {
-  //     await analytics().logEvent('data_retrieved', {
-  //       data: todaysData,
-  //       numberOfDaysVisited: numberOfDaysVisited,
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+  async function fetchData() {
+    const [todaysData, numberOfDaysVisited] = await getData();
+    setTodaysData(todaysData);
+    try {
+      await analytics().logEvent('data_retrieved', {
+        data: todaysData,
+        numberOfDaysVisited: numberOfDaysVisited,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   function randomizeData() {
     const randomizedData = [...data].sort(() => Math.random() - 0.5);
     setData(randomizedData);
-  };
+  }
 
-  const renderItem = ({ item, index }) => {
+  const renderItem = ({item, index}) => {
     return <WordList data={item} />;
   };
   return (
     // <Background>
-      <View
-        style={styles.container}>
-        <View
-          style={styles.innerContainer}>
-          <FlatList
-            ref={flatListRef}
-            data={data}
-            keyExtractor={(item,index)=>index}
-            renderItem={renderItem}
-            pagingEnabled={true}
-            decelerationRate={'normal'}
-            initialNumToRender={10}
-            />
-        </View>
+    <View style={styles.container}>
+      <View style={styles.innerContainer}>
+        <Text
+          style={{
+            color: '#030303',
+            letterSpacing: 2,
+            //fontWeight: 'bold',
+            fontSize: 24,
+            marginTop: '30%',
+            marginBottom:'10%',
+            fontFamily: 'Montserrat-SemiBold',
+          }}>
+          Hi {name}!
+        </Text>
+        {/* <Text
+          style={{
+            color: '#1e1e1e',
+            letterSpacing: 2,
+           // fontWeight: 'bold',
+            fontSize: 18,
+            marginTop: '10%',
+            fontFamily: 'Montserrat-Medium',
+          }}>
+          Practice English
+        </Text> */}
+        {/* <Text
+          style={{
+            color: '#1e1e1e',
+            letterSpacing: 2,
+           // fontWeight: 'bold',
+            fontSize: 16,
+            marginTop: '12%',
+            fontFamily: 'Montserrat-Regular',
+          }}>
+          Welcome to AWordGuru!
+        </Text> */}
+
+        <Card 
+        data={todaysData} 
+        changeScreen={()=>props.navigation.navigate('DailyWordScreen',{data:todaysData})}
+        listen={()=>Tts.speak(todaysData.word)}
+        >
+        <Text
+          style={{
+            color: '#c0bebe',
+           // letterSpacing: 2,
+           // fontWeight: 'bold',
+            fontSize: 16,
+            marginTop: '2%',
+            fontFamily: 'Montserrat-Thin',
+            textAlign:'center'
+          }}>
+          word of the day
+        </Text>
+        <Text
+          style={{
+            color: '#fff',
+           // letterSpacing: 2,
+           // fontWeight: 'bold',
+           textAlign:'center',
+            fontSize: 24,
+            marginTop: '8%',
+            fontFamily: 'Montserrat-SemiBold',
+          }}>
+          {todaysData.word}
+        </Text>
+          {/* <WordList data={mockData[0]} /> */}
+        </Card>
+        <Card 
+        data={todaysData} 
+        changeScreen={()=>props.navigation.navigate('VocabScreen',{data:data})}
+        listen={()=>Tts.speak(data[0].word)}
+        >
+        <Text
+          style={{
+            color: '#c0bebe',
+           // letterSpacing: 2,
+           // fontWeight: 'bold',
+            fontSize: 16,
+            marginTop: '2%',
+            textAlign:'center',
+            fontFamily: 'Montserrat-Thin',
+          }}>
+          vocabulary
+        </Text>
+        <Text
+          style={{
+            color: '#fff',
+           // letterSpacing: 2,
+           // fontWeight: 'bold',
+           textAlign:'center',
+            fontSize: 24,
+            marginTop: '8%',
+            fontFamily: 'Montserrat-SemiBold',
+          }}>
+          {data[0].word}
+        </Text>
+          {/* <WordList data={mockData[0]} /> */}
+        </Card>
       </View>
+    </View>
     // </Background>
   );
 };

@@ -5,8 +5,8 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
     // justifyContent: 'center',
-    // alignItems: 'center',
-    backgroundColor:"#ddd8c4",
+     alignItems: 'center',
+    backgroundColor:"#dfdfdf",
   },
     image:{
         height: '35%',

@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
        height: '100%',
         width: '100%',
        // backgroundColor:"#ECCCAD",
-      backgroundColor:"#ddd8c4",
+      backgroundColor:"#dfdfdf",
       // backgroundColor:"#D2BAAF",
 
       //  marginTop:'20%',
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
       },
       innerContainer:{
       //  marginLeft: '10%',
-      //  width: '80%',
+        width: '80%',
         flex:1
       //  height: '100%'
       },
@@ -56,27 +56,29 @@ const styles = StyleSheet.create({
       phonetic:{
         color: '#162017',
         letterSpacing: 3,
-        fontSize: 18,
+        fontSize: 14,
+        fontFamily: 'Montserrat-Light',
        // marginTop: '2%',
       },
       partOfSpeech:{
         color: '#162017',
         letterSpacing: 3,
-        fontSize: 16,
+        fontSize: 14,
         marginTop: '10%',
-        textAlign:'left'
+        textAlign:'left',
+        fontFamily: 'Montserrat-Light',
       },
       meaning:{
         color: '#000',
-        fontSize: 17,
+        fontSize: 18,
         textAlign:'center',
-       // marginTop: '10%',
+        marginTop: '1%',
         letterSpacing: 2,
         fontFamily: 'Montserrat-Regular',
       },
       sentence:{
         color: '#000',
-        fontSize: 17,
+        fontSize: 16,
         marginTop: '15%',
         letterSpacing: 2,
         fontFamily: 'Montserrat-Regular',
