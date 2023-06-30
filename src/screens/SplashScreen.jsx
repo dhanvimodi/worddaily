@@ -8,23 +8,21 @@ import styles from '../styles/SplashScreen';
 
 const SplashScreen = props => {
   useEffect(() => {
-   // console.log('In use effect');
+    // console.log('In use effect');
     getUser();
   }, []);
 
   useEffect(() => {
-  //  trackScreenView('SplashScreen');
+    //  trackScreenView('SplashScreen');
   }, []);
 
   async function trackScreenView(screen) {
     // Set & override the MainActivity screen name
-    try {await analytics().setCurrentScreen(screen, screen)}
-    catch(error)
-    {
-        console.log("error in splash screen" , error)
-    }        
-    
-
+    try {
+      await analytics().setCurrentScreen(screen, screen);
+    } catch (error) {
+      console.log('error in splash screen', error);
+    }
   }
 
   function changeScreen(name) {
@@ -38,7 +36,7 @@ const SplashScreen = props => {
   }
 
   const getUser = async () => {
-   // console.log('In get user');
+    // console.log('In get user');
     try {
       await AsyncStorage.getItem('username').then(name => {
         setTimeout(() => {
@@ -51,13 +49,12 @@ const SplashScreen = props => {
   };
   return (
     // <Background>
-      <View
-        style={styles.container}>
-        <Image
-          style={styles.image}
-          source={require('../../images/splash-screen.png')}
-        />
-      </View>
+    <View style={styles.container}>
+      <Image
+        style={styles.image}
+        source={require('../../images/splash-screen.png')}
+      />
+    </View>
     // </Background>
   );
 };

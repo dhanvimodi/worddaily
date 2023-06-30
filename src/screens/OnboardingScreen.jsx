@@ -25,20 +25,15 @@ const OnboardingScreen = props => {
 
   return (
     // <Background>
-    <View
-        style={styles.container}>
+    <View style={styles.container}>
       <Image
         style={styles.image}
         source={require('../../images/onboarding-screen-design.png')}
       />
 
-      <Text
-        style={styles.text}>
-        Let's get started
-      </Text>
+      <Text style={styles.text}>Let's get started</Text>
 
-      <Text
-        style={styles.descriptionText}>
+      <Text style={styles.descriptionText}>
         Learn a new word daily & become a Word Guru
       </Text>
       <TouchableOpacity
@@ -70,7 +65,7 @@ const OnboardingScreen = props => {
           </Text>
         </ImageBackground> */}
       </TouchableOpacity>
-      </View>
+    </View>
     // {/* </Background> */}
   );
 };

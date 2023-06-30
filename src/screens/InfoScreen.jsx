@@ -44,9 +44,8 @@ const InfoScreen = props => {
 
   return (
     // <Background>
-      <View
-        style={styles.container}>
-        {/* <Text
+    <View style={styles.container}>
+      {/* <Text
           style={{
             marginTop: '20%',
             color: 'black',
@@ -55,7 +54,7 @@ const InfoScreen = props => {
             textAlign: 'center',
           }}>
           Grow your vocabulary with a new word daily on Word Guru</Text> */}
-        {/* <Text
+      {/* <Text
           style={{
            // color: '#ff6341',
             color:'#7D5713',
@@ -67,40 +66,34 @@ const InfoScreen = props => {
           }}>
           Word Gurus!
         </Text> */}
-        <Text
-          style={styles.heading}>
-          What should we call you?
-        </Text>
+      <Text style={styles.heading}>What should we call you?</Text>
 
-        <TextInput
-          style={styles.inputBox}
-          maxLength={15}
-          placeholder="Enter your name"
-          placeholderTextColor="#cacaca"
-          value={name}
-          onChangeText={setName}
-        />
+      <TextInput
+        style={styles.inputBox}
+        maxLength={15}
+        placeholder="Enter your name"
+        placeholderTextColor="#cacaca"
+        value={name}
+        onChangeText={setName}
+      />
 
-        <TouchableOpacity
-          activeOpacity={0.9}
-          onPress={changeScreen}
-          style={styles.buttonContainer}>
-          <View
-            // source={require('../../images/Button.png')}
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={changeScreen}
+        style={styles.buttonContainer}>
+        <View
+          // source={require('../../images/Button.png')}
 
-            style={styles.buttonInnerContainer}
-            // imageStyle={{
-            //   height: '100%',
-            //   width: '100%',
-            // }}
-          >
-            <Text
-              style={styles.buttonText}>
-              Let's Go!
-            </Text>
-          </View>
-        </TouchableOpacity>
-      </View>
+          style={styles.buttonInnerContainer}
+          // imageStyle={{
+          //   height: '100%',
+          //   width: '100%',
+          // }}
+        >
+          <Text style={styles.buttonText}>Let's Go!</Text>
+        </View>
+      </TouchableOpacity>
+    </View>
     // {/* </Background> */}
   );
 };

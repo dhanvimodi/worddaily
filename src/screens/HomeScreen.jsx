@@ -1,23 +1,19 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {FlatList, Text, View, Dimensions, Button} from 'react-native';
-import Background from '../components/Background';
+import {Text, View} from 'react-native';
 import {getData} from '../utils/helperFunctions';
 import analytics from '@react-native-firebase/analytics';
 import Tts from 'react-native-tts';
 
 import styles from '../styles/HomeScreen';
-
 import mockData from '../../mockData/mockData.json';
 import WordList from '../components/WordList';
 import Card from '../components/Card';
-import Vocab from './VocabScreen';
 
 const HomeScreen = props => {
   const [name, setName] = useState(props.route.params.name);
   const [data, setData] = useState(mockData);
   const [todaysData, setTodaysData] = useState([]);
 
-  const flatListRef = useRef(null);
   // useEffect(() => {
 
   //   trackScreenView('HomeScreen');
@@ -32,7 +28,7 @@ const HomeScreen = props => {
   // }
 
   useEffect(() => {
-     fetchData();
+    fetchData();
     randomizeData();
   }, []);
 
@@ -57,22 +53,20 @@ const HomeScreen = props => {
   const renderItem = ({item, index}) => {
     return <WordList data={item} />;
   };
+
+  const changeScreen = (screenName, data) => {
+    props.navigation.navigate(screenName, {data: data});
+  };
+
+  const playSound = word => {
+    Tts.speak(word);
+  };
+
   return (
     // <Background>
     <View style={styles.container}>
       <View style={styles.innerContainer}>
-        <Text
-          style={{
-            color: '#030303',
-            letterSpacing: 2,
-            //fontWeight: 'bold',
-            fontSize: 24,
-            marginTop: '30%',
-            marginBottom:'10%',
-            fontFamily: 'Montserrat-SemiBold',
-          }}>
-          Hi {name}!
-        </Text>
+        <Text style={styles.name}>Hi {name}!</Text>
         {/* <Text
           style={{
             color: '#1e1e1e',
@@ -96,66 +90,20 @@ const HomeScreen = props => {
           Welcome to AWordGuru!
         </Text> */}
 
-        <Card 
-        data={todaysData} 
-        changeScreen={()=>props.navigation.navigate('DailyWordScreen',{data:todaysData})}
-        listen={()=>Tts.speak(todaysData.word)}
-        >
-        <Text
-          style={{
-            color: '#c0bebe',
-           // letterSpacing: 2,
-           // fontWeight: 'bold',
-            fontSize: 16,
-            marginTop: '2%',
-            fontFamily: 'Montserrat-Thin',
-            textAlign:'center'
-          }}>
-          word of the day
-        </Text>
-        <Text
-          style={{
-            color: '#fff',
-           // letterSpacing: 2,
-           // fontWeight: 'bold',
-           textAlign:'center',
-            fontSize: 24,
-            marginTop: '8%',
-            fontFamily: 'Montserrat-SemiBold',
-          }}>
-          {todaysData.word}
-        </Text>
+        <Card
+          data={todaysData}
+          changeScreen={() => changeScreen('DailyWordScreen', todaysData)}
+          listen={() => playSound(todaysData.word)}>
+          <Text style={styles.cardHeading}>word of the day</Text>
+          <Text style={styles.word}>{todaysData.word}</Text>
           {/* <WordList data={mockData[0]} /> */}
         </Card>
-        <Card 
-        data={todaysData} 
-        changeScreen={()=>props.navigation.navigate('VocabScreen',{data:data})}
-        listen={()=>Tts.speak(data[0].word)}
-        >
-        <Text
-          style={{
-            color: '#c0bebe',
-           // letterSpacing: 2,
-           // fontWeight: 'bold',
-            fontSize: 16,
-            marginTop: '2%',
-            textAlign:'center',
-            fontFamily: 'Montserrat-Thin',
-          }}>
-          vocabulary
-        </Text>
-        <Text
-          style={{
-            color: '#fff',
-           // letterSpacing: 2,
-           // fontWeight: 'bold',
-           textAlign:'center',
-            fontSize: 24,
-            marginTop: '8%',
-            fontFamily: 'Montserrat-SemiBold',
-          }}>
-          {data[0].word}
-        </Text>
+        <Card
+          data={todaysData}
+          changeScreen={() => changeScreen('VocabScreen', data)}
+          listen={() => playSound(data[0].word)}>
+          <Text style={styles.cardHeading}>vocabulary</Text>
+          <Text style={styles.word}>{data[0].word}</Text>
           {/* <WordList data={mockData[0]} /> */}
         </Card>
       </View>

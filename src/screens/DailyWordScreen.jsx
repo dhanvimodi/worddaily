@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { View } from 'react-native';
 import mockData from "../../mockData/mockData.json"
 import WordList from '../components/WordList';
-import styles from '../styles/HomeScreen';
+import styles from '../styles/DailyWordScreen';
 
 
 const DailyWordScreen = props => {
