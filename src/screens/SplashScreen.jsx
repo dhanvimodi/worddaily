@@ -47,6 +47,7 @@ const SplashScreen = props => {
       console.log(error);
     }
   };
+  
   return (
     // <Background>
     <View style={styles.container}>

@@ -2,8 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     wordContainer:{
-        justifyContent:'center',
-        
+        justifyContent:'center',        
         alignItems:'center',
         textAlign:'center',
         marginLeft:'5%',

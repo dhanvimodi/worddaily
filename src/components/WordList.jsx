@@ -4,17 +4,33 @@ import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Tts from 'react-native-tts';
 
 import styles from '../styles/WordList';
+import { useHeaderHeight } from '@react-navigation/elements';
+
 const WordList = ({data}) => {
-  
+  const [isSoundPlaying, setIsSoundPlaying] = useState(false);
+
+  const headerHeight = useHeaderHeight();
+
+  useEffect(() => {
+    Tts.addEventListener('tts-start', event => {
+      setIsSoundPlaying(true);
+    });
+    Tts.addEventListener('tts-finish', event => {
+      setIsSoundPlaying(false);
+    });
+  }, []);
+
   const playSound = () => {
-    Tts.speak(data.word);
+    if (!isSoundPlaying) {
+      Tts.speak(data.word);
+    }
   };
   return (
     <View
       style={[
         styles.wordContainer,
         {
-          height: Dimensions.get('window').height,
+          height: Dimensions.get('window').height-headerHeight,
         },
       ]}>
       <Text style={styles.word}>{data.word}</Text>

@@ -7,9 +7,9 @@ import OnboardingScreen from "./src/screens/OnboardingScreen";
 import SplashScreen from './src/screens/SplashScreen';
 import InfoScreen from './src/screens/InfoScreen';
 import analytics from '@react-native-firebase/analytics';
-import WordList from './src/components/WordList';
 import DailyWordScreen from './src/screens/DailyWordScreen';
 import VocabScreen from './src/screens/VocabScreen';
+import Header from './src/components/Header';
 
 const Stack = createStackNavigator();
 
@@ -42,7 +42,16 @@ const App = (props) => {
       }
     }}
   >
-      <Stack.Navigator>
+      <Stack.Navigator
+       screenOptions={
+      
+        {
+        // headerStyle:{
+        //   backgroundColor:'#dfdfdf'
+        // },
+         header: ({navigation}) => <Header navigation={navigation} />,
+       }}
+      >
       <Stack.Screen
           name="SplashScreen"
           component={SplashScreen}
@@ -61,17 +70,17 @@ const App = (props) => {
         <Stack.Screen
           name="HomeScreen"
           component={HomeScreen}
-          options={{headerShown:false}}
+          options={{headerShown:true}}
         />
         <Stack.Screen
           name="DailyWordScreen"
           component={DailyWordScreen}
-          options={{headerShown:false}}
+          options={{headerShown:true}}
         />
          <Stack.Screen
           name="VocabScreen"
           component={VocabScreen}
-          options={{headerShown:false}}
+          options={{headerShown:true}}
         />
       </Stack.Navigator>
     </NavigationContainer>

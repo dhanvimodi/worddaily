@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {FlatList} from 'react-native';
+import {FlatList, View} from 'react-native';
 import mockData from '../../mockData/mockData.json';
 import WordList from '../components/WordList';
+import styles from '../styles/VocabScreen';
+
 
 const VocabScreen = props => {
   const [data, setData] = useState(props.route.params.data);
@@ -11,7 +13,10 @@ const VocabScreen = props => {
   };
 
   return (
-    <FlatList
+    <View
+    style={styles.container}
+    >
+         <FlatList
       //  ref={flatListRef}
       data={data}
       keyExtractor={(item, index) => index}
@@ -20,6 +25,9 @@ const VocabScreen = props => {
       decelerationRate={'normal'}
       initialNumToRender={10}
     />
+
+    </View>
+ 
   );
 };
 

@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         letterSpacing: 2,
         //fontWeight: 'bold',
         fontSize: 24,
-        marginTop: '30%',
+        marginTop: '20%',
         marginBottom:'10%',
         fontFamily: 'Montserrat-SemiBold',
       },

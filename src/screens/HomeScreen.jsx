@@ -8,12 +8,43 @@ import styles from '../styles/HomeScreen';
 import mockData from '../../mockData/mockData.json';
 import WordList from '../components/WordList';
 import Card from '../components/Card';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const HomeScreen = props => {
-  const [name, setName] = useState(props.route.params.name);
+  const [name, setName] = useState('');
   const [data, setData] = useState(mockData);
   const [todaysData, setTodaysData] = useState([]);
+  const [isSoundPlaying, setIsSoundPlaying] = useState(false);
 
+  useEffect(() => {
+    Tts.addEventListener('tts-start', event => {
+      setIsSoundPlaying(true);
+    });
+    Tts.addEventListener('tts-finish', event => {
+      setIsSoundPlaying(false);
+    });
+  }, []);
+
+  useEffect(()=>{
+    getUser()
+  },[])
+
+  const getUser = async () => {
+     console.log('In get user');
+    try {
+      await AsyncStorage.getItem('username').then(name => {
+          setName(name);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const playSound = (word) => {
+    if (!isSoundPlaying) {
+      Tts.speak(word);
+    }
+  };
   // useEffect(() => {
 
   //   trackScreenView('HomeScreen');
@@ -58,9 +89,6 @@ const HomeScreen = props => {
     props.navigation.navigate(screenName, {data: data});
   };
 
-  const playSound = word => {
-    Tts.speak(word);
-  };
 
   return (
     // <Background>
