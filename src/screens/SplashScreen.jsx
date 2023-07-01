@@ -3,7 +3,6 @@ import {View, Image} from 'react-native';
 import analytics from '@react-native-firebase/analytics';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Background from '../components/Background';
 import styles from '../styles/SplashScreen';
 
 const SplashScreen = props => {

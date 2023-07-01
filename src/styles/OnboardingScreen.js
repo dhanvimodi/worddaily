@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     width: '100%',
     // justifyContent: 'center',
      alignItems: 'center',
-    backgroundColor:"#dfdfdf",
+    backgroundColor:"#ffe2cc",
   },
     image:{
         height: '35%',
@@ -20,6 +20,8 @@ const styles = StyleSheet.create({
         fontSize: 45,
         width: '70%',
         letterSpacing: 1,
+       // fontFamily:'Montserrat-Medium'
+
         // textAlign: 'center',
       },
       descriptionText:{
@@ -28,6 +30,8 @@ const styles = StyleSheet.create({
         fontSize: 20,
         width: '70%',
         letterSpacing: 1,
+        //fontStyle:'italic',
+       // fontFamily:'Montserrat-LightItalic'
         //textAlign: 'center',
       },
       buttonContainer:{

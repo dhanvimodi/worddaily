@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor:"#dfdfdf",
+        backgroundColor:"#ffe2cc",
       },
       heading:{
         marginTop: '15%',

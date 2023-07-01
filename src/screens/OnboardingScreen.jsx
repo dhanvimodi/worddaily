@@ -34,7 +34,7 @@ const OnboardingScreen = props => {
       <Text style={styles.text}>Let's get started</Text>
 
       <Text style={styles.descriptionText}>
-        Learn a new word daily & become a Word Guru
+        Learn new words & become a Word Guru
       </Text>
       <TouchableOpacity
         activeOpacity={0.9}

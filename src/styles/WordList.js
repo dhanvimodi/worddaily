@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
         marginLeft:'5%',
         marginRight:'5%',
        // width: '90%',
-       // backgroundColor:'pink',
-       // marginTop:'40%',
+        // backgroundColor:'pink',
+        // marginTop:'6%',
 
       },
       word:{

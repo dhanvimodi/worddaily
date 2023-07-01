@@ -30,7 +30,7 @@ const HomeScreen = props => {
   },[])
 
   const getUser = async () => {
-     console.log('In get user');
+    // console.log('In get user');
     try {
       await AsyncStorage.getItem('username').then(name => {
           setName(name);
@@ -93,8 +93,26 @@ const HomeScreen = props => {
   return (
     // <Background>
     <View style={styles.container}>
-      <View style={styles.innerContainer}>
+      <View style={{
+        width:'100%',
+       // height:'10%',
+           backgroundColor:'#FF8551',
+          //  padding:'5%',
+            paddingTop:'7%',
+        paddingBottom:'7%',
+          //  paddingBottom:'7%',
+          justifyContent:'center',
+          alignItems:'center',
+           borderColor:'#000',
+           borderWidth:2,
+          // marginBottom:'2%',
+           borderBottomLeftRadius:25,
+           borderBottomRightRadius:25,
+        }}>
         <Text style={styles.name}>Hi {name}!</Text>
+        </View>
+      <View style={styles.innerContainer}>
+        
         {/* <Text
           style={{
             color: '#1e1e1e',
@@ -120,17 +138,21 @@ const HomeScreen = props => {
 
         <Card
           data={todaysData}
+          color={'#FFDEDE'}
           changeScreen={() => changeScreen('DailyWordScreen', todaysData)}
           listen={() => playSound(todaysData.word)}>
           <Text style={styles.cardHeading}>word of the day</Text>
-          <Text style={styles.word}>{todaysData.word}</Text>
+          <Text style={styles.word}
+            numberOfLines={2}
+          >{todaysData.word}</Text> 
           {/* <WordList data={mockData[0]} /> */}
         </Card>
         <Card
           data={todaysData}
+          color={'#9BCDD2'}
           changeScreen={() => changeScreen('VocabScreen', data)}
           listen={() => playSound(data[0].word)}>
-          <Text style={styles.cardHeading}>vocabulary</Text>
+          <Text style={styles.cardHeading}>book of words</Text>
           <Text style={styles.word}>{data[0].word}</Text>
           {/* <WordList data={mockData[0]} /> */}
         </Card>

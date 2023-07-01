@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
        height: '100%',
         width: '100%',
        // backgroundColor:"#ECCCAD",
-      backgroundColor:"#dfdfdf",
+      backgroundColor:"#fff",
       // backgroundColor:"#D2BAAF",
 
       //  marginTop:'20%',
