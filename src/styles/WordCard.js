@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { scaleFont } from "../utils/responsiveFontSize";
 
 const styles = StyleSheet.create({
     wordContainer:{
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
       word:{
         color: '#000',
         letterSpacing: 2,
-        fontSize: 32,
+        fontSize: scaleFont(32),
         fontWeight: 'bold',
        // marginTop: '10%',
         fontFamily: 'Montserrat-Bold',
@@ -23,21 +24,21 @@ const styles = StyleSheet.create({
       phonetic:{
         color: '#162017',
         letterSpacing: 3,
-        fontSize: 14,
+        fontSize: scaleFont(14),
         fontFamily: 'Montserrat-Light',
        // marginTop: '2%',
       },
       partOfSpeech:{
         color: '#162017',
         letterSpacing: 3,
-        fontSize: 14,
+        fontSize: scaleFont(14),
         marginTop: '10%',
         textAlign:'left',
         fontFamily: 'Montserrat-Light',
       },
       meaning:{
         color: '#000',
-        fontSize: 18,
+        fontSize: scaleFont(18),
         textAlign:'center',
         marginTop: '1%',
         letterSpacing: 2,
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
       },
       sentence:{
         color: '#000',
-        fontSize: 16,
+        fontSize: scaleFont(16),
         marginTop: '15%',
         letterSpacing: 2,
         fontFamily: 'Montserrat-Regular',

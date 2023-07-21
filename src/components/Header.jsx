@@ -7,6 +7,7 @@ import styles from '../styles/Header';
 import {useRoute} from '@react-navigation/native';
 import { fetchFavorites } from '../utils/favorite';
 import { fetchUserName } from '../utils/username';
+import { scaleFont } from '../utils/responsiveFontSize';
 
 
 
@@ -43,7 +44,7 @@ const Header = (props) => {
                   <Text style={{color: '#030303',
                   letterSpacing: 2,
                   //fontWeight: 'bold',
-                  fontSize: 24,
+                  fontSize: scaleFont(24),
                   marginLeft: '5%',
                   //marginBottom:'10%',
                   fontFamily: 'Montserrat-SemiBold',}}>Hi {name}!</Text>
@@ -58,7 +59,7 @@ const Header = (props) => {
                   <Text style={{color: '#030303',
                   letterSpacing: 2,
                   //fontWeight: 'bold',
-                  fontSize: 24,
+                  fontSize: scaleFont(24),
                   marginRight: '10%',
                   //marginBottom:'10%',
                   fontFamily: 'Montserrat-SemiBold',}}>Favorites</Text>

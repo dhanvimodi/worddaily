@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { scaleFont } from "../utils/responsiveFontSize";
 
 const styles = StyleSheet.create({
   container:{
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
       text:{
         marginTop: '10%',
         color: 'black',
-        fontSize: 45,
+        fontSize: scaleFont(45),
         width: '70%',
         letterSpacing: 1,
        // fontFamily:'Montserrat-Medium'
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
       descriptionText:{
         marginTop: '6%',
         color: 'black',
-        fontSize: 20,
+        fontSize: scaleFont(20),
         width: '70%',
         letterSpacing: 1,
         //fontStyle:'italic',

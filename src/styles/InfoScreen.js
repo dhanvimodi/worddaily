@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { scaleFont } from "../utils/responsiveFontSize";
 
 const styles = StyleSheet.create({
     container:{
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
       heading:{
         marginTop: '15%',
         color: '#000',
-        fontSize: 22,
+        fontSize: scaleFont(22),
         width: '70%',
         letterSpacing: 2,
         textAlign: 'center',
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
         color: '#000',
         paddingLeft: 10,
         fontFamily: 'Montserrat-Regular',
-        fontSize: 16,
+        fontSize: scaleFont(16),
         borderBottomWidth: 3,
         borderRightWidth: 3,
         borderBottomColor: '#000',
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
       },
       buttonText:{
         color: 'white',
-        fontSize: 28,
+        fontSize: scaleFont(28),
         textAlign: 'center',
         fontFamily: 'Montserrat-Regular',
       }

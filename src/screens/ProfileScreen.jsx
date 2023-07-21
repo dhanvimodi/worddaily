@@ -1,6 +1,7 @@
 import React from 'react';
 import { View , Text, TouchableOpacity, Modal, TextInput, Button, Alert} from 'react-native';
 import { getFavorites } from '../utils/favorite';
+import { scaleFont } from '../utils/responsiveFontSize';
 
 const ProfileScreen = (props) => {   
 
@@ -55,7 +56,7 @@ const ProfileScreen = (props) => {
             onPress={showFavorites}
             >
                 <Text style={{
-                    fontSize:28,
+                    fontSize:scaleFont(28),
                     fontFamily:"Montserrat-Regular",
                     color:'#000'
                 }}>
@@ -79,7 +80,7 @@ const ProfileScreen = (props) => {
             onPress={()=>showAlert()}
             >
                 <Text style={{
-                    fontSize:28,
+                    fontSize:scaleFont(28),
                     fontFamily:"Montserrat-Regular",
                     color:'#000'
                 }}>

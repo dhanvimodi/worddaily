@@ -14,7 +14,7 @@ export  function scaleFont(fontSize) {
   
     // If the device is Android, scale the font size by PixelRatio
     if (Platform.OS === 'android') {
-      return PixelRatio.roundToNearestPixel(adjustedFontSize);
+      return PixelRatio.roundToNearestPixel(adjustedFontSize) - 2;
     }
   
     // If the device is iOS, return the adjusted font size
