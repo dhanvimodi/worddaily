@@ -1,18 +1,19 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState, useCallback} from 'react';
 import {Text, View} from 'react-native';
-import {getData} from '../utils/helperFunctions';
+import {getData} from '../utils/wordOfTheDay';
 import analytics from '@react-native-firebase/analytics';
 import Tts from 'react-native-tts';
 
+
 import styles from '../styles/HomeScreen';
-import mockData from '../../mockData/mockData.json';
-import WordList from '../components/WordList';
+//import vocabData from '../../mockData/vocab.json';
+import WordCard from '../components/WordCard';
 import Card from '../components/Card';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const HomeScreen = props => {
+const HomeScreen = (props) => {
   const [name, setName] = useState('');
-  const [data, setData] = useState(mockData);
+  const [data, setData] = useState([]);
   const [todaysData, setTodaysData] = useState([]);
   const [isSoundPlaying, setIsSoundPlaying] = useState(false);
 
@@ -59,31 +60,75 @@ const HomeScreen = props => {
   // }
 
   useEffect(() => {
-    fetchData();
-    randomizeData();
+    fetchWordOfTheDayData();
+    fetchVocabData();
+   // randomizeData();
   }, []);
 
-  async function fetchData() {
+
+
+  async function fetchWordOfTheDayData() {
+   // console.log('In fetch word of the day data')
     const [todaysData, numberOfDaysVisited] = await getData();
     setTodaysData(todaysData);
+    // try {
+    //   await analytics().logEvent('data_retrieved', {
+    //     data: todaysData,
+    //     numberOfDaysVisited: numberOfDaysVisited,
+    //   });
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  }
+
+  const updateTodaysFavorite = () => {
+    //console.log("update favorite in word of tehe day")
+    // console.log("data before updation",data)
+     setTodaysData({...todaysData, favorite: !todaysData.favorite})
+  }
+
+  const onNavigateBack = () => {
+
+    fetchVocabData()
+    fetchWordOfTheDayData()
+  };
+
+  useEffect(() => {
+    const unsubscribe = props.navigation.addListener('focus', () => {
+      onNavigateBack();
+    });
+
+    // Cleanup function to unsubscribe when the component is unmounted
+    return () => {
+      unsubscribe();
+    };
+  }, [props.navigation]);
+
+
+
+  async function fetchVocabData() {
+    //console.log("In fetch vocab data")
     try {
-      await analytics().logEvent('data_retrieved', {
-        data: todaysData,
-        numberOfDaysVisited: numberOfDaysVisited,
-      });
+      const value = await AsyncStorage.getItem('vocab');
+      if (value !== null) {
+     //   console.log('Vocab data retrieved');
+        randomizeData(JSON.parse(value))
+        //setData(JSON.parse(value));
+      }
     } catch (error) {
       console.log(error);
     }
   }
 
-  function randomizeData() {
-    const randomizedData = [...data].sort(() => Math.random() - 0.5);
-    setData(randomizedData);
-  }
+ // console.log(data)
 
-  const renderItem = ({item, index}) => {
-    return <WordList data={item} />;
-  };
+  function randomizeData(data) {
+   // const randomizedData = [...data].sort(() => Math.random() - 0.5);
+   // setData(randomizedData);
+  // console.log("In randomize data")
+  // console.log(data)
+   setData(data)
+  }
 
   const changeScreen = (screenName, data) => {
     props.navigation.navigate(screenName, {data: data});
@@ -93,7 +138,7 @@ const HomeScreen = props => {
   return (
     // <Background>
     <View style={styles.container}>
-      <View style={{
+      {/* <View style={{
         width:'100%',
        // height:'10%',
            backgroundColor:'#FF8551',
@@ -110,37 +155,15 @@ const HomeScreen = props => {
            borderBottomRightRadius:25,
         }}>
         <Text style={styles.name}>Hi {name}!</Text>
-        </View>
+        </View> */}
       <View style={styles.innerContainer}>
-        
-        {/* <Text
-          style={{
-            color: '#1e1e1e',
-            letterSpacing: 2,
-           // fontWeight: 'bold',
-            fontSize: 18,
-            marginTop: '10%',
-            fontFamily: 'Montserrat-Medium',
-          }}>
-          Practice English
-        </Text> */}
-        {/* <Text
-          style={{
-            color: '#1e1e1e',
-            letterSpacing: 2,
-           // fontWeight: 'bold',
-            fontSize: 16,
-            marginTop: '12%',
-            fontFamily: 'Montserrat-Regular',
-          }}>
-          Welcome to AWordGuru!
-        </Text> */}
-
         <Card
           data={todaysData}
           color={'#FFDEDE'}
           changeScreen={() => changeScreen('DailyWordScreen', todaysData)}
-          listen={() => playSound(todaysData.word)}>
+          listen={() => playSound(todaysData.word)}
+         // updateTodaysFavorite={updateTodaysFavorite}
+          >
           <Text style={styles.cardHeading}>word of the day</Text>
           <Text style={styles.word}
             numberOfLines={2}
@@ -153,7 +176,12 @@ const HomeScreen = props => {
           changeScreen={() => changeScreen('VocabScreen', data)}
           listen={() => playSound(data[0].word)}>
           <Text style={styles.cardHeading}>book of words</Text>
-          <Text style={styles.word}>{data[0].word}</Text>
+
+          {
+            data.length>0 && data[0].word && <Text style={styles.word}>{data[0].word}</Text>
+            
+          }
+          
           {/* <WordList data={mockData[0]} /> */}
         </Card>
       </View>
@@ -161,72 +189,4 @@ const HomeScreen = props => {
     // </Background>
   );
 };
-{
-  /* <View
-        style={{
-          height: '100%',
-          width: '100%',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-        <View
-          style={{
-            height: '70%',
-            width: '90%',
-            backgroundColor: '#e2ce37',
-            borderRadius: 40,
-            justifyContent: 'center',
-            alignItems: 'center',
-            shadowColor: '#c2af29',
-            // IOS specific
-            shadowOffset: {width: 0, height: 1},
-            shadowOpacity: 0.8,
-            shadowRadius: 2,
-            // Android specific
-            elevation: 15,
-          }}>
-         
-          <View
-            style={{
-              alignItems:'center',
-              
-              height: '96%',
-              width: '94%',
-              backgroundColor: '#f7f8f9',
-              borderRadius: 40,
-              shadowColor: 'black',
-              //IOS specific
-              shadowOffset: {width: 0, height: 1},
-              shadowOpacity: 0.8,
-              shadowRadius: 2,
-              // Andorid specific
-              elevation: 5,
-            }}>
-
-<View
-             style={{
-             
-              height: '15%',
-              width: '20%',
-              
-            marginTop:"-10%",
-              backgroundColor: '#e2ce37',
-              borderRadius: 100,
-              justifyContent: 'center',
-              alignItems: 'center',
-              shadowColor: '#c2af29',
-              // IOS specific
-              shadowOffset: {width: 0, height: 1},
-              shadowOpacity: 0.8,
-              shadowRadius: 2,
-              // Android specific
-              elevation: 15,
-            }}>
-
-            </View>
-
-            </View>
-        </View>
-      </View> */
-}
 export default HomeScreen;

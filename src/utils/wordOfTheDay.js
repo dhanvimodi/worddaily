@@ -1,14 +1,28 @@
 import AsyncStorage from "@react-native-async-storage/async-storage"
-import mockData from "../../mockData/mockData.json"
+//import wordOfTheDayData from "../../mockData/wordOfTheDayData.json"
 
 export async function getData(){
+ // console.log("In get Data function")
+
+
+  var wordOfTheDayData=[]
+  try{
+    var data=await AsyncStorage.getItem("wordOfTheDay")
+    //console.log(data)
+    wordOfTheDayData=JSON.parse(data)
+  }
+  catch(error){
+    console.log(error)
+  }
+
     var lastUpdatedDate=await AsyncStorage.getItem("lastUpdatedDate")
     var numberOfDaysVisited= Number(await AsyncStorage.getItem("numberOfDaysVisited"))
 
     var todaysDate=new Date().getDate().toString()
-    var idx=lastUpdatedDate===todaysDate? numberOfDaysVisited%mockData.length : (numberOfDaysVisited+1)%mockData.length
+    var idx=lastUpdatedDate===todaysDate? numberOfDaysVisited%wordOfTheDayData.length : (numberOfDaysVisited+1)%wordOfTheDayData.length
 
-    var data=mockData[idx]
+    
+    var data=wordOfTheDayData[idx]
     updateData(lastUpdatedDate,numberOfDaysVisited);
     return [data, numberOfDaysVisited]
 }

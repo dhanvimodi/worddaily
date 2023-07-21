@@ -9,6 +9,7 @@
     "word": "Serendipity"
   },
   {
+    "favorite": false,
     "id": "2",
     "meaning": "A situation or state of confused movement or violent turmoil.",
     "partOfSpeech": "Noun",

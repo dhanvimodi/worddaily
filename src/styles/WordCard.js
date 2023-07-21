@@ -52,9 +52,16 @@ const styles = StyleSheet.create({
                 textAlign:'center',
 
       },
-      soundButton:{
-        marginTop:'23%',
+      button:{
+       // marginTop:'23%',
         opacity:0.6
+       },
+       buttonContainer:{
+        flexDirection:'row',
+        justifyContent:'space-evenly',
+        alignItems:'center',
+        marginTop:'23%',
+        width:'100%'
        }
 })
 export default styles;

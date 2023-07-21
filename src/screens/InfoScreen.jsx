@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, TouchableOpacity, TextInput} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import analytics from '@react-native-firebase/analytics';
 
 import Background from '../components/Background';
 import styles from '../styles/InfoScreen';
+import vocab from '../../mockData/vocab.json'
+import wordOfTheDayData from '../../mockData/wordOfTheDayData.json'
 
 const InfoScreen = props => {
   const [name, setName] = useState('');
@@ -19,6 +21,10 @@ const InfoScreen = props => {
   //   else{
   //       console.log("Error")
   //   }  }
+
+  useEffect(() => {
+    storeData()
+  }, []);
 
   function changeScreen() {
     if (name) {
@@ -39,6 +45,26 @@ const InfoScreen = props => {
       await AsyncStorage.setItem('numberOfDaysVisited', '0');
     } catch (error) {
       console.log(error);
+    }
+  }
+
+  async function storeData() {
+    console.debug("Storing data")
+    try{
+      console.debug("Storing vocab data")
+      await AsyncStorage.setItem('vocab', JSON.stringify(vocab));
+    }
+    catch(error){
+      console.log(error)
+    }
+
+    try{
+      console.debug("Storing word of the day data")
+
+      await AsyncStorage.setItem('wordOfTheDay', JSON.stringify(wordOfTheDayData));
+    }
+    catch(error){
+      console.log(error)
     }
   }
 
