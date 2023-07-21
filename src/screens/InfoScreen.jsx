@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, TouchableOpacity, TextInput} from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import analytics from '@react-native-firebase/analytics';
-
-import Background from '../components/Background';
 import styles from '../styles/InfoScreen';
-import vocab from '../../mockData/vocab.json'
-import wordOfTheDayData from '../../mockData/wordOfTheDayData.json'
+import { storeUserName } from '../utils/username';
+import { storeWordOfTheDayData } from '../utils/wordOfTheDay';
+import { storeVocabData } from '../utils/vocab';
 
 const InfoScreen = props => {
   const [name, setName] = useState('');
@@ -38,34 +36,12 @@ const InfoScreen = props => {
   }
 
   async function storeName(name) {
-    todaysDate = new Date().getDate().toString();
-    try {
-      await AsyncStorage.setItem('username', name);
-      await AsyncStorage.setItem('lastUpdatedDate', todaysDate);
-      await AsyncStorage.setItem('numberOfDaysVisited', '0');
-    } catch (error) {
-      console.log(error);
-    }
+    await storeUserName(name)
   }
 
   async function storeData() {
-    console.debug("Storing data")
-    try{
-      console.debug("Storing vocab data")
-      await AsyncStorage.setItem('vocab', JSON.stringify(vocab));
-    }
-    catch(error){
-      console.log(error)
-    }
-
-    try{
-      console.debug("Storing word of the day data")
-
-      await AsyncStorage.setItem('wordOfTheDay', JSON.stringify(wordOfTheDayData));
-    }
-    catch(error){
-      console.log(error)
-    }
+    await storeVocabData()
+    await storeWordOfTheDayData()
   }
 
   return (

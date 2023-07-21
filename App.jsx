@@ -76,7 +76,7 @@ const App = (props) => {
         <Stack.Screen
           name="DailyWordScreen"
           component={DailyWordScreen}
-          options={{headerShown:true}}
+          options={{headerShown:false}}
         />
          <Stack.Screen
           name="VocabScreen"

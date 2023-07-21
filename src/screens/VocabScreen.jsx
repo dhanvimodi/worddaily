@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, createRef} from 'react';
 import {FlatList, View} from 'react-native';
 //import mockData from '../../mockData/mockData.json';
 import WordCard from '../components/WordCard';
@@ -6,6 +6,9 @@ import styles from '../styles/VocabScreen';
 
 
 const VocabScreen = (props) => {
+
+  const flatListRef=createRef()
+
  // console.log(props)
   const [vocab, setVocab] = useState(props.route.params.data);
 
@@ -19,14 +22,22 @@ const VocabScreen = (props) => {
     >
     <FlatList
       persistentScrollbar
-      //  ref={flatListRef}
+        ref={flatListRef}
       data={vocab}
       keyExtractor={(item, index) => index}
       renderItem={renderItem}
       pagingEnabled={true}
       decelerationRate={'normal'}
       initialNumToRender={10}
+    //  contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}
+      snapToAlignment="center"
       //showsVerticalScrollIndicator={true}
+      onScrollToIndexFailed={info => {
+        const wait = new Promise(resolve => setTimeout(resolve, 500));
+        wait.then(() => {
+          flatListRef.current?.scrollToIndex({ index: info.index});
+        });
+      }}
     />
 
     </View>

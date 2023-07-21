@@ -24,7 +24,6 @@ const OnboardingScreen = props => {
   }
 
   return (
-    // <Background>
     <View style={styles.container}>
       <Image
         style={styles.image}
@@ -41,32 +40,8 @@ const OnboardingScreen = props => {
         onPress={changeScreen}
         style={styles.buttonContainer}>
         <Ionicons name="arrow-forward-circle-sharp" size={80} color="#000" />
-        {/* <ImageBackground
-          source={require('../../images/Button.png')}
-          style={{
-            height: '100%',
-            width: '100%',
-            //   backgroundColor:"pink",
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-          imageStyle={{
-            height: '100%',
-            width: '100%',
-          }}>
-          <Text
-            style={{
-              color: 'white',
-              fontSize: 24,
-              textAlign: 'center',
-              fontWeight:"bold"
-            }}>
-            Get Started
-          </Text>
-        </ImageBackground> */}
       </TouchableOpacity>
     </View>
-    // {/* </Background> */}
   );
 };
 

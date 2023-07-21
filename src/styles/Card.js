@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { scaleFont } from "../utils/responsiveFontSize";
 
 const styles = StyleSheet.create({
     container:{
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
        // fontWeight: 'bold',
        textAlign:'center',
       // textAlignVertical:'center',
-        fontSize: 14,
+        fontSize: scaleFont(14),
         marginTop: '2%',
         fontFamily: 'Montserrat-SemiBold',
       }

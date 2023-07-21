@@ -2,8 +2,8 @@ import React, {useEffect} from 'react';
 import {View, Image} from 'react-native';
 import analytics from '@react-native-firebase/analytics';
 
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from '../styles/SplashScreen';
+import { fetchUserName } from '../utils/username';
 
 const SplashScreen = props => {
   useEffect(() => {
@@ -25,6 +25,7 @@ const SplashScreen = props => {
   }
 
   function changeScreen(name) {
+    console.log('In change screen',name);
     if (name) {
       props.navigation.replace('HomeScreen', {
         name,
@@ -35,27 +36,20 @@ const SplashScreen = props => {
   }
 
   const getUser = async () => {
-    // console.log('In get user');
-    try {
-      await AsyncStorage.getItem('username').then(name => {
-        setTimeout(() => {
-          changeScreen(name);
-        }, 2000);
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    const name= await fetchUserName();
+
+    setTimeout(() => {
+            changeScreen(name);
+          }, 2000);
   };
   
   return (
-    // <Background>
     <View style={styles.container}>
       <Image
         style={styles.image}
         source={require('../../images/splash-screen.png')}
       />
     </View>
-    // </Background>
   );
 };
 

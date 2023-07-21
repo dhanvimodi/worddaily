@@ -6,6 +6,8 @@ import styles from '../styles/DailyWordScreen';
 
 const DailyWordScreen = (props) => {
 
+    console.log("DailyWordScreen")
+
     const [data, setData] = useState(props.route.params.data);
 
         return(

@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { scaleFont } from "../utils/responsiveFontSize";
 
 const styles = StyleSheet.create({
     container:{
@@ -19,27 +20,20 @@ const styles = StyleSheet.create({
       name:{
         color: '#030303',
         letterSpacing: 2,
-        //fontWeight: 'bold',
-        fontSize: 24,
-        //marginTop: '20%',
-        //marginBottom:'10%',
+        fontSize: scaleFont(24),
         fontFamily: 'Montserrat-SemiBold',
       },
       cardHeading:{
         color: '#000',
-       // letterSpacing: 2,
-       // fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: scaleFont(16),
         marginTop: '2%',
         fontFamily: 'Montserrat',
         textAlign:'center'
       },
       word:{
         color: '#000',
-       // letterSpacing: 2,
-       // fontWeight: 'bold',
        textAlign:'center',
-        fontSize: 30,
+        fontSize: scaleFont(30),
         marginTop: '6%',
         fontFamily: 'Montserrat-SemiBold',
       },

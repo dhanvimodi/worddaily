@@ -6,8 +6,9 @@ import Tts from 'react-native-tts';
 
 import styles from '../styles/WordCard';
 import { useHeaderHeight } from '@react-navigation/elements';
-import { addFavorite, getFavorites, removeFavorite } from '../utils/favorite';
-import { updateVocabData, updateWordOfTheDayData } from '../utils/updateData';
+import { addFavorite, removeFavorite } from '../utils/favorite';
+import { updateVocabFavorite } from '../utils/vocab';
+import { updateWordOfTheDayFavorite } from '../utils/wordOfTheDay';
 import {useRoute} from '@react-navigation/native';
 
 
@@ -49,7 +50,7 @@ const WordCard = ({data}) => {
   function updateFavorite () {
     //console.log("update favorite")
 
-   if(data.favorite){
+   if(isFavorite){
     //console.log("remove favorite")
     removeFavorite(data)
    }
@@ -57,18 +58,8 @@ const WordCard = ({data}) => {
     //console.log("add favorite")
     addFavorite(data)
    }
-   
-   if(route.name=="DailyWordScreen"){
-    updateWordOfTheDayData(data)
-    
-   }
-   else if(route.name=="FavoriteScreen"){
-    updateVocabData(data)
-    updateWordOfTheDayData(data)
-   }
-   else{
-    updateVocabData(data)
-     }
+    updateVocabFavorite(data)
+    updateWordOfTheDayFavorite(data)
      //updateFavoriteData()
        //setData({...data, favorite:!data.favorite})
    //console.log(data.favorite)
@@ -90,7 +81,7 @@ const WordCard = ({data}) => {
          style={[{
          // backgroundColor:'pink',
           width:'98%',
-          height:'90%',
+          height:'95%',
           justifyContent:'center',        
         alignItems:'center',
         textAlign:'center',
