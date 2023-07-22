@@ -10,7 +10,6 @@ import { fetchUserName } from '../utils/username';
 import { scaleFont } from '../utils/responsiveFontSize';
 
 
-
 const Header = (props) => {
 
   const [name, setName] = useState('');

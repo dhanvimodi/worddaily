@@ -12,7 +12,6 @@ import VocabScreen from './src/screens/VocabScreen';
 import Header from './src/components/Header';
 import ProfileScreen from './src/screens/ProfileScreen';
 import FavoriteScreen from './src/screens/FavoriteScreen';
-
 const Stack = createStackNavigator();
 
 const App = (props) => {

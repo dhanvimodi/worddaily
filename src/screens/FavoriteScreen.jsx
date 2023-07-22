@@ -1,12 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import {FlatList, Text, TouchableOpacity, View} from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import React, {useEffect, useState, useRef} from 'react';
+import {FlatList, Text, TouchableOpacity, View, Button, Platform} from 'react-native';
 
 import styles from '../styles/FavoriteScreen';
 import { fetchFavorites } from '../utils/favorite';
+//import { captureScreen } from '../utils/shareScreenshot';
 
 
 const FavoriteScreen = (props) => {
+  const viewShotRef = useRef(null);
+
   console.log("FavoriteScreen")
   const [favorites, setFavorites] = useState(props.route.params.data);
 
@@ -41,6 +43,7 @@ const FavoriteScreen = (props) => {
     props.navigation.navigate('DailyWordScreen', {data: item});
   }
 
+
   return (
     <View
     style={styles.container}
@@ -64,7 +67,6 @@ const FavoriteScreen = (props) => {
       decelerationRate={'normal'}
       initialNumToRender={10}
     />}
-
     </View>
  
   );
