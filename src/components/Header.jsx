@@ -40,33 +40,35 @@ const Header = (props) => {
     return(
         <View style={styles.container}>
           {route.name=="HomeScreen" ? 
-                  <Text style={{color: '#030303',
+                  <Text style={{color: '#220a6a',
                   letterSpacing: 2,
                   //fontWeight: 'bold',
-                  fontSize: scaleFont(24),
+                  fontSize: scaleFont(30),
                   marginLeft: '5%',
                   //marginBottom:'10%',
-                  fontFamily: 'Montserrat-SemiBold',}}>Hi {name}!</Text>
+                  fontFamily: 'Montserrat-Bold',}}>Hi {name}!</Text>
 :
-      <TouchableOpacity onPress={navigateToHome}>
-        <SimpleLineIcons name="home" size={30} color="#000" />
-      </TouchableOpacity>
-      }
-      {
+      // <TouchableOpacity onPress={navigateToHome}>
+      //   <SimpleLineIcons name="home" size={30} color="#220a6a" />
+      // </TouchableOpacity>
+      
+      
         route.name=="FavoriteScreen" ?
 
-                  <Text style={{color: '#030303',
+                  <Text style={{color: '#220a6a',
                   letterSpacing: 2,
                   //fontWeight: 'bold',
-                  fontSize: scaleFont(24),
+                  fontSize: scaleFont(28),
                   marginRight: '10%',
                   //marginBottom:'10%',
-                  fontFamily: 'Montserrat-SemiBold',}}>Favorites</Text>
+                  fontFamily: 'Montserrat-Bold',}}>Favorites</Text>
                   :
+                  null}
+                  {route.name=="HomeScreen" ?
         <TouchableOpacity onPress={navigateToFavorites}>
         {/* <Feather name="user" size={30} color="#000" /> */}
-        <Ionicons name="heart-outline" size={40} color="#000" />
-      </TouchableOpacity>}
+        <Ionicons name="heart-outline" size={40} color="#220a6a" />
+      </TouchableOpacity>:null}
 
         
 

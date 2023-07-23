@@ -27,9 +27,8 @@ const VocabScreen = (props) => {
       keyExtractor={(item, index) => index}
       renderItem={renderItem}
       pagingEnabled={true}
-      decelerationRate={'normal'}
+      //decelerationRate={'normal'}
       initialNumToRender={10}
-    //  contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}
       snapToAlignment="center"
       //showsVerticalScrollIndicator={true}
       onScrollToIndexFailed={info => {

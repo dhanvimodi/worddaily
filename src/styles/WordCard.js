@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
       },
       button:{
        // marginTop:'23%',
-        opacity:0.6
+       // opacity:0.6
        },
        buttonContainer:{
         flexDirection:'row',

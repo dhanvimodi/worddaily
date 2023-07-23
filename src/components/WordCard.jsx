@@ -18,6 +18,7 @@ const WordCard = ({data}) => {
   const [isSoundPlaying, setIsSoundPlaying] = useState(false);
   const [color, setColor] = useState(getColor());
   const [isFavorite, setIsFavorite] = useState(data.favorite);
+  const [isShared, setIsShared] = useState(false);
 
   const headerHeight = useHeaderHeight();
   const route = useRoute();
@@ -41,14 +42,15 @@ const WordCard = ({data}) => {
   };
 
   function getColor() {
-    const colour = [
-      '#edd4f1',
-      '#f0eade',
-      '#f8df9b',
-      '#d7ebf1',
-      '#ffe2cc',
-      '#dae3b1',
-    ];
+    // const colour = [
+    //   '#edd4f1',
+    //   '#f0eade',
+    //   '#f8df9b',
+    //   '#d7ebf1',
+    //   '#ffe2cc',
+    //   '#dae3b1',
+    // ];
+    const colour = ["#fff"]
     index = Math.floor(Math.random() * (6 - 0) + 0);
     // setData(randomizedData);
     return colour[index];
@@ -74,13 +76,27 @@ const WordCard = ({data}) => {
     // addFavorite(data)
   }
 
+  const shareContent=()=>{
+  //  console.log("share content")
+    setIsShared(true)
+    captureAndShareScreenshot(viewref)
+  }
+
+  useEffect(() => {
+    if(isShared){
+      setTimeout(()=>{
+        setIsShared(false)
+      },1500)
+    }
+  },[isShared])
+
   return (
     <ViewShot ref={viewref}>
       <View
         style={[
           styles.wordContainer,
           {
-            height: Dimensions.get('window').height * 0.85,
+            height: Dimensions.get('window').height * 0.80,
           },
         ]}>
         <View
@@ -101,7 +117,7 @@ const WordCard = ({data}) => {
               // borderRadius:
             },
             {
-              backgroundColor: color,
+              backgroundColor: '#fff',
             },
           ]}>
           <Text style={styles.word}>{data.word}</Text>
@@ -121,16 +137,22 @@ const WordCard = ({data}) => {
               <Ionicons
                 name={isFavorite ? 'heart' : 'heart-outline'}
                 size={50}
-                color="#000"
+                color={isFavorite ? "#d1d0f0" : '#000'}
               />
+              
             </TouchableOpacity>
 
             <TouchableOpacity 
               activeOpacity={.7} // default is .2
-            onPress={()=>captureAndShareScreenshot(viewref)} style={styles.button}>
+            onPress={shareContent} style={styles.button}>
               <Ionicons name="share-outline" size={45} color="#000" />
             </TouchableOpacity>
           </View>
+         {
+         isShared &&
+         <Text style={{
+            color:'#000',
+          }}>A WORD GURU</Text>}
         </View>
       </View>
     </ViewShot>

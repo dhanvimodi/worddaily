@@ -3,10 +3,11 @@
 
 const styles = StyleSheet.create({
     container:{
+        paddingTop:'10%',
            width: '100%',
-           backgroundColor:"#fff",
+           backgroundColor:"#d1d0f0",
            justifyContent: 'center',
-           alignItems: 'center'
+           alignItems: 'center',
        }
     
 })

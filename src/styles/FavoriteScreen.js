@@ -4,7 +4,7 @@ import { scaleFont } from '../utils/responsiveFontSize';
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    backgroundColor: '#fff',
+    backgroundColor: '#d1d0f0',
     justifyContent: 'center',
     alignItems: 'center',
     height: '100%',
@@ -12,27 +12,30 @@ const styles = StyleSheet.create({
   flatList:{
     width:'100%',
     height:'100%',
-    marginTop:'15%'
+    marginTop:'10%',
+    paddingBottom:'5%'
+  },
+  flatListContent:{
+    paddingBottom:'5%'
+  //  height:'100%',
   },
   cardContainer: {
     marginLeft:'5%',
     width: '90%',
    // width: '100%',
-    backgroundColor: '#9BCDD2',
+    backgroundColor: '#fff',
     justifyContent: 'center',
    // alignItems: 'flex-left',
     paddingHorizontal: 30,
     paddingTop: 20,
     paddingBottom: 20,
     marginTop: '5%',
-    borderRadius: 10,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
+    borderRadius: 20,
+    shadowColor: '#220a6a',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    elevation: 10,
   },
   favoriteCardContainer: {
     marginLeft:'5%',

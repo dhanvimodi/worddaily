@@ -5,7 +5,9 @@ const styles = StyleSheet.create({
     container:{
        height: '100%',
         width: '100%',
-        backgroundColor:"#fff",
+        backgroundColor:"#d1d0f0",
+       // backfaceVisibility:'hidden',
+       // opacity:.2,
         justifyContent: 'center',
         alignItems: 'center'
       },
@@ -31,7 +33,7 @@ const styles = StyleSheet.create({
         textAlign:'center'
       },
       word:{
-        color: '#000',
+        color: '#220a6a',
        textAlign:'center',
         fontSize: scaleFont(30),
         marginTop: '6%',

@@ -63,7 +63,7 @@ const FavoriteScreen = (props) => {
       data={favorites}
       keyExtractor={(item, index) => index}
       renderItem={renderItem}
-      pagingEnabled={true}
+     // pagingEnabled={true}
       decelerationRate={'normal'}
       initialNumToRender={10}
     />}

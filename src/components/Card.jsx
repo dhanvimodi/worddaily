@@ -7,8 +7,8 @@ const Card = props => {
   return (
     <View style={[styles.container,{
       backgroundColor:props.color,
-      borderColor:'#000',
-      borderWidth:2
+    //  borderColor:'#000',
+    //  borderWidth:2
     }]}>
       {props.children}
       <View style={styles.buttonRowContainer}>

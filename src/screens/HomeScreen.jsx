@@ -8,9 +8,6 @@ import Card from '../components/Card';
 import {fetchVocabData} from '../utils/vocab';
 
 const HomeScreen = props => {
-
-  console.log("Home Screen")
-
   // const [name, setName] = useState('');
   const [data, setData] = useState([]);
   const [todaysData, setTodaysData] = useState([]);
@@ -117,7 +114,8 @@ const HomeScreen = props => {
       <View style={styles.innerContainer}>
         <Card
           data={todaysData}
-          color={'#FFDEDE'}
+         // color={'#d1d0f0'}
+          color={'#fff'}
           changeScreen={() => changeScreen('DailyWordScreen', todaysData)}
           listen={() => playSound(todaysData.word)}>
           <Text style={styles.cardHeading}>word of the day</Text>
@@ -128,7 +126,7 @@ const HomeScreen = props => {
         </Card>
         <Card
           data={todaysData}
-          color={'#9BCDD2'}
+          color={'#fff'}
           changeScreen={() => changeScreen('VocabScreen', data)}
           listen={() => playSound(data[0].word)}>
           <Text style={styles.cardHeading}>book of words</Text>

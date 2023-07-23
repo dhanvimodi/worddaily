@@ -5,9 +5,9 @@ const styles = StyleSheet.create({
   container:{
     height: '100%',
     width: '100%',
-    // justifyContent: 'center',
+     justifyContent: 'center',
      alignItems: 'center',
-    backgroundColor:"#ffe2cc",
+    backgroundColor:"#d1d0f0",
   },
     image:{
         height: '35%',
