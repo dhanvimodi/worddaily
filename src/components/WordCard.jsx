@@ -152,6 +152,9 @@ const WordCard = ({data}) => {
          isShared &&
          <Text style={{
             color:'#000',
+            marginTop:'5%',
+            fontFamily:'Montserrat-Medium',
+            color:'#220a6a',
           }}>A WORD GURU</Text>}
         </View>
       </View>

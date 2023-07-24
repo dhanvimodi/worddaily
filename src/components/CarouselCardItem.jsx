@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { View, Text, StyleSheet, Dimensions, Image, TextInput, TouchableOpacity } from "react-native"
+import { View, Text, StyleSheet, Dimensions, Image, TextInput, Keyboard } from "react-native"
 import { scaleFont } from '../utils/responsiveFontSize'
 import data from '../../mockData/carouselData'
 import { storeUserName } from '../utils/username'
@@ -11,6 +11,28 @@ export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
 
 function CarouselCardItem ({ item, index, name, setName}){
 
+  const [isKeyboardVisible, setIsKeyboardVisible] = useState(false)
+
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      () => {
+        setIsKeyboardVisible(true); // or some other action
+      }
+    );
+    const keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      () => {
+        setIsKeyboardVisible(false); // or some other action
+      }
+    );
+
+    return () => {
+      keyboardDidHideListener.remove();
+      keyboardDidShowListener.remove();
+    };
+  }, []);
+
   return (
     <View style={styles.container} key={index}>
 { item.imgUrl &&     <Image
@@ -18,14 +40,15 @@ function CarouselCardItem ({ item, index, name, setName}){
         style={styles.image}
       />}
       <Text style={styles.header}>{item.title}</Text>
-      <Text style={styles.body}>{item.body}</Text>
+   
+        <Text style={styles.body}>{item.body}</Text>
       { index===data.length-1 &&  
            <TextInput
-           style={{
+           style={[{
             height: '12%',
             alignSelf: 'center',
             width: '60%',
-            marginTop: '15%',
+            marginTop: '5%',
             borderRadius: 10,
            // placeholderTextColor: '#000',
             color: '#000',
@@ -45,48 +68,20 @@ function CarouselCardItem ({ item, index, name, setName}){
             shadowOpacity: 0.2,
             shadowRadius: 3,
             elevation: 15,
-          }}
+          },
+          isKeyboardVisible && {
+            marginBottom:"20%"
+
+          }]}
            maxLength={15}
            placeholder="Enter your name"
            placeholderTextColor="#000"
            value={name}
+          // onPressIn={changeKeyBoardShown}
+          // onPressOut={changeKeyBoardShown}
            onChangeText={setName}
        />
       }
-      {/* {
-        index===data.length-1 &&
-        <TouchableOpacity style={{
-            height: '15%',
-            alignSelf: 'center',
-            width: '70%',
-            marginTop: '20%',
-            borderRadius: 10,
-        }}
-        activeOpacity={.7}
-        onPress={changeScreen}
-        >
-
-            <View style={{
-                height: '100%',
-                width: '100%',
-                backgroundColor: '#220a6a',
-                borderRadius: 10,
-                justifyContent: 'center',
-                alignItems: 'center',
-                shadowColor: '#220a6a',
-                shadowOffset: {width: -2, height: 4},
-                shadowOpacity: 0.2,
-                shadowRadius: 3,
-                elevation: 15,
-            }}>
-                <Text style={{
-                    color: '#fff',
-                    fontFamily: 'Montserrat-SemiBold',
-                    fontSize: scaleFont(24),
-                }}>Let's Go!</Text>
-            </View>
-        </TouchableOpacity>
-      } */}
 
     </View>
   )
@@ -106,7 +101,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 3,
     elevation: 10,
-    justifyContent:'space-evenly'
+    justifyContent:'space-around'
   },
   image: {
     alignSelf: 'center',
@@ -121,13 +116,12 @@ const styles = StyleSheet.create({
     fontSize: scaleFont(32),
    // fontWeight: "bold",
     paddingLeft: 20,
-    paddingTop: 20
+ //   paddingTop: 
   },
   body: {
     color: "#000",
     fontFamily: 'Montserrat-Regular',
     fontSize: 18,
-    marginTop:'5%',
     paddingLeft: 20,
     paddingLeft: 20,
     paddingRight: 20

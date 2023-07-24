@@ -6,6 +6,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Background from '../components/Background';
 import styles from '../styles/OnboardingScreen';
 import CarouselCards from '../components/Carousel';
+import { storeVocabData } from '../utils/vocab';
+import { storeWordOfTheDayData } from '../utils/wordOfTheDay';
 
 const OnboardingScreen = props => {
   // useEffect(() => {
@@ -20,8 +22,12 @@ const OnboardingScreen = props => {
   //       console.log("Error")
   //   }  }
 
-  function changeScreen() {
-    props.navigation.replace('InfoScreen');
+  useEffect(() => {
+    storeData()
+  }, []);
+  async function storeData() {
+    await storeVocabData()
+    await storeWordOfTheDayData()
   }
 
   return (
