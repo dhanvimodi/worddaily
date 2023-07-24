@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { View, Text, StyleSheet, Dimensions, Image, TextInput, TouchableOpacity } from "react-native"
 import { scaleFont } from '../utils/responsiveFontSize'
-import data from './data'
+import data from '../../mockData/carouselData'
 import { storeUserName } from '../utils/username'
 import { storeVocabData } from '../utils/vocab'
 import { storeWordOfTheDayData } from '../utils/wordOfTheDay'

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { View , TouchableOpacity, Text, Dimensions } from "react-native"
 import Carousel, { Pagination } from 'react-native-snap-carousel'
 import CarouselCardItem, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselCardItem'
-import data from './data'
+import data from '../../mockData/carouselData'
 import { scaleFont } from '../utils/responsiveFontSize'
 import { storeUserName } from '../utils/username'
 
