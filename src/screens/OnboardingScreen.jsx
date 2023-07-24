@@ -5,6 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Background from '../components/Background';
 import styles from '../styles/OnboardingScreen';
+import CarouselCards from '../components/Carousel';
 
 const OnboardingScreen = props => {
   // useEffect(() => {
@@ -25,7 +26,7 @@ const OnboardingScreen = props => {
 
   return (
     <View style={styles.container}>
-      <Image
+      {/* <Image
         style={styles.image}
         source={require('../../images/onboarding-screen-design.png')}
       />
@@ -40,7 +41,8 @@ const OnboardingScreen = props => {
         onPress={changeScreen}
         style={styles.buttonContainer}>
         <Ionicons name="arrow-forward-circle-sharp" size={80} color="#000" />
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+      <CarouselCards navigation={props.navigation}/>
     </View>
   );
 };
