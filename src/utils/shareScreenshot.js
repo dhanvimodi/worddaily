@@ -15,7 +15,7 @@ export async function captureAndShareScreenshot(ref) {
 
         let options = {
           // title: "Share Title",
-           message: "A Word Guru",
+           message:`Hey,\n\nWords can be magical, and A Word Guru is here to prove it! Dive into a world of remarkable words waiting to be shared.\n\n🔍 Explore captivating vocabulary.\n💬 Share the magic with friends.\n🌟 Learn and enjoy the ride!\n\nReady to start? Download now:\nhttps://play.google.com/store/apps/details?id=com.worddaily\n\nHappy word-sharing!\nA Word Guru Team`,
            url: urlString,
            type: "image/jpeg"
          };

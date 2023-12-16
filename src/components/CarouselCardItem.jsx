@@ -6,8 +6,8 @@ import { storeUserName } from '../utils/username'
 import { storeVocabData } from '../utils/vocab'
 import { storeWordOfTheDayData } from '../utils/wordOfTheDay'
 
-export const SLIDER_WIDTH = Dimensions.get('window').width + 80
-export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
+export const SLIDER_WIDTH = Dimensions.get('window').width
+export const ITEM_WIDTH = Math.round(SLIDER_WIDTH)
 
 function CarouselCardItem ({ item, index, name, setName}){
 
@@ -37,18 +37,29 @@ function CarouselCardItem ({ item, index, name, setName}){
     <View style={styles.container} key={index}>
 { item.imgUrl &&     <Image
         source={item.imgUrl}
-        style={styles.image}
+        style={[styles.image,
+              index===1 && styles.secondImage
+        ]}
       />}
-      <Text style={styles.header}>{item.title}</Text>
+      
+      <Text style={[styles.header,
+          !item.imgUrl && {
+            marginTop: '5%',
+          }
+      ]}>{item.title}</Text>
    
-        <Text style={styles.body}>{item.body}</Text>
+        <Text style={[styles.body,
+          !item.imgUrl && {
+            marginTop: '20%',
+          }
+        ]}>{item.body}</Text>
       { index===data.length-1 &&  
            <TextInput
            style={[{
             height: '12%',
             alignSelf: 'center',
             width: '60%',
-            marginTop: '5%',
+            marginTop: '25%',
             borderRadius: 10,
            // placeholderTextColor: '#000',
             color: '#000',
@@ -89,25 +100,35 @@ function CarouselCardItem ({ item, index, name, setName}){
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+   // backgroundColor: 'white',
    // alignItems: 'center',
     borderRadius: 20,
    // width: ITEM_WIDTH,
     height:'100%',
-    paddingTop:40,
+    paddingTop:20,
     paddingBottom: 40,
-    shadowColor: '#220a6a',
-    shadowOffset: {width: -2, height: 4},
-    shadowOpacity: 0.2,
-    shadowRadius: 3,
-    elevation: 10,
-    justifyContent:'space-around'
+    width:'100%',
+    // shadowColor: '#220a6a',
+    // shadowOffset: {width: -2, height: 4},
+    // shadowOpacity: 0.2,
+    // shadowRadius: 3,
+    // elevation: 10,
+   // justifyContent:'space-around'
   },
   image: {
     alignSelf: 'center',
-   // width: '90%',
-    height: '50%',
+    //width: '90%',
+    height: '52%',
     aspectRatio: 1,
+    marginBottom:'15%',
+    borderRadius: 20,
+  },
+  secondImage:{
+    alignSelf: 'center',
+    //width: '90%',
+    height: '52%',
+    aspectRatio: 4/3,
+    marginBottom:'15%',
     borderRadius: 20,
   },
   header: {
@@ -115,16 +136,22 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Bold',
     fontSize: scaleFont(32),
    // fontWeight: "bold",
-    paddingLeft: 20,
+   marginLeft:'7%',
+   marginRight:'7%',
+
+  //  paddingLeft: 20,
  //   paddingTop: 
   },
   body: {
     color: "#000",
     fontFamily: 'Montserrat-Regular',
     fontSize: 18,
-    paddingLeft: 20,
-    paddingLeft: 20,
-    paddingRight: 20
+    // paddingLeft: 20,
+    // paddingLeft: 20,
+    // paddingRight: 20,
+    marginRight:'7%',
+    marginLeft:'7%',
+    marginTop:'5%'
   }
 })
 

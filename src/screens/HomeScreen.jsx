@@ -1,17 +1,24 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {Text, View, Dimensions} from 'react-native';
+import * as Notifications from 'expo-notifications'
 import {fetchWordOfTheDayData} from '../utils/wordOfTheDay';
-import analytics from '@react-native-firebase/analytics';
 import Tts from 'react-native-tts';
 import styles from '../styles/HomeScreen';
 import Card from '../components/Card';
 import {fetchVocabData} from '../utils/vocab';
 
+
+
 const HomeScreen = props => {
+  console.log('HomeScreen')
   // const [name, setName] = useState('');
   const [data, setData] = useState([]);
   const [todaysData, setTodaysData] = useState([]);
   const [isSoundPlaying, setIsSoundPlaying] = useState(false);
+
+
+  const notificationListener = useRef();
+  const responseListener = useRef();
 
   useEffect(() => {
     Tts.addEventListener('tts-start', event => {
@@ -23,7 +30,7 @@ const HomeScreen = props => {
   }, []);
 
   useEffect(() => {
-    //  getUser()
+   // createChannel();
     getWordOfTheDayData();
     getVocabData();
   }, []);
@@ -38,6 +45,27 @@ const HomeScreen = props => {
       unsubscribe();
     };
   }, [props.navigation]);
+
+  useEffect(() => {
+
+    notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
+     // setNotification(notification);
+    });
+
+   
+    responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
+     // props.navigation.navigate()
+     console.log('Notification clicked');
+     props.navigation.navigate('DailyWordScreen', {data: response.notification.request.content.data});
+    });
+
+    return () => {
+      Notifications.removeNotificationSubscription(notificationListener.current);
+       Notifications.removeNotificationSubscription(responseListener.current);
+    };
+  }, []);
+
+
 
   const playSound = word => {
     if (!isSoundPlaying) {
@@ -63,11 +91,11 @@ const HomeScreen = props => {
   }
 
   function randomizeData(data) {
-    // const randomizedData = [...data].sort(() => Math.random() - 0.5);
-    // setData(randomizedData);
+    const randomizedData = [...data].sort(() => Math.random() - 0.5);
+    setData(randomizedData);
     // console.log("In randomize data")
     // console.log(data)
-    setData(data);
+    //setData(data);
   }
 
   const changeScreen = (screenName, data) => {
@@ -93,24 +121,6 @@ const HomeScreen = props => {
   // }
   return (
     <View style={styles.container}>
-      {/* <View style={{
-        width:'100%',
-       // height:'10%',
-           backgroundColor:'#FF8551',
-          //  padding:'5%',
-            paddingTop:'7%',
-        paddingBottom:'7%',
-          //  paddingBottom:'7%',
-          justifyContent:'center',
-          alignItems:'center',
-           borderColor:'#000',
-           borderWidth:2,
-          // marginBottom:'2%',
-           borderBottomLeftRadius:25,
-           borderBottomRightRadius:25,
-        }}>
-        <Text style={styles.name}>Hi {name}!</Text>
-        </View> */}
       <View style={styles.innerContainer}>
         <Card
           data={todaysData}
@@ -118,7 +128,7 @@ const HomeScreen = props => {
           color={'#fff'}
           changeScreen={() => changeScreen('DailyWordScreen', todaysData)}
           listen={() => playSound(todaysData.word)}>
-          <Text style={styles.cardHeading}>word of the day</Text>
+          <Text style={styles.cardHeading}>Word of the Day</Text>
           <Text style={styles.word} numberOfLines={2}>
             {todaysData.word}
           </Text>
@@ -129,7 +139,7 @@ const HomeScreen = props => {
           color={'#fff'}
           changeScreen={() => changeScreen('VocabScreen', data)}
           listen={() => playSound(data[0].word)}>
-          <Text style={styles.cardHeading}>book of words</Text>
+          <Text style={styles.cardHeading}>Word Bank</Text>
 
           {data.length > 0 && data[0].word && (
             <Text style={styles.word}>{data[0].word}</Text>

@@ -7,12 +7,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
        // backgroundColor:"#EFE8D8",
-       backgroundColor:"#fff",
+       backgroundColor:"#d1d0f0",
        //backgroundColor:"#F5F7FB",
       },
       image:{
-        height: '28%',
-        aspectRatio: 4 / 3,
+        height: '35%',
+        aspectRatio: 4 / 5,
       }
 })
 

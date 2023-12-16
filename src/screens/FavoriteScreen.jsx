@@ -3,6 +3,7 @@ import {FlatList, Text, TouchableOpacity, View, Button, Platform} from 'react-na
 
 import styles from '../styles/FavoriteScreen';
 import { fetchFavorites } from '../utils/favorite';
+import NotificationScreen from './NotificationScreen';
 //import { captureScreen } from '../utils/shareScreenshot';
 
 
@@ -68,6 +69,8 @@ const FavoriteScreen = (props) => {
       initialNumToRender={10}
     />}
     </View>
+
+
  
   );
 };

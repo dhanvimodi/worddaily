@@ -56,7 +56,7 @@ async function storeName(name) {
             // alignItems: 'center',
             //ssss backgroundColor:'pink',
             marginTop:'15%',
-             height:Dimensions.get('window').height*0.7,
+            // height:Dimensions.get('window').height*0.7,
             }}
        // useScrollView={true}
       />
@@ -85,7 +85,7 @@ async function storeName(name) {
             height: '10%',
             alignSelf: 'center',
             width: '90%',
-            marginBottom: '15%',
+            marginBottom: '8%',
             borderRadius: 10,
         }}
         activeOpacity={.7}
@@ -121,7 +121,7 @@ async function storeName(name) {
              height: '6%',
              alignSelf: 'flex-end',
             // width: '70%',
-            marginRight:'20%',
+            marginRight:'15%',
            // alignSelf:'flex-end',
            //position:'absolute',
            //right:0,
