@@ -1,197 +1,152 @@
-import React, { useEffect, useState} from 'react';
-import {Text, View} from 'react-native';
-import Background from '../components/Background';
-import {getData} from '../utils/helperFunctions';
-import analytics from '@react-native-firebase/analytics';
+import React, {useEffect, useState, useRef} from 'react';
+import {Text, View, Dimensions} from 'react-native';
+import * as Notifications from 'expo-notifications'
+import {fetchWordOfTheDayData} from '../utils/wordOfTheDay';
+import Tts from 'react-native-tts';
+import styles from '../styles/HomeScreen';
+import Card from '../components/Card';
+import {fetchVocabData} from '../utils/vocab';
+
+
 
 const HomeScreen = props => {
-  const [name, setName] = useState(props.route.params.name);
-  const [data, setData] = useState({});
+  console.log('HomeScreen')
+  // const [name, setName] = useState('');
+  const [data, setData] = useState([]);
+  const [todaysData, setTodaysData] = useState([]);
+  const [isSoundPlaying, setIsSoundPlaying] = useState(false);
+
+
+  const notificationListener = useRef();
+  const responseListener = useRef();
 
   useEffect(() => {
-    trackScreenView('HomeScreen');
+    Tts.addEventListener('tts-start', event => {
+      setIsSoundPlaying(true);
+    });
+    Tts.addEventListener('tts-finish', event => {
+      setIsSoundPlaying(false);
+    });
   }, []);
-
-  async function trackScreenView(screen) {
-    // Set & override the MainActivity screen name
-    await analytics().setCurrentScreen(screen, screen);
-  }
 
   useEffect(() => {
-    fetchData();
+   // createChannel();
+    getWordOfTheDayData();
+    getVocabData();
   }, []);
 
-  async function fetchData() {
-    todaysData = await getData();
-    setData(todaysData);
+  useEffect(() => {
+    const unsubscribe = props.navigation.addListener('focus', () => {
+      onNavigateBack();
+    });
+
+    // Cleanup function to unsubscribe when the component is unmounted
+    return () => {
+      unsubscribe();
+    };
+  }, [props.navigation]);
+
+  useEffect(() => {
+
+    notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
+     // setNotification(notification);
+    });
+
+   
+    responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
+     // props.navigation.navigate()
+     console.log('Notification clicked');
+     props.navigation.navigate('DailyWordScreen', {data: response.notification.request.content.data});
+    });
+
+    return () => {
+      Notifications.removeNotificationSubscription(notificationListener.current);
+       Notifications.removeNotificationSubscription(responseListener.current);
+    };
+  }, []);
+
+
+
+  const playSound = word => {
+    if (!isSoundPlaying) {
+      Tts.speak(word);
+    }
+  };
+
+  async function getWordOfTheDayData() {
+    // console.log('In fetch word of the day data')
+    const [todaysData, numberOfDaysVisited] = await fetchWordOfTheDayData();
+    setTodaysData(todaysData);
   }
+
+  const onNavigateBack = () => {
+    getVocabData();
+    getWordOfTheDayData();
+  };
+
+  async function getVocabData() {
+    // console.log("In get vocab data")
+    const vocabData = await fetchVocabData();
+    randomizeData(vocabData);
+  }
+
+  function randomizeData(data) {
+    const randomizedData = [...data].sort(() => Math.random() - 0.5);
+    setData(randomizedData);
+    // console.log("In randomize data")
+    // console.log(data)
+    //setData(data);
+  }
+
+  const changeScreen = (screenName, data) => {
+    props.navigation.navigate(screenName, {data: data});
+  };
+
+  // const getUser = async () => {
+  //   const name= await fetchUserName()
+  //   setName(name)
+  // };
+
+  // useEffect(() => {
+
+  //   trackScreenView('HomeScreen');
+  // }, []);
+
+  // async function trackScreenView(screen) {
+  //   // Set & override the MainActivity screen name
+  //   if(await analytics().setCurrentScreen(screen, screen)){}
+  //   else{
+  //       console.log("Error")
+  //   }
+  // }
   return (
-    <Background>
-      <View
-        style={{
-          height: '100%',
-          width: '100%',
-          justifyContent: 'center',
-          alignItems: 'flex-start',
-          // marginLeft:"10%",
-          // width:"50%",
-          //  backgroundColor:"pink"
-        }}>
-        <View
-          style={{
-            marginLeft: '10%',
-            width: '80%',
-            height: '100%',
-            // justifyContent:"center"
-          }}>
-          <Text
-            style={{
-              color: '#1e1e1e',
-              fontWeight: 'bold',
-              letterSpacing: 2,
-              fontSize: 20,
-              marginTop: '30%',
-            }}>
-            Hi {name},
+    <View style={styles.container}>
+      <View style={styles.innerContainer}>
+        <Card
+          data={todaysData}
+         // color={'#d1d0f0'}
+          color={'#fff'}
+          changeScreen={() => changeScreen('DailyWordScreen', todaysData)}
+          listen={() => playSound(todaysData.word)}>
+          <Text style={styles.cardHeading}>Word of the Day</Text>
+          <Text style={styles.word} numberOfLines={2}>
+            {todaysData.word}
           </Text>
-          <View
-            style={{
-              // justifyContent:"center",
-              height: '70%',
-              //backgroundColor:"pink"
-            }}>
-            <Text
-              style={{
-                marginTop: '20%',
-                color: '#162016',
-                letterSpacing: 3,
-                fontSize: 18,
-              }}>
-              word of the day :
-            </Text>
-            <Text
-              style={{
-                color: '#000',
-                letterSpacing: 2,
-                fontSize: 32,
-                fontWeight: 'bold',
-                marginTop: '10%',
-                fontFamily: 'Montserrat-Bold',
-              }}>
-              {data.word}
-            </Text>
+          {/* <WordList data={mockData[0]} /> */}
+        </Card>
+        <Card
+          data={todaysData}
+          color={'#fff'}
+          changeScreen={() => changeScreen('VocabScreen', data)}
+          listen={() => playSound(data[0].word)}>
+          <Text style={styles.cardHeading}>Word Bank</Text>
 
-            <Text
-              style={{
-                color: '#162017',
-                letterSpacing: 3,
-                fontSize: 18,
-                marginTop: '3%',
-              }}>
-              {data.phonetic}
-            </Text>
-            <Text
-              style={{
-                color: '#162017',
-                letterSpacing: 3,
-                fontSize: 18,
-                marginTop: '2%',
-              }}>
-              {data.partOfSpeech}
-            </Text>
-            <Text
-              style={{
-                color: '#000',
-                fontSize: 21,
-                marginTop: '10%',
-                letterSpacing: 2,
-                fontFamily: 'Montserrat-Medium',
-              }}>
-              {data.meaning}
-            </Text>
-
-            <Text
-              style={{
-                color: '#000',
-                fontSize: 19,
-                marginTop: '15%',
-                letterSpacing: 2,
-                fontFamily: 'Montserrat-Regular',
-              }}>
-              {data.sentence}
-            </Text>
-          </View>
-        </View>
+          {data.length > 0 && data[0].word && (
+            <Text style={styles.word}>{data[0].word}</Text>
+          )}
+        </Card>
       </View>
-    </Background>
+    </View>
   );
 };
-{
-  /* <View
-        style={{
-          height: '100%',
-          width: '100%',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-        <View
-          style={{
-            height: '70%',
-            width: '90%',
-            backgroundColor: '#e2ce37',
-            borderRadius: 40,
-            justifyContent: 'center',
-            alignItems: 'center',
-            shadowColor: '#c2af29',
-            // IOS specific
-            shadowOffset: {width: 0, height: 1},
-            shadowOpacity: 0.8,
-            shadowRadius: 2,
-            // Android specific
-            elevation: 15,
-          }}>
-         
-          <View
-            style={{
-              alignItems:'center',
-              
-              height: '96%',
-              width: '94%',
-              backgroundColor: '#f7f8f9',
-              borderRadius: 40,
-              shadowColor: 'black',
-              //IOS specific
-              shadowOffset: {width: 0, height: 1},
-              shadowOpacity: 0.8,
-              shadowRadius: 2,
-              // Andorid specific
-              elevation: 5,
-            }}>
-
-<View
-             style={{
-             
-              height: '15%',
-              width: '20%',
-              
-            marginTop:"-10%",
-              backgroundColor: '#e2ce37',
-              borderRadius: 100,
-              justifyContent: 'center',
-              alignItems: 'center',
-              shadowColor: '#c2af29',
-              // IOS specific
-              shadowOffset: {width: 0, height: 1},
-              shadowOpacity: 0.8,
-              shadowRadius: 2,
-              // Android specific
-              elevation: 15,
-            }}>
-
-            </View>
-
-            </View>
-        </View>
-      </View> */
-}
 export default HomeScreen;

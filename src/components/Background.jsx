@@ -6,12 +6,13 @@ const Background = (props) => {
   return(
     <View 
     style={{
-        backgroundColor:"#fff",
+      // backgroundColor:"#FFDAB9",
+       backgroundColor:"#DAD8CD",
         height:"100%",
         width:"100%"
     }}
     >
-        <ImageBackground
+        {/* <ImageBackground
         source={require("../../images/BackDrop1.png")}
         style={{
             height:"100%",
@@ -21,7 +22,7 @@ const Background = (props) => {
          }}
         // imageStyle={{opacity: 0.3}}
         resizeMode="cover"
-        >
+        > */}
             <View style={{
                 height:"100%",
                 width:"100%",
@@ -30,7 +31,7 @@ const Background = (props) => {
             {props.children}
             </View>
             
-        </ImageBackground>
+        {/* </ImageBackground> */}
     </View>
    
   )

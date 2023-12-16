@@ -1,0 +1,272 @@
+[
+  {
+    "favorite": false,
+    "id": "1",
+    "meaning": "Luck that takes the form of finding valuable or pleasant things that are not looked for.",
+    "partOfSpeech": "Noun",
+    "phonetic": "ˌserənˈdipədē",
+    "sentence": "She discovered the shop by serendipity after getting lost.",
+    "word": "Serendipity"
+  },
+  {
+    "favorite": false,
+    "id": "2",
+    "meaning": "A situation or state of confused movement or violent turmoil.",
+    "partOfSpeech": "Noun",
+    "phonetic": "ˈmeɪlstrəm",
+    "sentence": "The boat was caught in a maelstrom of waves and wind.",
+    "word": "Maelstrom"
+  },
+  {
+    "favorite": false,
+    "id": "3",
+    "meaning": "The state of being close to someone or something; proximity.",
+    "partOfSpeech": "Noun",
+    "phonetic": "prəˈpɪŋkwəti",
+    "sentence": "The propinquity of their desks made it easy for them to collaborate.",
+    "word": "Propinquity"
+  },
+  {
+    "favorite": false,
+    "id": "4",
+    "meaning": "The quality of being pleasing to the ear.",
+    "partOfSpeech": "Noun",
+    "phonetic": "ˈjuːfəni",
+    "sentence": "The song was filled with euphony, making it very enjoyable to listen to.",
+    "word": "Euphony"
+  },
+  {
+    "favorite": false,
+    "id": "5",
+    "meaning": "A complicated irregular network of passages or paths in which it is difficult to find one's way; a maze.",
+    "partOfSpeech": "Noun",
+    "phonetic": "ˈlæbərɪnθ",
+    "sentence": "She got lost in the labyrinth of hallways in the old building.",
+    "word": "Labyrinth"
+  },
+  {
+    "favorite": false,
+    "id": "6",
+    "meaning": "Appease the anger or anxiety of (someone).",
+    "partOfSpeech": "Verb",
+    "phonetic": "ˈmɒlɪfʌɪ",
+    "sentence": "She tried to mollify her upset coworker with kind words.",
+    "word": "Mollify"
+  },
+  {
+    "favorite": false,
+    "id": "7",
+    "meaning": "Lasting for a very short time.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ɪˈfɛm(ə)r(ə)l",
+    "sentence": "The beauty of the cherry blossoms is ephemeral.",
+    "word": "Ephemeral"
+  },
+  {
+    "favorite": false,
+    "id": "8",
+    "meaning": "Having a harmful effect, especially in a gradual or subtle way.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "pəˈnɪʃəs",
+    "sentence": "The pernicious effects of smoking are well documented.",
+    "word": "Pernicious"
+  },
+  {
+    "favorite": false,
+    "id": "9",
+    "meaning": "Calm, peaceful, and untroubled; tranquil.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "səˈriːn",
+    "sentence": "The view of the sunset over the ocean was serene and beautiful.",
+    "word": "Serene"
+  },
+  {
+    "favorite": false,
+    "id": "10",
+    "meaning": "An inclination or natural tendency to behave in a particular way.",
+    "partOfSpeech": "Noun",
+    "phonetic": "prəˈpɛnsɪti",
+    "sentence": "Her propensity for always being on time made her a reliable employee.",
+    "word": "Propensity"
+  },
+  {
+    "favorite": false,
+    "id": "11",
+    "meaning": "Supersede and replace.",
+    "partOfSpeech": "Verb",
+    "phonetic": "səˈplɑːnt",
+    "sentence": "The new technology will supplant the old system.",
+    "word": "Supplant"
+  },
+  {
+    "favorite": false,
+    "id": "12",
+    "meaning": "Using very few words.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ləˈkɒnɪk",
+    "sentence": "His laconic response was both surprising and effective.",
+    "word": "Laconic"
+  },
+  {
+    "favorite": false,
+    "id": "13",
+    "meaning": "Showing a disinterested and selfless concern for the well-being of others; unselfish.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ælˈtruːɪstɪk",
+    "sentence": "His altruistic behavior earned him the respect of his peers.",
+    "word": "Altruistic"
+  },
+  {
+    "favorite": false,
+    "id": "14",
+    "meaning": "Too great or extreme to be expressed or described in words.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ɪnˈɛfəb(ə)l",
+    "sentence": "The beauty of the mountains was ineffable.",
+    "word": "Ineffable"
+  },
+  {
+    "favorite": false,
+    "id": "15",
+    "meaning": "Eager or quick to argue or fight; aggressively defiant.",
+    "partOfSpeech": "adjective",
+    "phonetic": "trŭk′yə-lənt",
+    "sentence": "His truculent behavior was making it difficult",
+    "word": "Truculent"
+  },
+  {
+    "favorite": false,
+    "id": "16",
+    "meaning": "Excessively talkative, especially on trivial matters; loquacious or rambling.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ˈɡærələs",
+    "sentence": "The garrulous old man would often ramble on for hours without a pause.",
+    "word": "Garrulous"
+  },
+  {
+    "favorite": false,
+    "id": "17",
+    "meaning": "Characterized by vulgar or pretentious display; designed to impress or attract notice.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ˌɒstɛnˈteɪʃəs",
+    "sentence": "Her ostentatious jewelry made her stand out in the crowd.",
+    "word": "Ostentatious"
+  },
+  {
+    "favorite": false,
+    "id": "18",
+    "meaning": "Exceedingly idealistic; unrealistic and impractical.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "kwɪkˈsɒtɪk",
+    "sentence": "His quixotic dream of world peace was admirable but unlikely.",
+    "word": "Quixotic"
+  },
+  {
+    "favorite": false,
+    "id": "19",
+    "meaning": "Present, appearing, or found everywhere.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "juːˈbɪkwɪtəs",
+    "sentence": "Smartphones have become ubiquitous in our daily lives.",
+    "word": "Ubiquitous"
+  },
+  {
+    "favorite": false,
+    "id": "20",
+    "meaning": "Filled with bitter criticism or malice.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ˌvɪtrɪˈɒlɪk",
+    "sentence": "Her vitriolic comments about her ex-husband were hurtful.",
+    "word": "Vitriolic"
+  },
+  {
+    "favorite": false,
+    "id": "21",
+    "meaning": "Having or showing great enthusiasm or zeal.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ˈzɛləs",
+    "sentence": "The zealous volunteer worked tirelessly to help others.",
+    "word": "Zealous"
+  },
+  {
+    "favorite": false,
+    "id": "22",
+    "meaning": "Leadership or dominance, especially by one state or social group over others.",
+    "partOfSpeech": "Noun",
+    "phonetic": "hɪˈɡɛməni",
+    "sentence": "The rise of China has led to concerns about its potential hegemony.",
+    "word": "Hegemony"
+  },
+  {
+    "favorite": false,
+    "id": "23",
+    "meaning": "Impossible to understand or interpret.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ɪnˈskruːtəbl",
+    "sentence": "His inscrutable expression gave no indication of his thoughts.",
+    "word": "Inscrutable"
+  },
+  {
+    "favorite": false,
+    "id": "24",
+    "meaning": "Very generous or forgiving, especially toward a rival or someone less powerful than oneself.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "mæɡˈnænɪməs",
+    "sentence": "She was magnanimous in victory, congratulating her opponents with sincerity.",
+    "word": "Magnanimous"
+  },
+  {
+    "favorite": false,
+    "id": "25",
+    "meaning": "A typical example or pattern of something; a model.",
+    "partOfSpeech": "Noun",
+    "phonetic": "ˈpærədaɪm",
+    "sentence": "This research provides a new paradigm for understanding the issue.",
+    "word": "Paradigm"
+  },
+  {
+    "favorite": false,
+    "id": "26",
+    "meaning": "Kept secret or done secretively, especially because illicit.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "klænˈdɛstɪn",
+    "sentence": "The group held clandestine meetings in a remote location.",
+    "word": "Clandestine"
+  },
+  {
+    "favorite": false,
+    "id": "27",
+    "meaning": "Regard or represent as being of little worth.",
+    "partOfSpeech": "Verb",
+    "phonetic": "dɪˈsparɪdʒ",
+    "sentence": "She disparaged his work in front of his colleagues.",
+    "word": "Disparage"
+  },
+  {
+    "favorite": false,
+    "id": "28",
+    "meaning": "Treating serious issues with deliberately inappropriate humor.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "fəˈsiːʃəs",
+    "sentence": "His facetious comments about the pandemic were insensitive.",
+    "word": "Facetious"
+  },
+  {
+    "favorite": false,
+    "id": "29",
+    "meaning": "Childishly sulky or bad-tempered.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ˈpɛtjʊlənt",
+    "sentence": "He threw a petulant tantrum when he didn't get his way.",
+    "word": "Petulant"
+  },
+  {
+    "favorite": false,
+    "id": "30",
+    "meaning": "Kept secret, especially because it would not be approved of.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ˌsʌrəpˈtɪʃəs",
+    "sentence": "He made a surreptitious attempt to peek at her diary.",
+    "word": "Surreptitious"
+  }
+]
