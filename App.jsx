@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavigationContainer, useNavigationContainerRef, CommonActions } from '@react-navigation/native';
 import { createStackNavigator, StackActions } from '@react-navigation/stack';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import HomeScreen from "./src/screens/HomeScreen";
 import OnboardingScreen from "./src/screens/OnboardingScreen";
@@ -12,56 +13,19 @@ import VocabScreen from './src/screens/VocabScreen';
 import Header from './src/components/Header';
 import ProfileScreen from './src/screens/ProfileScreen';
 import FavoriteScreen from './src/screens/FavoriteScreen';
-import NotificationScreen from './src/screens/NotificationScreen';
+import PushNotification from 'react-native-push-notification';
 import * as Notifications from 'expo-notifications';
 
 
 const Stack = createStackNavigator();
 
-const App = (props) => {
+const App = () => {
 
   const navigationRef = useNavigationContainerRef();
   const routeNameRef = useRef();
 
-  const lastNotificationResponse = Notifications.useLastNotificationResponse();
-//  console.log("lastNotification",lastNotificationResponse)
-//   React.useEffect(() => {
-//      console.log("In use effect")
-//      //console.log(lastNotificationResponse)
-//     if (
-//       lastNotificationResponse &&
-//       lastNotificationResponse.notification.request.content.data &&
-//       lastNotificationResponse.actionIdentifier === Notifications.DEFAULT_ACTION_IDENTIFIER
-//     ) {
-//       // navigate to your desired screen
-//       console.log("In if condition")
-//      // console.log(navigationRef)
-//       //navigationRef.navigate()
-//       // navigationRef.setParams({data:lastNotificationResponse.notification.request.content.data})
-//       // navigationRef.resetRoot({
-//       //   index: 0,
-//       //   routes: [{ name: 'DailyWordScreen',
-//       //   params: {
-//       //           data: lastNotificationResponse.notification.request.content.data,
-//       //         },
-//       // }],
-//       // });
-// //navigationRef.navigate('DailyWordScreen', {data: lastNotificationResponse.notification.request.content.data});
+//console.log("in use effect of app jsx")
 
-// navigationRef.dispatch(
-//         CommonActions.reset({
-//           routes:[{
-//           name: 'DailyWordScreen',
-//           params: {
-//             data: lastNotificationResponse.notification.request.content.data,
-//           },
-//         }]
-//       })
-//       );
-      
-//      // navigationRef.navigate('DailyWordScreen', {data: lastNotificationResponse.notification.request.content.data});
-//     }
-//   }, [lastNotificationResponse]);
 
   return (
     <NavigationContainer
@@ -90,9 +54,6 @@ const App = (props) => {
        screenOptions={
       
         {
-        // headerStyle:{
-        //   backgroundColor:'#dfdfdf'
-        // },
          header: ({navigation}) => <Header navigation={navigation} />,
        }}
       >
@@ -136,11 +97,11 @@ const App = (props) => {
           component={FavoriteScreen}
           options={{headerShown:true}}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="NotificationScreen"
           component={NotificationScreen}
           options={{headerShown:true}}
-        />
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

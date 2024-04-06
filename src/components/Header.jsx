@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Feather from 'react-native-vector-icons/Feather';
 import styles from '../styles/Header';
 import {useRoute} from '@react-navigation/native';
 import { fetchFavorites } from '../utils/favorite';
@@ -40,13 +38,7 @@ const Header = (props) => {
     return(
         <View style={styles.container}>
           {route.name=="HomeScreen" ? 
-                  <Text style={{color: '#220a6a',
-                  letterSpacing: 2,
-                  //fontWeight: 'bold',
-                  fontSize: scaleFont(30),
-                  marginLeft: '5%',
-                  //marginBottom:'10%',
-                  fontFamily: 'Montserrat-Bold',}}>Hi {name}!</Text>
+                  <Text style={styles.greeting}>Hi {name}!</Text>
 :
       // <TouchableOpacity onPress={navigateToHome}>
       //   <SimpleLineIcons name="home" size={30} color="#220a6a" />
@@ -55,13 +47,7 @@ const Header = (props) => {
       
         route.name=="FavoriteScreen" ?
 
-                  <Text style={{color: '#220a6a',
-                  letterSpacing: 2,
-                  //fontWeight: 'bold',
-                  fontSize: scaleFont(28),
-                  marginRight: '10%',
-                  //marginBottom:'10%',
-                  fontFamily: 'Montserrat-Bold',}}>Favorites</Text>
+                  <Text style={styles.favoriteHeading}>Favorites</Text>
                   :
                   null}
                   {route.name=="HomeScreen" ?

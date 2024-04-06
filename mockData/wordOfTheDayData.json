@@ -268,5 +268,14 @@
     "phonetic": "ˌsʌrəpˈtɪʃəs",
     "sentence": "He made a surreptitious attempt to peek at her diary.",
     "word": "Surreptitious"
+  },
+  {
+    "favorite": false,
+    "id": "31",
+    "meaning": "Done openly and unashamedly; obvious or conspicuous.",
+    "partOfSpeech": "Adjective",
+    "phonetic": "ˈbleɪtnt",
+    "sentence": "His blatant disregard for the rules was evident to everyone.",
+    "word": "Blatant"
   }
 ]

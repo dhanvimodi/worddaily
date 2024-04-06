@@ -8,7 +8,6 @@ import Card from '../components/Card';
 import {fetchVocabData} from '../utils/vocab';
 
 
-
 const HomeScreen = props => {
   console.log('HomeScreen')
   // const [name, setName] = useState('');
@@ -19,6 +18,8 @@ const HomeScreen = props => {
 
   const notificationListener = useRef();
   const responseListener = useRef();
+
+
 
   useEffect(() => {
     Tts.addEventListener('tts-start', event => {
@@ -46,26 +47,6 @@ const HomeScreen = props => {
     };
   }, [props.navigation]);
 
-  useEffect(() => {
-
-    notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
-     // setNotification(notification);
-    });
-
-   
-    responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
-     // props.navigation.navigate()
-     console.log('Notification clicked');
-     props.navigation.navigate('DailyWordScreen', {data: response.notification.request.content.data});
-    });
-
-    return () => {
-      Notifications.removeNotificationSubscription(notificationListener.current);
-       Notifications.removeNotificationSubscription(responseListener.current);
-    };
-  }, []);
-
-
 
   const playSound = word => {
     if (!isSoundPlaying) {
@@ -75,7 +56,7 @@ const HomeScreen = props => {
 
   async function getWordOfTheDayData() {
     // console.log('In fetch word of the day data')
-    const [todaysData, numberOfDaysVisited] = await fetchWordOfTheDayData();
+    const todaysData = await fetchWordOfTheDayData();
     setTodaysData(todaysData);
   }
 
@@ -102,13 +83,7 @@ const HomeScreen = props => {
     props.navigation.navigate(screenName, {data: data});
   };
 
-  // const getUser = async () => {
-  //   const name= await fetchUserName()
-  //   setName(name)
-  // };
-
   // useEffect(() => {
-
   //   trackScreenView('HomeScreen');
   // }, []);
 
