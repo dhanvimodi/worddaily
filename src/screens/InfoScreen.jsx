@@ -45,7 +45,6 @@ const InfoScreen = props => {
   }
 
   return (
-    // <Background>
     <View style={styles.container}>
       {/* <Text
           style={{
@@ -96,7 +95,6 @@ const InfoScreen = props => {
         </View>
       </TouchableOpacity>
     </View>
-    // {/* </Background> */}
   );
 };
 

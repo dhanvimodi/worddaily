@@ -1,4 +1,4 @@
-import { Text, Dimensions, PixelRatio, Platform } from 'react-native';
+import { Dimensions, PixelRatio, Platform } from 'react-native';
 
 export  function scaleFont(fontSize) {
     const { width, height } = Dimensions.get('window');

@@ -1,10 +1,9 @@
 import AsyncStorage from "@react-native-async-storage/async-storage"
-import wordOfTheDay from "../../mockData/wordOfTheDayData.json"
 
 export async function addFavorite(data){
    // console.log("addFavorite function in favorite.js")
     var favorites=await AsyncStorage.getItem("favorites")
-    console.log("in add favorite function")
+    //console.log("in add favorite function")
     if(favorites===null){
         favorites=[]
         favorites.push({...data,favorite:true})
@@ -32,7 +31,7 @@ export async function addFavorite(data){
 
 export async function fetchFavorites(){
 
-    console.log("in fetch Favorites")
+    //console.log("in fetch Favorites")
     var favorites=await AsyncStorage.getItem("favorites")
     if(favorites===null){
         favorites=[]
@@ -46,7 +45,7 @@ export async function fetchFavorites(){
 }
 
 export async function removeFavorite(data){
-  console.log("In remove favorite function")
+  //console.log("In remove favorite function")
     var favorites=await AsyncStorage.getItem("favorites")
     if(favorites===null){
         favorites=[]

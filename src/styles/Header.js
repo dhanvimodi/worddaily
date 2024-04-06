@@ -1,4 +1,6 @@
 import { StyleSheet } from "react-native";
+import { scaleFont } from '../utils/responsiveFontSize';
+
 
 const styles = StyleSheet.create({
     container:{       

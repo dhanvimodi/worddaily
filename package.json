@@ -2,6 +2,7 @@
   "name": "worddaily",
   "version": "2.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -11,6 +12,7 @@
     "lint-fix": "eslint . --fix"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.24.1",
     "@notifee/react-native": "^7.8.0",
     "@react-native-async-storage/async-storage": "^1.17.11",
     "@react-native-community/masked-view": "^0.1.11",
@@ -47,6 +49,7 @@
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
+    "@eslint/js": "^9.0.0",
     "@react-native-community/eslint-config": "^3.2.0",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^29.2.1",

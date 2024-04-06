@@ -12,7 +12,7 @@ export async function fetchUserName(){
 }
 
 export async function storeUserName(name){
-  todaysDate = new Date().getDate().toString();
+  var todaysDate = new Date().getDate().toString();
   try {
     await AsyncStorage.setItem('username', name);
     await AsyncStorage.setItem('lastUpdatedDate', todaysDate);

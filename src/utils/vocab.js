@@ -34,7 +34,7 @@ export async function updateVocabFavorite(data){
             vocab.forEach((element,index) => {
                 if(element.word===data.word){
                     element.favorite=!data.favorite
-                    //console.log(element)
+                    console.log(index)
                 }
             })
             try {
