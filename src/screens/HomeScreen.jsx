@@ -1,6 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {Text, View, Dimensions} from 'react-native';
-import * as Notifications from 'expo-notifications'
+import {Text, View} from 'react-native';
 import {fetchWordOfTheDayData} from '../utils/wordOfTheDay';
 import Tts from 'react-native-tts';
 import styles from '../styles/HomeScreen';
@@ -9,17 +8,11 @@ import {fetchVocabData} from '../utils/vocab';
 
 
 const HomeScreen = props => {
-  console.log('HomeScreen')
+  // console.log('HomeScreen')
   // const [name, setName] = useState('');
   const [data, setData] = useState([]);
   const [todaysData, setTodaysData] = useState([]);
   const [isSoundPlaying, setIsSoundPlaying] = useState(false);
-
-
-  const notificationListener = useRef();
-  const responseListener = useRef();
-
-
 
   useEffect(() => {
     Tts.addEventListener('tts-start', event => {
@@ -31,7 +24,6 @@ const HomeScreen = props => {
   }, []);
 
   useEffect(() => {
-   // createChannel();
     getWordOfTheDayData();
     getVocabData();
   }, []);

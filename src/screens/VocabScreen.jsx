@@ -1,6 +1,5 @@
-import React, {useEffect, useState, createRef} from 'react';
+import React, { useState, createRef} from 'react';
 import {FlatList, View} from 'react-native';
-//import mockData from '../../mockData/mockData.json';
 import WordCard from '../components/WordCard';
 import styles from '../styles/VocabScreen';
 
@@ -30,7 +29,6 @@ const VocabScreen = (props) => {
       //decelerationRate={'normal'}
       initialNumToRender={10}
       snapToAlignment="center"
-      //showsVerticalScrollIndicator={true}
       onScrollToIndexFailed={info => {
         const wait = new Promise(resolve => setTimeout(resolve, 500));
         wait.then(() => {

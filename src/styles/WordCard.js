@@ -13,6 +13,21 @@ const styles = StyleSheet.create({
         // marginTop:'6%',
 
       },
+      wordInnerContainer:{
+        // backgroundColor:'pink',
+        width: '98%',
+        height: '95%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        padding: '3%',
+        borderStyle: 'solid',
+        borderTopLeftRadius: 25,
+        borderBottomLeftRadius: 25,
+        borderTopRightRadius: 25,
+        borderBottomRightRadius: 25,
+        backgroundColor: '#fff',
+      },
       word:{
         color: '#000',
         letterSpacing: 2,
@@ -63,6 +78,12 @@ const styles = StyleSheet.create({
         alignItems:'center',
         marginTop:'23%',
         width:'100%'
-       }
+       },
+       appName:{
+        color:'#000',
+        marginTop:'5%',
+        fontFamily:'Montserrat-Medium',
+        color:'#220a6a',
+      }
 })
 export default styles;

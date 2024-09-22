@@ -5,7 +5,6 @@ import styles from '../styles/Header';
 import {useRoute} from '@react-navigation/native';
 import { fetchFavorites } from '../utils/favorite';
 import { fetchUserName } from '../utils/username';
-import { scaleFont } from '../utils/responsiveFontSize';
 
 
 const Header = (props) => {
@@ -20,10 +19,6 @@ const Header = (props) => {
 
     },[])
 
-    const navigateToHome=()=>{
-      //  console.log(props.navigation)
-        props.navigation.navigate('HomeScreen')
-    }
 
     const navigateToFavorites=async()=>{
       const data = await fetchFavorites()

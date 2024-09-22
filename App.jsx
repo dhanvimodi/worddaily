@@ -11,11 +11,7 @@ import analytics from '@react-native-firebase/analytics';
 import DailyWordScreen from './src/screens/DailyWordScreen';
 import VocabScreen from './src/screens/VocabScreen';
 import Header from './src/components/Header';
-import ProfileScreen from './src/screens/ProfileScreen';
 import FavoriteScreen from './src/screens/FavoriteScreen';
-import PushNotification from 'react-native-push-notification';
-import * as Notifications from 'expo-notifications';
-
 
 const Stack = createStackNavigator();
 
@@ -23,9 +19,6 @@ const App = () => {
 
   const navigationRef = useNavigationContainerRef();
   const routeNameRef = useRef();
-
-//console.log("in use effect of app jsx")
-
 
   return (
     <NavigationContainer
@@ -86,11 +79,6 @@ const App = () => {
           name="VocabScreen"
           component={VocabScreen}
           options={{headerShown:false}}
-        />
-          <Stack.Screen
-          name="ProfileScreen"
-          component={ProfileScreen}
-          options={{headerShown:true}}
         />
         <Stack.Screen
           name="FavoriteScreen"

@@ -1,16 +1,13 @@
-import React, {useEffect, useState, useRef} from 'react';
-import {FlatList, Text, TouchableOpacity, View, Button, Platform} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {FlatList, Text, TouchableOpacity, View} from 'react-native';
 
 import styles from '../styles/FavoriteScreen';
 import { fetchFavorites } from '../utils/favorite';
-import NotificationScreen from './NotificationScreen';
-//import { captureScreen } from '../utils/shareScreenshot';
 
 
 const FavoriteScreen = (props) => {
-  const viewShotRef = useRef(null);
 
-  console.log("FavoriteScreen")
+  //console.log("FavoriteScreen")
   const [favorites, setFavorites] = useState(props.route.params.data);
 
   const renderItem = ({item, index}) => {

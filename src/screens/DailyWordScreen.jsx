@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import { View , Button, Alert, BackHandler} from 'react-native';
-import { useNavigation, useNavigationState, CommonActions,useFocusEffect } from '@react-navigation/native';
+import { View , BackHandler} from 'react-native';
+import {  useNavigationState, CommonActions } from '@react-navigation/native';
 import WordCard from '../components/WordCard';
 import styles from '../styles/DailyWordScreen';
 
 
 const DailyWordScreen = (props) => {
 
-    console.log("DailyWordScreen")
+    //console.log("DailyWordScreen")
     const previousScreen=usePreviousRouteName()
     function usePreviousRouteName() {
       return useNavigationState(state =>
@@ -19,9 +19,9 @@ const DailyWordScreen = (props) => {
 
     useEffect(() => {
       const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
-        console.log('back press');
+       // console.log('back press');
         if (previousScreen === 'None') {
-          console.log('Navigating to home screen');
+          //console.log('Navigating to home screen');
           props.navigation.dispatch(
             CommonActions.reset({
               index: 0,

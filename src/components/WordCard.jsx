@@ -12,19 +12,16 @@ import {updateVocabFavorite} from '../utils/vocab';
 import {updateWordOfTheDayFavorite} from '../utils/wordOfTheDay';
 import {useRoute} from '@react-navigation/native';
 import {captureAndShareScreenshot} from '../utils/shareScreenshot';
-import {scaleFont} from '../utils/responsiveFontSize';
 
 const WordCard = ({data}) => {
   const [isSoundPlaying, setIsSoundPlaying] = useState(false);
-  const [color, setColor] = useState(getColor());
+  // const [color, setColor] = useState(getColor());
   const [isFavorite, setIsFavorite] = useState(data.favorite);
   const [isShared, setIsShared] = useState(false);
 
-  const headerHeight = useHeaderHeight();
-  const route = useRoute();
+  // const headerHeight = useHeaderHeight();
+  // const route = useRoute();
   const viewref = useRef();
-  // var data=props.data
-  //console.log("data in wordcard", data)
 
   useEffect(() => {
     Tts.addEventListener('tts-start', event => {
@@ -41,20 +38,7 @@ const WordCard = ({data}) => {
     }
   };
 
-  function getColor() {
-    // const colour = [
-    //   '#edd4f1',
-    //   '#f0eade',
-    //   '#f8df9b',
-    //   '#d7ebf1',
-    //   '#ffe2cc',
-    //   '#dae3b1',
-    // ];
-    const colour = ["#fff"]
-    index = Math.floor(Math.random() * (6 - 0) + 0);
-    // setData(randomizedData);
-    return colour[index];
-  }
+
 
   function updateFavorite() {
     //console.log("update favorite")
@@ -68,12 +52,7 @@ const WordCard = ({data}) => {
     }
     updateVocabFavorite(data);
     updateWordOfTheDayFavorite(data);
-    //updateFavoriteData()
-    //setData({...data, favorite:!data.favorite})
-    //console.log(data.favorite)
     setIsFavorite(initialValue => !initialValue);
-    // updateVocabData()
-    // addFavorite(data)
   }
 
   const shareContent=()=>{
@@ -100,26 +79,7 @@ const WordCard = ({data}) => {
           },
         ]}>
         <View
-          style={[
-            {
-              // backgroundColor:'pink',
-              width: '98%',
-              height: '95%',
-              justifyContent: 'center',
-              alignItems: 'center',
-              textAlign: 'center',
-              padding: '3%',
-              borderStyle: 'solid',
-              borderTopLeftRadius: 25,
-              borderBottomLeftRadius: 25,
-              borderTopRightRadius: 25,
-              borderBottomRightRadius: 25,
-              // borderRadius:
-            },
-            {
-              backgroundColor: '#fff',
-            },
-          ]}>
+          style={styles.wordInnerContainer}>
           <Text style={styles.word}>{data.word}</Text>
 
           <Text style={styles.phonetic}>{data.phonetic}</Text>
@@ -150,12 +110,7 @@ const WordCard = ({data}) => {
           </View>
          {
          isShared &&
-         <Text style={{
-            color:'#000',
-            marginTop:'5%',
-            fontFamily:'Montserrat-Medium',
-            color:'#220a6a',
-          }}>A WORD GURU</Text>}
+         <Text style={styles.appName}>A WORD GURU</Text>}
         </View>
       </View>
     </ViewShot>

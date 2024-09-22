@@ -1,5 +1,5 @@
-import React, {useEffect, useRef} from 'react';
-import {Text, TouchableOpacity, Image, View} from 'react-native';
+import React, {useEffect} from 'react';
+import {View} from 'react-native';
 
 //import analytics from '@react-native-firebase/analytics';
 
@@ -22,9 +22,6 @@ const OnboardingScreen = props => {
   //       console.log("Error")
   //   }  }
 
-  const notificationListener = useRef();
-
-
   useEffect(()=>{
     storeData()
   },[])
@@ -34,12 +31,7 @@ const OnboardingScreen = props => {
     await storeVocabData()
     await storeWordOfTheDayData()
    
-  }; // Run only once on mount
-
-
-
-
-
+  }
 
   return (
     <View style={styles.container}>
