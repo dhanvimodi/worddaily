@@ -3,15 +3,15 @@ package com.worddaily;
 import android.content.res.Configuration;
 import expo.modules.ApplicationLifecycleDispatcher;
 import expo.modules.ReactNativeHostWrapper;
-import com.facebook.react.bridge.ReactApplicationContext; 
+// import com.facebook.react.bridge.ReactApplicationContext; 
 import android.app.Application;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
-import com.facebook.react.shell.MainReactPackage;
-import com.worddaily.CustomReactPackage;
-import com.worddaily.AlarmModule; // Import your custom native module here
+// import com.facebook.react.shell.MainReactPackage;
+// import com.worddaily.CustomReactPackage;
+// import com.worddaily.AlarmModule; // Import your custom native module here
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactNativeHost;
 import com.facebook.soloader.SoLoader;
@@ -33,9 +33,13 @@ public class MainApplication extends Application implements ReactApplication {
 
         @Override
         protected List<ReactPackage> getPackages() {
+          @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
-          // Add your custom package here
-          packages.add(new CustomReactPackage());
+          // Packages that cannot be autolinked yet can be added manually here, for example:
+          // packages.add(new MyReactNativePackage());
+
+          // packages.add(new MainReactPackage());
+          // packages.add(new ReactNativeFirebaseAnalyticsPackage());
           return packages;
         }
     

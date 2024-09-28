@@ -2,6 +2,7 @@ import React, {useEffect, useState, useRef} from 'react';
 import {Text, View} from 'react-native';
 import {fetchWordOfTheDayData} from '../utils/wordOfTheDay';
 import Tts from 'react-native-tts';
+import * as Notifications from 'expo-notifications'
 import styles from '../styles/HomeScreen';
 import Card from '../components/Card';
 import {fetchVocabData} from '../utils/vocab';
@@ -13,6 +14,9 @@ const HomeScreen = props => {
   const [data, setData] = useState([]);
   const [todaysData, setTodaysData] = useState([]);
   const [isSoundPlaying, setIsSoundPlaying] = useState(false);
+
+  const notificationListener = useRef();
+  const responseListener = useRef();
 
   useEffect(() => {
     Tts.addEventListener('tts-start', event => {
@@ -38,6 +42,25 @@ const HomeScreen = props => {
       unsubscribe();
     };
   }, [props.navigation]);
+
+  // useEffect(() => {
+
+  //   notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
+  //    // setNotification(notification);
+  //   });
+   
+  //   responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
+  //    // props.navigation.navigate()
+  //    console.log('Notification clicked');
+  //    props.navigation.replace('HomeScreen', {
+  //     name,
+  //   });
+  //   });
+  //   return () => {
+  //     Notifications.removeNotificationSubscription(notificationListener.current);
+  //      Notifications.removeNotificationSubscription(responseListener.current);
+  //   };
+  // }, []);
 
 
   const playSound = word => {
@@ -116,4 +139,4 @@ const HomeScreen = props => {
     </View>
   );
 };
-export default HomeScreen;
+export default React.memo(HomeScreen);

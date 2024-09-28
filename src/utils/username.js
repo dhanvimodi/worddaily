@@ -4,6 +4,7 @@ export async function fetchUserName(){
     var name;
     try {
        name= await AsyncStorage.getItem('username')
+       console.log("name: ---" + name);
       } catch (error) {
         console.log(error);
       }

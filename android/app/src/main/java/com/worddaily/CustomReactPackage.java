@@ -1,26 +1,26 @@
-package com.worddaily;
+// package com.worddaily;
 
-import com.facebook.react.ReactPackage;
-import com.facebook.react.bridge.NativeModule;
-import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.uimanager.ViewManager;
-import com.worddaily.AlarmModule; // Import your custom native module here
+// import com.facebook.react.ReactPackage;
+// import com.facebook.react.bridge.NativeModule;
+// import com.facebook.react.bridge.ReactApplicationContext;
+// import com.facebook.react.uimanager.ViewManager;
+// import com.worddaily.AlarmModule; // Import your custom native module here
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.Collections;
+// import java.util.List;
 
-public class CustomReactPackage implements ReactPackage {
+// public class CustomReactPackage implements ReactPackage {
 
-    @Override
-    public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        List<NativeModule> modules = new ArrayList<>();
-        modules.add(new AlarmModule(reactContext));
-        return modules;
-    }
+//     @Override
+//     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
+//         List<NativeModule> modules = new ArrayList<>();
+//         modules.add(new AlarmModule(reactContext));
+//         return modules;
+//     }
 
-    @Override
-    public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        return Collections.emptyList();
-    }
-}
+//     @Override
+//     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
+//         return Collections.emptyList();
+//     }
+// }

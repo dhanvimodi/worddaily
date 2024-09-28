@@ -34,29 +34,13 @@ export async function fetchWordOfTheDayData() {
 //      ? numberOfDaysVisited % wordOfTheDayData.length
 //      : (numberOfDaysVisited + 1) % wordOfTheDayData.length;
 
-const today = new Date();
-const day = today.getDate();
-
+  const today = new Date();
+  const day = today.getDate();
   var data = wordOfTheDayData[day-1];
 //  console.log("data is",data);
 //  updateDailyData(lastUpdatedDate, numberOfDaysVisited);
   return data;
 }
-
-//export async function updateDailyData(lastUpdatedDate, numberOfDaysVisited) {
-//  todaysDate = new Date().getDate().toString();
-//  if (todaysDate !== lastUpdatedDate) {
-//    try {
-//      await AsyncStorage.setItem('lastUpdatedDate', todaysDate);
-//      await AsyncStorage.setItem(
-//        'numberOfDaysVisited',
-//        (numberOfDaysVisited + 1).toString(),
-//      );
-//    } catch (error) {
-//      console.log(error);
-//    }
-//  }
-//}
 
 export async function updateWordOfTheDayFavorite(data){
   //  console.log("updateWordOfTheDayData")

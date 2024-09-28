@@ -1,81 +1,90 @@
-import React, {useEffect} from 'react';
-import {View, Image, PermissionsAndroid, Platform } from 'react-native';
-import analytics from '@react-native-firebase/analytics';
-
+import React, { useEffect } from 'react';
+import { View, Image } from 'react-native';
+import { useRoute } from '@react-navigation/native';
 import styles from '../styles/SplashScreen';
 import { fetchUserName } from '../utils/username';
-import AlarmManager from '../utils/alarmManager';
-
+import { storeVocabData } from '../utils/vocab';
+import { storeWordOfTheDayData } from '../utils/wordOfTheDay';
+import { schedulePushNotification } from './NotificationScreen';
+import * as Notifications from 'expo-notifications';
+import * as Device from 'expo-device';
 
 const SplashScreen = props => {
 
-  let timerRef = React.useRef(null);
+  useEffect(() => {
+    let name;
+   
+    const initialize = async () => {
+      name = await fetchUserName();
 
-    useEffect(()=>{
-    timerRef.current = setTimeout(() => {
-      changeScreen();
-    }, 2000);
- }, []);
+      await registerForPushNotificationsAsync();
+      await storeData();
 
-   const handleScheduleAlarm = () => {
-
-     AlarmManager.scheduleAlarm();
-   };
-
-
-    const requestNotificationPermission = async () => {
-        // console.log('In request permission ')
-
-     
-      if (Platform.OS === 'android') {
-      //console.log("requesting permission")
-        await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS, null);
-      } 
+      changeScreen(name);
     };
 
-    const handlePermissionResponse = async () => {
-    //console.log('In handle permission response')
-      const status = await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS);
-        //console.log(status)
-        if (status === true) {
+    initialize();
+    
+  }, []); 
 
-          //console.log('Notification permission granted');
-          // Perform actions requiring notification permission (e.g., setting up notification listeners)
-        } else {
-        requestNotificationPermission()
-        handleScheduleAlarm()
+  async function storeData() {
+    console.log("In store data");
+
+    await storeVocabData();
+    console.log("Store vocab data");
+
+    await storeWordOfTheDayData();
+
+    console.log("Store word of the day data");
+
+  }
+
+  async function registerForPushNotificationsAsync() {
+    console.log("In register notification");
+
+    if (Device.isDevice) {
+      const { status: existingStatus } = await Notifications.getPermissionsAsync();
+      let finalStatus = existingStatus;
+
+      if (existingStatus !== 'granted') {
+
+        const { status } = await Notifications.requestPermissionsAsync();
+
+        if (Platform.OS === 'android') {
+          await Notifications.setNotificationChannelAsync('default', {
+            name: 'default',
+            importance: Notifications.AndroidImportance.MAX,
+            vibrationPattern: [0, 250, 250, 250],
+            lightColor: '#FF231F7C',
+          });
         }
-      };
+        finalStatus = status;
+        console.log("Schedule push notifications");
 
-      useEffect(() => {
-        handlePermissionResponse();
-      }, []);
-
-  async function trackScreenView(screen) {
-    // Set & override the MainActivity screen name
-    try {
-      await analytics().setCurrentScreen(screen, screen);
-    } catch (error) {
-      console.log('error in splash screen', error);
+        await schedulePushNotification(); 
+      }
+      if (finalStatus !== 'granted') {
+        return;
+      }
+    } else {
+      alert('Must use a physical device for Push Notifications');
     }
   }
-  async function changeScreen() {
-    const name= await fetchUserName();
 
-    //console.log('In change screen',name);
-     if (name) {
-      //console.log("Go to home screen")
-      
-      props.navigation.replace('HomeScreen', {
-        name,
-      });
+  async function getUserName(){
+    var name = await fetchUserName();
+    return name?name:null;
+  }
+
+  async function changeScreen(name) {
+    
+    if (name!=null) {
+      props.navigation.replace('HomeScreen', { name });
     } else {
-      //console.log("Go to onboarding screen")
       props.navigation.replace('OnboardingScreen');
     }
   }
 
-  
   return (
     <View style={styles.container}>
       <Image
@@ -86,4 +95,4 @@ const SplashScreen = props => {
   );
 };
 
-export default SplashScreen;
+export default React.memo(SplashScreen);
