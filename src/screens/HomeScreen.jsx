@@ -1,11 +1,13 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 import {fetchWordOfTheDayData} from '../utils/wordOfTheDay';
 import Tts from 'react-native-tts';
 import * as Notifications from 'expo-notifications'
 import styles from '../styles/HomeScreen';
 import Card from '../components/Card';
 import {fetchVocabData} from '../utils/vocab';
+import { fetchSatData } from '../utils/sat';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 const HomeScreen = props => {
@@ -13,10 +15,9 @@ const HomeScreen = props => {
   // const [name, setName] = useState('');
   const [data, setData] = useState([]);
   const [todaysData, setTodaysData] = useState([]);
+  const [satData, setSatData] = useState([]);
   const [isSoundPlaying, setIsSoundPlaying] = useState(false);
 
-  const notificationListener = useRef();
-  const responseListener = useRef();
 
   useEffect(() => {
     Tts.addEventListener('tts-start', event => {
@@ -30,6 +31,7 @@ const HomeScreen = props => {
   useEffect(() => {
     getWordOfTheDayData();
     getVocabData();
+    getSatData();
   }, []);
 
   useEffect(() => {
@@ -42,25 +44,6 @@ const HomeScreen = props => {
       unsubscribe();
     };
   }, [props.navigation]);
-
-  // useEffect(() => {
-
-  //   notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
-  //    // setNotification(notification);
-  //   });
-   
-  //   responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
-  //    // props.navigation.navigate()
-  //    console.log('Notification clicked');
-  //    props.navigation.replace('HomeScreen', {
-  //     name,
-  //   });
-  //   });
-  //   return () => {
-  //     Notifications.removeNotificationSubscription(notificationListener.current);
-  //      Notifications.removeNotificationSubscription(responseListener.current);
-  //   };
-  // }, []);
 
 
   const playSound = word => {
@@ -75,9 +58,16 @@ const HomeScreen = props => {
     setTodaysData(todaysData);
   }
 
+  async function getSatData() {
+    // console.log('In fetch word of the day data')
+    const satData = await fetchSatData();
+    setSatData(satData);
+  }
+
   const onNavigateBack = () => {
     getVocabData();
     getWordOfTheDayData();
+    getSatData();
   };
 
   async function getVocabData() {
@@ -98,21 +88,33 @@ const HomeScreen = props => {
     props.navigation.navigate(screenName, {data: data});
   };
 
-  // useEffect(() => {
-  //   trackScreenView('HomeScreen');
-  // }, []);
+  const renderItem = ({ item }) => (
+    <Card
+      data={item}
+      color={'#fff'}
+      changeScreen={() => changeScreen('FlashcardScreen', item)}
+      listen={() => playSound(item.word)}
+    >
+      <Text style={styles.cardHeading}>{item.cardHeading}</Text>
+      <Text style={styles.word}>{item.word}</Text>
+    </Card>
+  );
 
-  // async function trackScreenView(screen) {
-  //   // Set & override the MainActivity screen name
-  //   if(await analytics().setCurrentScreen(screen, screen)){}
-  //   else{
-  //       console.log("Error")
-  //   }
-  // }
-  return (
-    <View style={styles.container}>
-      <View style={styles.innerContainer}>
-        <Card
+  const combinedData = [
+    { cardHeading: "Word of the Day", word: todaysData.word },
+    { cardHeading: "Word Bank", word: data[0]?.word },
+    { cardHeading: "SAT Vocab", word: satData[0]?.word },
+  ];
+
+return(
+  <View style={{ flex:1,backgroundColor: "#d1d0f0"}}>
+<ScrollView 
+        style={styles.scrollView} 
+        contentContainerStyle={styles.contentContainer}
+        // stickyHeaderHiddenOnScroll={true}
+      >
+        <View style={{height:'30%'}}>
+          <Card
           data={todaysData}
          // color={'#d1d0f0'}
           color={'#fff'}
@@ -124,6 +126,8 @@ const HomeScreen = props => {
           </Text>
           {/* <WordList data={mockData[0]} /> */}
         </Card>
+        </View>
+        <View style={{height:'30%'}}>
         <Card
           data={todaysData}
           color={'#fff'}
@@ -135,8 +139,44 @@ const HomeScreen = props => {
             <Text style={styles.word}>{data[0].word}</Text>
           )}
         </Card>
+        </View>
+        <View style={{height:'30%'}}>
+        <Card
+          data={satData}
+          color={'#fff'}
+          changeScreen={() => changeScreen('FlashcardScreen', satData)}
+          listen={() => playSound(satData[0].word)}>
+          <Text style={styles.cardHeading}>SAT Vocab</Text>
+
+          {satData.length > 0 && satData[0].word && (
+            <Text style={styles.word}>{satData[0].word}</Text>
+          )}
+        </Card>
+        </View>
+      </ScrollView>
       </View>
-    </View>
-  );
+  )
 };
+// const styles = StyleSheet.create({
+//   paragraph: {
+//     margin: 24,
+//     fontSize: 18,
+//     fontWeight: 'bold',
+//     textAlign: 'center',
+//   },
+//   scrollView: {
+//     height: '100%',
+//     width: '100%',
+//    // margin: 20,
+//     alignSelf: 'center',
+//    // padding: 20,
+//   },
+//   contentContainer: {
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     backgroundColor: "#d1d0f0",
+//     paddingBottom: 50
+//   }
+// });
+
 export default React.memo(HomeScreen);

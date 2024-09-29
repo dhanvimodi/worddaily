@@ -12,6 +12,7 @@ import DailyWordScreen from './src/screens/DailyWordScreen';
 import VocabScreen from './src/screens/VocabScreen';
 import Header from './src/components/Header';
 import FavoriteScreen from './src/screens/FavoriteScreen';
+import FlashcardScreen from './src/screens/FlashcardScreen';
 
 const Stack = createStackNavigator();
 
@@ -69,6 +70,7 @@ const App = () => {
           name="HomeScreen"
           component={HomeScreen}
           options={{headerShown:true}}
+        //  options={{ header: () => <Header /> }}
         />
         <Stack.Screen
           name="DailyWordScreen"
@@ -83,6 +85,11 @@ const App = () => {
         <Stack.Screen
           name="FavoriteScreen"
           component={FavoriteScreen}
+          options={{headerShown:true}}
+        />
+        <Stack.Screen
+          name="FlashcardScreen"
+          component={FlashcardScreen}
           options={{headerShown:true}}
         />
         {/* <Stack.Screen

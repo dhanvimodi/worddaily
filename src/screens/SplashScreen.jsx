@@ -8,6 +8,7 @@ import { storeWordOfTheDayData } from '../utils/wordOfTheDay';
 import { schedulePushNotification } from './NotificationScreen';
 import * as Notifications from 'expo-notifications';
 import * as Device from 'expo-device';
+import { storeSatData } from '../utils/sat';
 
 const SplashScreen = props => {
 
@@ -28,14 +29,12 @@ const SplashScreen = props => {
   }, []); 
 
   async function storeData() {
-    console.log("In store data");
 
     await storeVocabData();
-    console.log("Store vocab data");
 
     await storeWordOfTheDayData();
 
-    console.log("Store word of the day data");
+    await storeSatData();
 
   }
 

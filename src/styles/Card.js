@@ -3,7 +3,7 @@ import { scaleFont } from "../utils/responsiveFontSize";
 
 const styles = StyleSheet.create({
     container:{
-        height:'40%',
+        //height: 200,
         marginTop:'10%',
        // backgroundColor:'#030303',
         borderRadius:25,

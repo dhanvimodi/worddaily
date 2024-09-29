@@ -2,23 +2,24 @@ import { StyleSheet } from "react-native";
 import { scaleFont } from "../utils/responsiveFontSize";
 
 const styles = StyleSheet.create({
-    container:{
-       height: '100%',
-        width: '100%',
-        backgroundColor:"#d1d0f0",
-       // backfaceVisibility:'hidden',
-       // opacity:.2,
-        justifyContent: 'center',
-        alignItems: 'center'
-      },
-      innerContainer:{
-        width: '95%',
-        flex:1,
-        marginTop:'5%',
-       // justifyContent:'space-evenly',
-       // gap:.5,
-        alignItems:'center'
-      },
+  scrollView: {
+   //  height: '100%',
+   //  backgroundColor:'orange',
+    // width: '100%',
+    //flexGrow:1,
+    // flex:1,
+   // margin: 20,
+   // alignSelf: 'center',
+   // padding: 20,
+  },
+  contentContainer: {
+    height:'120%',
+   //  flexGrow:1,
+   // justifyContent: 'center',
+    alignItems: 'center',
+  // backgroundColor:'red',
+   // paddingBottom: 20
+  },
       name:{
         color: '#030303',
         letterSpacing: 2,
