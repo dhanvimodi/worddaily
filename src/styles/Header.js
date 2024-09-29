@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
     container:{       
         width: '100%',
         backgroundColor:'#d1d0f0',
-        paddingTop:'15%',
+        paddingTop:'8%',
+        paddingBottom:'5%',
         paddingHorizontal:'10%',
         flexDirection:'row',
         justifyContent: 'space-between',

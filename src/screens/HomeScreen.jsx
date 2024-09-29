@@ -113,7 +113,7 @@ return(
         contentContainerStyle={styles.contentContainer}
         // stickyHeaderHiddenOnScroll={true}
       >
-        <View style={{height:'30%'}}>
+        <View style={{height:'35%'}}>
           <Card
           data={todaysData}
          // color={'#d1d0f0'}
@@ -127,20 +127,8 @@ return(
           {/* <WordList data={mockData[0]} /> */}
         </Card>
         </View>
-        <View style={{height:'30%'}}>
-        <Card
-          data={todaysData}
-          color={'#fff'}
-          changeScreen={() => changeScreen('VocabScreen', data)}
-          listen={() => playSound(data[0].word)}>
-          <Text style={styles.cardHeading}>Word Bank</Text>
-
-          {data.length > 0 && data[0].word && (
-            <Text style={styles.word}>{data[0].word}</Text>
-          )}
-        </Card>
-        </View>
-        <View style={{height:'30%'}}>
+        
+        <View style={{height:'35%'}}>
         <Card
           data={satData}
           color={'#fff'}
@@ -150,6 +138,20 @@ return(
 
           {satData.length > 0 && satData[0].word && (
             <Text style={styles.word}>{satData[0].word}</Text>
+          )}
+        </Card>
+        </View>
+        
+        <View style={{height:'35%'}}>
+        <Card
+          data={todaysData}
+          color={'#fff'}
+          changeScreen={() => changeScreen('VocabScreen', data)}
+          listen={() => playSound(data[0].word)}>
+          <Text style={styles.cardHeading}>Word Bank</Text>
+
+          {data.length > 0 && data[0].word && (
+            <Text style={styles.word}>{data[0].word}</Text>
           )}
         </Card>
         </View>

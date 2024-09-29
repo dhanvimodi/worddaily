@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
    // justifyContent: 'center',
     alignItems: 'center',
   // backgroundColor:'red',
-   // paddingBottom: 20
+    paddingBottom: '15%'
   },
       name:{
         color: '#030303',
@@ -28,15 +28,15 @@ const styles = StyleSheet.create({
       },
       cardHeading:{
         color: '#000',
-        fontSize: scaleFont(16),
+        fontSize: scaleFont(20),
         marginTop: '2%',
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-SemiBold',
         textAlign:'center'
       },
       word:{
         color: '#220a6a',
        textAlign:'center',
-        fontSize: scaleFont(30),
+        fontSize: scaleFont(18),
         marginTop: '6%',
         fontFamily: 'Montserrat-SemiBold',
       },

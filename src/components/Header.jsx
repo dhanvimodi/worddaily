@@ -33,7 +33,9 @@ const Header = (props) => {
     return(
         <View style={styles.container}>
           {route.name=="HomeScreen" ? 
-                  <Text style={styles.greeting}>Hi {name}!</Text>
+                  // <Text style={styles.greeting}>Hi {name}!</Text>
+                  <Ionicons name="home" size={34} color="#220a6a" />
+
 :
       // <TouchableOpacity onPress={navigateToHome}>
       //   <SimpleLineIcons name="home" size={30} color="#220a6a" />
@@ -48,7 +50,7 @@ const Header = (props) => {
                   {route.name=="HomeScreen" ?
         <TouchableOpacity onPress={navigateToFavorites}>
         {/* <Feather name="user" size={30} color="#000" /> */}
-        <Ionicons name="heart-outline" size={40} color="#220a6a" />
+        <Ionicons name="heart" size={34} color="#220a6a" />
       </TouchableOpacity>:null}
 
         

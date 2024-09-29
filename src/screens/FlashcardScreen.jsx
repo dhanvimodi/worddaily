@@ -43,6 +43,7 @@ const FlashcardScreen = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor:"#d1d0f0",
     justifyContent: 'center',
     alignItems: 'center',
   },
